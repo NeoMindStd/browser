@@ -19,17 +19,11 @@
 
 package de.baumann.browser.unit;
 
-import static android.content.Context.*;
-
-import java.text.SimpleDateFormat;
-import java.util.Date;
 import java.util.List;
-import java.util.Locale;
 import java.util.Objects;
 
 import android.app.Activity;
 import android.app.Dialog;
-import android.app.DownloadManager;
 import android.content.ComponentName;
 import android.content.Context;
 import android.content.Intent;
@@ -37,142 +31,20 @@ import android.content.SharedPreferences;
 import android.content.pm.PackageManager;
 import android.graphics.PorterDuff;
 import android.net.Uri;
-import android.os.Environment;
 import android.os.Handler;
-import android.text.TextUtils;
-import android.util.DisplayMetrics;
-import android.util.Log;
 import android.util.TypedValue;
 import android.view.Gravity;
 import android.view.View;
 import android.view.inputmethod.InputMethodManager;
-import android.webkit.CookieManager;
-import android.webkit.URLUtil;
-import android.widget.Button;
-import android.widget.EditText;
 import android.widget.ImageView;
-import android.widget.LinearLayout;
-import android.widget.TextView;
-import android.widget.Toast;
 import androidx.appcompat.app.AlertDialog;
 import androidx.preference.PreferenceManager;
 import com.google.android.material.dialog.MaterialAlertDialogBuilder;
-import com.google.android.material.textfield.TextInputLayout;
 import de.baumann.browser.R;
 import de.baumann.browser.view.GridItem;
-import de.baumann.browser.view.NinjaToast;
 
 public class HelperUnit {
 	private static SharedPreferences sp;
-
-	public static void saveAs(final Activity activity, String titleMenu, final String url, final String name,
-		Dialog dialogParent) {
-
-		try {
-			MaterialAlertDialogBuilder builder = new MaterialAlertDialogBuilder(activity);
-
-			View dialogView = View.inflate(activity, R.layout.dialog_edit, null);
-
-			TextInputLayout editTopLayout = dialogView.findViewById(R.id.editTopLayout);
-			editTopLayout.setHint(activity.getString(R.string.dialog_title_hint));
-			TextInputLayout editBottomLayout = dialogView.findViewById(R.id.editBottomLayout);
-			editBottomLayout.setHint(activity.getString(R.string.dialog_extension_hint));
-
-			EditText editTop = dialogView.findViewById(R.id.editTop);
-			EditText editBottom = dialogView.findViewById(R.id.editBottom);
-			editTop.setHint(activity.getString(R.string.dialog_title_hint));
-			editBottom.setHint(activity.getString(R.string.dialog_extension_hint));
-
-			String filename = name != null ? name : URLUtil.guessFileName(url, null, null);
-			String extension = filename.substring(filename.lastIndexOf("."));
-			String prefix = filename.substring(0, filename.lastIndexOf("."));
-
-			editTop.setText(prefix);
-			if (extension.length() <= 8)
-				editBottom.setText(extension);
-
-			LinearLayout textGroupEdit = dialogView.findViewById(R.id.textGroupEdit);
-			TextView menuURLEdit = dialogView.findViewById(R.id.menuURLEdit);
-			menuURLEdit.setText(url);
-			menuURLEdit.setEllipsize(TextUtils.TruncateAt.MARQUEE);
-			menuURLEdit.setSingleLine(true);
-			menuURLEdit.setMarqueeRepeatLimit(1);
-			menuURLEdit.setSelected(true);
-			textGroupEdit.setOnClickListener(v -> {
-				menuURLEdit.setEllipsize(TextUtils.TruncateAt.MARQUEE);
-				menuURLEdit.setSingleLine(true);
-				menuURLEdit.setMarqueeRepeatLimit(1);
-				menuURLEdit.setSelected(true);
-			});
-			TextView menuTitleEdit = dialogView.findViewById(R.id.menuTitleEdit);
-			menuTitleEdit.setText(titleMenu);
-
-			builder.setView(dialogView);
-
-			AlertDialog dialog = builder.create();
-			dialog.show();
-			HelperUnit.setupDialog(activity, dialog);
-
-			Button ib_cancel = dialogView.findViewById(R.id.editCancel);
-			ib_cancel.setOnClickListener(view -> {
-				hideSoftKeyboard(editBottom, activity);
-				dialog.cancel();
-			});
-			Button ib_ok = dialogView.findViewById(R.id.editOK);
-			ib_ok.setOnClickListener(view12 -> {
-
-				String title = editTop.getText().toString().trim();
-				String extension1 = editBottom.getText().toString().trim();
-				String filename1 = title + extension1;
-
-				if (title.isEmpty() || !extension1.startsWith(".")) {
-					NinjaToast.show(activity, activity.getString(R.string.toast_input_empty));
-				} else {
-					if (BackupUnit.checkPermissionStorage(activity)) {
-						try {
-							Uri source = Uri.parse(url);
-							DownloadManager.Request request = new DownloadManager.Request(source);
-							String cookies = CookieManager.getInstance().getCookie(url);
-							request.addRequestHeader("cookie", cookies);
-							request.addRequestHeader("Accept", "text/html, application/xhtml+xml, *" + "/" + "*");
-							request.addRequestHeader("Accept-Language", "en-US,en;q=0.7,he;q=0.3");
-							request.addRequestHeader("Referer", url);
-							request.setNotificationVisibility(
-								DownloadManager.Request.VISIBILITY_VISIBLE_NOTIFY_COMPLETED); //Notify client once download is completed!
-							request.setDestinationInExternalPublicDir(Environment.DIRECTORY_DOWNLOADS, filename1);
-							DownloadManager dm = (DownloadManager)activity.getSystemService(DOWNLOAD_SERVICE);
-							assert dm != null;
-							dm.enqueue(request);
-						} catch (Exception e) {
-							System.out.println("Error Downloading File: " + e);
-							Toast.makeText(activity, activity.getString(R.string.app_error) + e.toString()
-								.substring(e.toString().indexOf(":")), Toast.LENGTH_LONG).show();
-							e.printStackTrace();
-						}
-
-					} else {
-						BackupUnit.requestPermission(activity);
-					}
-					HelperUnit.hideSoftKeyboard(editBottom, activity);
-					try {
-						dialog.cancel();
-					} catch (Exception e) {
-						Log.i("FOSS Browser", "shouldOverrideUrlLoading Exception:" + e);
-					}
-					dialogParent.cancel();
-				}
-			});
-		} catch (Exception e) {
-			e.printStackTrace();
-		}
-	}
-
-	public static String fileName(String url) {
-		SimpleDateFormat sdf = new SimpleDateFormat("yyyy-MM-dd_HH-mm-ss", Locale.getDefault());
-		String currentTime = sdf.format(new Date());
-		String domain = Objects.requireNonNull(Uri.parse(url).getHost()).replace("www.", "").trim();
-		return domain.replace(".", "_").trim() + "_" + currentTime.trim();
-	}
 
 	public static String domain(String url) {
 		if (url == null) {
@@ -327,17 +199,5 @@ public class HelperUnit {
 		AlertDialog dialog = builder.create();
 		dialog.show();
 		HelperUnit.setupDialog(context, dialog);
-	}
-
-	/**
-	 * This method converts dp unit to equivalent pixels, depending on device density.
-	 *
-	 * @param dp A value in dp (density independent pixels) unit. Which we need to convert into pixels
-	 * @param context Context to get resources and device specific display metrics
-	 * @return A float value to represent px equivalent to dp depending on device density
-	 */
-	public static int convertDpToPixel(float dp, Context context) {
-		return Math.round(
-			dp * ((float)context.getResources().getDisplayMetrics().densityDpi / DisplayMetrics.DENSITY_DEFAULT));
 	}
 }
