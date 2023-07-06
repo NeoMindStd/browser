@@ -20,10 +20,7 @@
 package de.baumann.browser.unit;
 
 import static android.content.Context.*;
-import static android.graphics.drawable.Icon.*;
 
-import java.io.File;
-import java.io.FileOutputStream;
 import java.text.SimpleDateFormat;
 import java.util.Date;
 import java.util.List;
@@ -38,12 +35,8 @@ import android.content.Context;
 import android.content.Intent;
 import android.content.SharedPreferences;
 import android.content.pm.PackageManager;
-import android.content.pm.ShortcutInfo;
-import android.content.pm.ShortcutManager;
 import android.graphics.PorterDuff;
-import android.graphics.drawable.Icon;
 import android.net.Uri;
-import android.os.Build;
 import android.os.Environment;
 import android.os.Handler;
 import android.text.TextUtils;
@@ -62,18 +55,12 @@ import android.widget.LinearLayout;
 import android.widget.TextView;
 import android.widget.Toast;
 import androidx.appcompat.app.AlertDialog;
-import androidx.core.content.res.ResourcesCompat;
 import androidx.preference.PreferenceManager;
-import com.google.android.material.card.MaterialCardView;
 import com.google.android.material.dialog.MaterialAlertDialogBuilder;
 import com.google.android.material.textfield.TextInputLayout;
 import de.baumann.browser.R;
-import de.baumann.browser.activity.BrowserActivity;
-import de.baumann.browser.browser.BrowserController;
-import de.baumann.browser.browser.DataURIParser;
 import de.baumann.browser.view.GridItem;
 import de.baumann.browser.view.NinjaToast;
-import de.baumann.browser.view.NinjaWebView;
 
 public class HelperUnit {
 	private static SharedPreferences sp;

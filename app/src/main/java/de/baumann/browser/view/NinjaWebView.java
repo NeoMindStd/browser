@@ -43,7 +43,6 @@ import androidx.core.app.NotificationCompat;
 import androidx.preference.PreferenceManager;
 import androidx.webkit.WebSettingsCompat;
 import androidx.webkit.WebViewFeature;
-import com.google.android.material.chip.Chip;
 import com.google.android.material.color.MaterialColors;
 import com.google.android.material.dialog.MaterialAlertDialogBuilder;
 import com.google.android.material.floatingactionbutton.FloatingActionButton;
@@ -51,7 +50,6 @@ import de.baumann.browser.R;
 import de.baumann.browser.activity.BrowserActivity;
 import de.baumann.browser.browser.AlbumController;
 import de.baumann.browser.browser.BrowserController;
-import de.baumann.browser.browser.NinjaDownloadListener;
 import de.baumann.browser.browser.NinjaWebChromeClient;
 import de.baumann.browser.browser.NinjaWebViewClient;
 import de.baumann.browser.unit.BrowserUnit;
@@ -70,7 +68,6 @@ public class NinjaWebView extends WebView implements AlbumController {
 	private AlbumController predecessor = null;
 	private NinjaWebViewClient webViewClient;
 	private NinjaWebChromeClient webChromeClient;
-	private NinjaDownloadListener downloadListener;
 	private String profile;
 	private SharedPreferences sp;
 	private boolean foreground;
@@ -110,7 +107,6 @@ public class NinjaWebView extends WebView implements AlbumController {
 			}
 		};
 		this.webChromeClient = new NinjaWebChromeClient(this);
-		this.downloadListener = new NinjaDownloadListener(this.context, this);
 
 		initWebView();
 		initAlbum();
@@ -183,7 +179,6 @@ public class NinjaWebView extends WebView implements AlbumController {
 	private synchronized void initWebView() {
 		setWebViewClient(webViewClient);
 		setWebChromeClient(webChromeClient);
-		setDownloadListener(downloadListener);
 	}
 
 	@SuppressLint({"SetJavaScriptEnabled", "JavascriptInterface"})

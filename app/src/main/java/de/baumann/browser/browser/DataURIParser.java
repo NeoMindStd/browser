@@ -23,10 +23,6 @@ public class DataURIParser {
 		imagedata = Base64.decode(data, Base64.DEFAULT);
 	}
 
-	public String getFilename() {
-		return filename;
-	}
-
 	public byte[] getImagedata() {
 		return imagedata;
 	}

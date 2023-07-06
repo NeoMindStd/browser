@@ -27,7 +27,6 @@ import android.content.IntentFilter;
 import android.content.SharedPreferences;
 import android.content.res.Configuration;
 import android.content.res.Resources;
-import android.graphics.Bitmap;
 import android.media.MediaPlayer;
 import android.net.Uri;
 import android.os.Build;
@@ -35,9 +34,6 @@ import android.os.Bundle;
 import android.os.Handler;
 import android.os.HandlerThread;
 import android.os.Message;
-import android.print.PrintAttributes;
-import android.print.PrintDocumentAdapter;
-import android.print.PrintManager;
 import android.text.Editable;
 import android.text.TextUtils;
 import android.text.TextWatcher;
@@ -156,10 +152,6 @@ public class BrowserActivity extends AppCompatActivity implements BrowserControl
 	private ValueCallback<Uri[]> filePathCallback = null;
 	private AlbumController currentAlbumController = null;
 	private ValueCallback<Uri[]> mFilePathCallback;
-
-	public Bitmap favicon() {
-		return ninjaWebView.getFavicon();
-	}
 
 	private AlbumController nextAlbumController(boolean next) {
 		if (BrowserContainer.size() <= 1)
