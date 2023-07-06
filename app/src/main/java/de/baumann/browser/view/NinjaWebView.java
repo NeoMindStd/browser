@@ -249,31 +249,6 @@ public class NinjaWebView extends WebView implements AlbumController {
 		profile = profileOriginal;
 	}
 
-	public void setProfileIcon(FloatingActionButton omniBox_tab) {
-		String url = this.getUrl();
-		String profile = sp.getString("profile", "profileStandard");
-		assert url != null;
-		switch (profile) {
-			case "profileTrusted":
-				omniBox_tab.setImageResource(R.drawable.icon_profile_trusted);
-				break;
-			case "profileStandard":
-				omniBox_tab.setImageResource(R.drawable.icon_profile_standard);
-				break;
-			case "profileProtected":
-				omniBox_tab.setImageResource(R.drawable.icon_profile_protected);
-				break;
-			default:
-				omniBox_tab.setImageResource(R.drawable.icon_profile_changed);
-				break;
-		}
-
-		TypedValue typedValue = new TypedValue();
-		Resources.Theme theme = context.getTheme();
-		theme.resolveAttribute(R.attr.colorError, typedValue, true);
-		int color = typedValue.data;
-	}
-
 	public void setProfileDefaultValues() {
 		sp.edit()
 			.putBoolean("profileTrusted_saveData", true)

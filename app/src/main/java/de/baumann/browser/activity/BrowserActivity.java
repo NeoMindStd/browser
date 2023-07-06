@@ -789,7 +789,6 @@ public class BrowserActivity extends AppCompatActivity implements BrowserControl
 		if (url != null) {
 
 			progressBar.setVisibility(View.GONE);
-			ninjaWebView.setProfileIcon(omniBox_tab);
 
 			if (Objects.requireNonNull(ninjaWebView.getTitle()).isEmpty())
 				omniBox_text.setText(url);
