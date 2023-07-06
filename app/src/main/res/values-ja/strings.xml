@@ -34,20 +34,13 @@
     <string name="menu_quit">終了</string>
     <string name="menu_openFav">スタートページを開く</string>
     <string name="menu_delete">削除</string>
-    <string name="menu_edit">編集</string>
     <string name="menu_closeTab">タブを閉じる</string>
     <string name="menu_download">ダウンロードを開く</string>
-    <string name="menu_fav">スタートページとして保存</string>
-    <string name="menu_sc">ホーム画面のショートカット</string>
     <string name="menu_sort">ソート…</string>
     <string name="menu_filter">フィルター…</string>
     <string name="menu_share_link">リンクを共有</string>
-    <string name="menu_save_home">ホームに保存</string>
-    <string name="menu_save_bookmark">ブックマークに保存</string>
     <string name="menu_save_as">名前を付けて保存…</string>
-    <string name="menu_save_pdf">PDF として保存</string>
     <string name="menu_shareClipboard">クリップボードにコピー</string>
-    <string name="menu_other_searchSite">サイト内の検索</string>
     <string name="link_you_copied">リンクがコピーされました</string>
     <!-- Dialog -->
     <string name="dialog_title_hint">タイトル:</string>
@@ -61,25 +54,14 @@
     <string name="dialog_sortIcon">アイコン順</string>
     <string name="dialog_sortDate">日付順</string>
     <!-- Settings -->
-    <string name="setting_label">設定</string>
     <!-- browser setting -->
-    <string name="setting_title_dom">ウェブストレージ</string>
-    <string name="setting_title_save_data">「データを保存」のリクエスト</string>
-    <string name="setting_title_profiles_trustedList">信頼できるウェブサイト</string>
-    <string name="setting_title_profiles_standardList">標準のウェブサイト</string>
-    <string name="setting_title_profiles_protectedList">保護されたウェブサイト</string>
     <string name="setting_title_profiles_trusted">信頼済み</string>
     <string name="setting_title_profiles_standard">標準</string>
     <string name="setting_title_profiles_protected">保護済み</string>
     <string name="setting_title_profiles_changed">カスタム</string>
     <!-- browser start -->
-    <string name="setting_title_images">画像</string>
-    <string name="setting_title_cookie">クッキー</string>
-    <string name="setting_title_javascript_popUp">ポップアップ</string>
-    <string name="setting_title_javascript">JavaScript</string>
     <!-- browser clear -->
     <!-- App setting -->
-    <string name="setting_title_fingerPrint">指紋の保護</string>
     <string name="setting_theme_system">システム</string>
     <!-- App behavior -->
     <string name="setting_title_confirm_exit">ブラウザ終了の確認</string>

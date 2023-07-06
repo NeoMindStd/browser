@@ -34,20 +34,13 @@
     <string name="menu_quit">Ieși</string>
     <string name="menu_openFav">Deschide favorit</string>
     <string name="menu_delete">Șterge</string>
-    <string name="menu_edit">Editează</string>
     <string name="menu_closeTab">Închide tab-ul</string>
     <string name="menu_download">Deschide descărcări</string>
-    <string name="menu_fav">Set as start site</string>
-    <string name="menu_sc">Scurtătură pe ecranul de pornire</string>
     <string name="menu_sort">Sortează după …</string>
     <string name="menu_filter">Filtrează după …</string>
     <string name="menu_share_link">Distribuie link-ul</string>
-    <string name="menu_save_home">Salvează acasă</string>
-    <string name="menu_save_bookmark">Salvează ca bookmark</string>
     <string name="menu_save_as">Salvează ca …</string>
-    <string name="menu_save_pdf">Save as PDF</string>
     <string name="menu_shareClipboard">Copy to clipboard</string>
-    <string name="menu_other_searchSite">Search on site</string>
     <string name="link_you_copied">Link you copied</string>
     <!-- Dialog -->
     <string name="dialog_title_hint">Title:</string>
@@ -61,25 +54,14 @@
     <string name="dialog_sortIcon">Sort by icon</string>
     <string name="dialog_sortDate">Sort by date</string>
     <!-- Settings -->
-    <string name="setting_label">Settings</string>
     <!-- browser setting -->
-    <string name="setting_title_dom">DOM Storage</string>
-    <string name="setting_title_save_data">Solicită \'Salvare date\'</string>
-    <string name="setting_title_profiles_trustedList">Trusted websites</string>
-    <string name="setting_title_profiles_standardList">Standard websites</string>
-    <string name="setting_title_profiles_protectedList">Protected websites</string>
     <string name="setting_title_profiles_trusted">Trusted</string>
     <string name="setting_title_profiles_standard">Standard</string>
     <string name="setting_title_profiles_protected">Protejat</string>
     <string name="setting_title_profiles_changed">Custom</string>
     <!-- browser start -->
-    <string name="setting_title_images">Imagini</string>
-    <string name="setting_title_cookie">Cookie-uri</string>
-    <string name="setting_title_javascript_popUp">Popups</string>
-    <string name="setting_title_javascript">JavaScript</string>
     <!-- browser clear -->
     <!-- App setting -->
-    <string name="setting_title_fingerPrint">Fingerprint protection</string>
     <string name="setting_theme_system">Sistem</string>
     <!-- App behavior -->
     <string name="setting_title_confirm_exit">Confirm browser exit</string>

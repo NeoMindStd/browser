@@ -34,20 +34,13 @@
     <string name="menu_quit">Beenden</string>
     <string name="menu_openFav">Startseite öffnen</string>
     <string name="menu_delete">Löschen</string>
-    <string name="menu_edit">Bearbeiten</string>
     <string name="menu_closeTab">Tab schließen</string>
     <string name="menu_download">Downloads öffnen</string>
-    <string name="menu_fav">Als Startseite speichern</string>
-    <string name="menu_sc">Verknüpfung auf Startbildschirm</string>
     <string name="menu_sort">Sortiere nach …</string>
     <string name="menu_filter">Filter nach …</string>
     <string name="menu_share_link">Link teilen</string>
-    <string name="menu_save_home">Auf Start speichern</string>
-    <string name="menu_save_bookmark">Als Lesezeichen speichern</string>
     <string name="menu_save_as">Speichern als …</string>
-    <string name="menu_save_pdf">Als PDF speichern</string>
     <string name="menu_shareClipboard">In Zwischenablage kopieren</string>
-    <string name="menu_other_searchSite">Auf Website suchen</string>
     <string name="link_you_copied">Kopierter Link</string>
     <!-- Dialog -->
     <string name="dialog_title_hint">Titel:</string>
@@ -61,25 +54,14 @@
     <string name="dialog_sortIcon">Nach Icon sortieren</string>
     <string name="dialog_sortDate">Nach Datum sortieren</string>
     <!-- Settings -->
-    <string name="setting_label">Einstellungen</string>
     <!-- browser setting -->
-    <string name="setting_title_dom">DOM-Speicher</string>
-    <string name="setting_title_save_data">\"Daten sparen\" verlangen</string>
-    <string name="setting_title_profiles_trustedList">Vertrauenswürdige Internetseiten</string>
-    <string name="setting_title_profiles_standardList">Standard Internetseiten</string>
-    <string name="setting_title_profiles_protectedList">Geschützte Internetseiten</string>
     <string name="setting_title_profiles_trusted">Vertrauenswürdig</string>
     <string name="setting_title_profiles_standard">Standard</string>
     <string name="setting_title_profiles_protected">Geschützt</string>
     <string name="setting_title_profiles_changed">Eigenes Profil</string>
     <!-- browser start -->
-    <string name="setting_title_images">Bilder</string>
-    <string name="setting_title_cookie">Cookies</string>
-    <string name="setting_title_javascript_popUp">Popups</string>
-    <string name="setting_title_javascript">JavaScript</string>
     <!-- browser clear -->
     <!-- App setting -->
-    <string name="setting_title_fingerPrint">Fingerabdruck-Schutz</string>
     <string name="setting_theme_system">System</string>
     <!-- App behavior -->
     <string name="setting_title_confirm_exit">Verlassen des Browsers bestätigen</string>

@@ -34,20 +34,13 @@
     <string name="menu_quit">خروج</string>
     <string name="menu_openFav">صفحه مورد علاقه</string>
     <string name="menu_delete">پاکسازی</string>
-    <string name="menu_edit">ویرایش</string>
     <string name="menu_closeTab">بستن زبانه</string>
     <string name="menu_download">بارگیری ها</string>
-    <string name="menu_fav">ثبت به عنوان صفحه مورد علاقه</string>
-    <string name="menu_sc">افزودن میانبر صفحه به منو سیستم</string>
     <string name="menu_sort">مرتب سازی بر اساس …</string>
     <string name="menu_filter">فیلتر بر اساس …</string>
     <string name="menu_share_link">اشتراک لینک</string>
-    <string name="menu_save_home">افزودن به صفحه خانگی</string>
-    <string name="menu_save_bookmark">ذخیره در نشانک ها</string>
     <string name="menu_save_as">ذخیره به عتوان …</string>
-    <string name="menu_save_pdf">ذخیره به عنوان PDF</string>
     <string name="menu_shareClipboard">کپی در حافظه</string>
-    <string name="menu_other_searchSite">جستجو در صفحه </string>
     <string name="link_you_copied">پیوند کپی شد</string>
     <!-- Dialog -->
     <string name="dialog_title_hint">عنوان:</string>
@@ -61,25 +54,14 @@
     <string name="dialog_sortIcon">مرتب‌سازی بر اساس تصویر</string>
     <string name="dialog_sortDate">مرتب‌سازی بر اساس تاریخ</string>
     <!-- Settings -->
-    <string name="setting_label">تنظیمات</string>
     <!-- browser setting -->
-    <string name="setting_title_dom">محل ذخیره DOM</string>
-    <string name="setting_title_save_data">درخواست صرفه جویی داده</string>
-    <string name="setting_title_profiles_trustedList">سایت های مورد اعتماد</string>
-    <string name="setting_title_profiles_standardList">سایت های استاندارد</string>
-    <string name="setting_title_profiles_protectedList">سایت های محافظت شده</string>
     <string name="setting_title_profiles_trusted">مورد اعتماد</string>
     <string name="setting_title_profiles_standard">استاندارد</string>
     <string name="setting_title_profiles_protected">حفاظت شده</string>
     <string name="setting_title_profiles_changed">سفارشی</string>
     <!-- browser start -->
-    <string name="setting_title_images">عکس ها</string>
-    <string name="setting_title_cookie">کوکی ها</string>
-    <string name="setting_title_javascript_popUp">بالا پر</string>
-    <string name="setting_title_javascript">جاواسکریپت</string>
     <!-- browser clear -->
     <!-- App setting -->
-    <string name="setting_title_fingerPrint">محافظت به وسیله اثرانگشت</string>
     <string name="setting_theme_system">سامانه</string>
     <!-- App behavior -->
     <string name="setting_title_confirm_exit">تاییدیه خروج از مرورگر</string>

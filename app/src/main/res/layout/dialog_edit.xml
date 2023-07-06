@@ -120,7 +120,6 @@
         </com.google.android.material.textfield.TextInputLayout>
 
         <LinearLayout
-                android:id="@+id/editButtonsLayout"
                 android:layout_width="match_parent"
                 android:layout_height="wrap_content"
                 android:layout_marginTop="10dp"
@@ -129,7 +128,6 @@
                 android:visibility="gone">
 
             <com.google.android.material.chip.Chip
-                    android:id="@+id/editDesktopMode"
                     style="@style/Widget.Material3.Chip.Suggestion"
                     android:layout_width="wrap_content"
                     android:layout_height="wrap_content"
@@ -139,7 +137,6 @@
                     app:textStartPadding="0dp" />
 
             <com.google.android.material.card.MaterialCardView
-                    android:id="@+id/editIcon"
                     android:layout_width="match_parent"
                     android:layout_height="32dp"
                     android:layout_marginStart="10dp"

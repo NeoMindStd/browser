@@ -34,20 +34,13 @@
     <string name="menu_quit">Изађи</string>
     <string name="menu_openFav">Отвори почетну</string>
     <string name="menu_delete">Избриши</string>
-    <string name="menu_edit">Измени</string>
     <string name="menu_closeTab">Затвори језичак</string>
     <string name="menu_download">Отвори преузимања</string>
-    <string name="menu_fav">Сачувај као почетну страницу</string>
-    <string name="menu_sc">Пречица на почетном екрану</string>
     <string name="menu_sort">Сортирај по …</string>
     <string name="menu_filter">Филтрирај по …</string>
     <string name="menu_share_link">Подели везу</string>
-    <string name="menu_save_home">Сачувај на главној страници</string>
-    <string name="menu_save_bookmark">Сачувај као забелешку</string>
     <string name="menu_save_as">Сачувај као …</string>
-    <string name="menu_save_pdf">Сачувај као PDF датотеку</string>
     <string name="menu_shareClipboard">Копирај</string>
-    <string name="menu_other_searchSite">Претражи на страници</string>
     <string name="link_you_copied">Веза коју сте копирали</string>
     <!-- Dialog -->
     <string name="dialog_title_hint">Наслов:</string>
@@ -61,25 +54,14 @@
     <string name="dialog_sortIcon">Сортирај по иконици</string>
     <string name="dialog_sortDate">Сортирај по датуму</string>
     <!-- Settings -->
-    <string name="setting_label">Подешавања</string>
     <!-- browser setting -->
-    <string name="setting_title_dom">ДОМ складиште</string>
-    <string name="setting_title_save_data">Захтевај уштеду података</string>
-    <string name="setting_title_profiles_trustedList">Поуздани сајтови</string>
-    <string name="setting_title_profiles_standardList">Стандардни сајтови</string>
-    <string name="setting_title_profiles_protectedList">Заштићени сајтови</string>
     <string name="setting_title_profiles_trusted">Поуздани</string>
     <string name="setting_title_profiles_standard">Стандардни</string>
     <string name="setting_title_profiles_protected">Заштићени</string>
     <string name="setting_title_profiles_changed">Прилагођено</string>
     <!-- browser start -->
-    <string name="setting_title_images">Слике</string>
-    <string name="setting_title_cookie">Колачићи</string>
-    <string name="setting_title_javascript_popUp">Искачући прозорчићи</string>
-    <string name="setting_title_javascript">Џава-скрипт</string>
     <!-- browser clear -->
     <!-- App setting -->
-    <string name="setting_title_fingerPrint">Заштита отиска прста</string>
     <string name="setting_theme_system">Система</string>
     <!-- App behavior -->
     <string name="setting_title_confirm_exit">Потврдите излаз из претраживача</string>

@@ -34,20 +34,13 @@
     <string name="menu_quit">Izađi</string>
     <string name="menu_openFav">Otvori Omiljenu</string>
     <string name="menu_delete">Izbriši</string>
-    <string name="menu_edit">Uredi</string>
     <string name="menu_closeTab">Zatvori karticu</string>
     <string name="menu_download">Otvori preuzimanja</string>
-    <string name="menu_fav">Spasi kao omiljenu stranicu</string>
-    <string name="menu_sc">Prečac na početnom ekranu</string>
     <string name="menu_sort">Sortiraj po …</string>
     <string name="menu_filter">Filtriraj po …</string>
     <string name="menu_share_link">Podijeli vezu</string>
-    <string name="menu_save_home">Spasi na početnoj stranici</string>
-    <string name="menu_save_bookmark">Spasi kao bilježak</string>
     <string name="menu_save_as">Spasi kao …</string>
-    <string name="menu_save_pdf">Spasi kao PDF</string>
     <string name="menu_shareClipboard">Kopiraj na međuspremnik</string>
-    <string name="menu_other_searchSite">Traži na stranici</string>
     <string name="link_you_copied">Link you copied</string>
     <!-- Dialog -->
     <string name="dialog_title_hint">Naslov:</string>
@@ -61,25 +54,14 @@
     <string name="dialog_sortIcon">Sortiraj po ikoni</string>
     <string name="dialog_sortDate">Sortiraj po datumu</string>
     <!-- Settings -->
-    <string name="setting_label">Postavke</string>
     <!-- browser setting -->
-    <string name="setting_title_dom">DOM skladište</string>
-    <string name="setting_title_save_data">Zahtjevnite \'Spašavanje Podataka\'</string>
-    <string name="setting_title_profiles_trustedList">Pouzdane stranice</string>
-    <string name="setting_title_profiles_standardList">Standardne stranice</string>
-    <string name="setting_title_profiles_protectedList">Zaštićene stranice</string>
     <string name="setting_title_profiles_trusted">Pouzdani</string>
     <string name="setting_title_profiles_standard">Standardni</string>
     <string name="setting_title_profiles_protected">Zaštićeni</string>
     <string name="setting_title_profiles_changed">Prilagođeni</string>
     <!-- browser start -->
-    <string name="setting_title_images">Slike</string>
-    <string name="setting_title_cookie">Keksi</string>
-    <string name="setting_title_javascript_popUp">Iskočke</string>
-    <string name="setting_title_javascript">JavaScript</string>
     <!-- browser clear -->
     <!-- App setting -->
-    <string name="setting_title_fingerPrint">Zaštita otiska prsta</string>
     <string name="setting_theme_system">Sistema</string>
     <!-- App behavior -->
     <string name="setting_title_confirm_exit">Potvrdite izlaz iz pretražnika</string>

@@ -34,20 +34,13 @@
     <string name="menu_quit">خروج</string>
     <string name="menu_openFav">فتح المفضلة</string>
     <string name="menu_delete">حذف</string>
-    <string name="menu_edit">تعديل</string>
     <string name="menu_closeTab">أغلق النافذة</string>
     <string name="menu_download">فتح التنزيلات</string>
-    <string name="menu_fav">حفظ كمفضلة</string>
-    <string name="menu_sc">الاختصار على الشاشة الرئيسية</string>
     <string name="menu_sort">فرز حسب …</string>
     <string name="menu_filter">فرز بواسطة…</string>
     <string name="menu_share_link">مشاركة الرابط</string>
-    <string name="menu_save_home">حفظ في الصفحة الرئيسية</string>
-    <string name="menu_save_bookmark">حفظ كإشارة مرجعية</string>
     <string name="menu_save_as">حفظ كـ …</string>
-    <string name="menu_save_pdf">حفظ كـ PDF</string>
     <string name="menu_shareClipboard">نسخ للحافظة</string>
-    <string name="menu_other_searchSite">البحث في الموقع</string>
     <string name="link_you_copied">Link you copied</string>
     <!-- Dialog -->
     <string name="dialog_title_hint">العنوان:</string>
@@ -61,25 +54,14 @@
     <string name="dialog_sortIcon">افرز حسب الأيقونة</string>
     <string name="dialog_sortDate">افرز حسب التاريخ</string>
     <!-- Settings -->
-    <string name="setting_label">الاعدادات</string>
     <!-- browser setting -->
-    <string name="setting_title_dom">تخزين DOM</string>
-    <string name="setting_title_save_data">اطلب \'حفظ البيانات\'</string>
-    <string name="setting_title_profiles_trustedList">المواقع الموثوقة</string>
-    <string name="setting_title_profiles_standardList">المواقع القياسية</string>
-    <string name="setting_title_profiles_protectedList">المواقع المحمية</string>
     <string name="setting_title_profiles_trusted">موثوق</string>
     <string name="setting_title_profiles_standard">قياسي</string>
     <string name="setting_title_profiles_protected">محمي</string>
     <string name="setting_title_profiles_changed">مخصص</string>
     <!-- browser start -->
-    <string name="setting_title_images">الصور</string>
-    <string name="setting_title_cookie">الكعكات</string>
-    <string name="setting_title_javascript_popUp">نوافذ منبثقة</string>
-    <string name="setting_title_javascript">جافا سكريبت</string>
     <!-- browser clear -->
     <!-- App setting -->
-    <string name="setting_title_fingerPrint">حماية بصمة الإصبع</string>
     <string name="setting_theme_system">نظام</string>
     <!-- App behavior -->
     <string name="setting_title_confirm_exit">تأكيد خروج المتصفح</string>

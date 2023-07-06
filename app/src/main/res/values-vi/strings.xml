@@ -34,20 +34,13 @@
     <string name="menu_quit">Thoát</string>
     <string name="menu_openFav">Mở Yêu thích</string>
     <string name="menu_delete">Xoá</string>
-    <string name="menu_edit">Sửa</string>
     <string name="menu_closeTab">Đóng tab</string>
     <string name="menu_download">Mở tải xuống</string>
-    <string name="menu_fav">Set as start site</string>
-    <string name="menu_sc">Lối tắt trên màn hình chính</string>
     <string name="menu_sort">Sắp xếp theo …</string>
     <string name="menu_filter">Lọc theo …</string>
     <string name="menu_share_link">Chia sẻ liên kết</string>
-    <string name="menu_save_home">Lưu tại Trang chủ</string>
-    <string name="menu_save_bookmark">Lưu dưới dạng dấu trang</string>
     <string name="menu_save_as">Lưu dưới dạng …</string>
-    <string name="menu_save_pdf">Lưu dưới dạng PDF</string>
     <string name="menu_shareClipboard">Sao chép vào bộ nhớ tạm</string>
-    <string name="menu_other_searchSite">Tìm kiếm trên trang</string>
     <string name="link_you_copied">Đã sao chép liên kết</string>
     <!-- Dialog -->
     <string name="dialog_title_hint">Tiêu đề:</string>
@@ -61,25 +54,14 @@
     <string name="dialog_sortIcon">Sắp xếp theo biểu tượng</string>
     <string name="dialog_sortDate">Sắp xếp theo ngày</string>
     <!-- Settings -->
-    <string name="setting_label">Cài đặt</string>
     <!-- browser setting -->
-    <string name="setting_title_dom">Bộ nhớ DOM</string>
-    <string name="setting_title_save_data">Yêu cầu \'Tiết kiệm dữ liệu\'</string>
-    <string name="setting_title_profiles_trustedList">Trang web đã tin cậy</string>
-    <string name="setting_title_profiles_standardList">Trang web tiêu chuẩn</string>
-    <string name="setting_title_profiles_protectedList">Trang web được bảo vệ</string>
     <string name="setting_title_profiles_trusted">Đã tin cậy</string>
     <string name="setting_title_profiles_standard">Tiêu chuẩn</string>
     <string name="setting_title_profiles_protected">Được bảo vệ</string>
     <string name="setting_title_profiles_changed">Tuỳ chỉnh</string>
     <!-- browser start -->
-    <string name="setting_title_images">Hình ảnh</string>
-    <string name="setting_title_cookie">Cookie</string>
-    <string name="setting_title_javascript_popUp">Popup</string>
-    <string name="setting_title_javascript">JavaScript</string>
     <!-- browser clear -->
     <!-- App setting -->
-    <string name="setting_title_fingerPrint">Bảo vệ vân tay</string>
     <string name="setting_theme_system">Hệ thống</string>
     <!-- App behavior -->
     <string name="setting_title_confirm_exit">Xác nhận thoát trình duyệt</string>

@@ -34,20 +34,13 @@
     <string name="menu_quit">Вихід</string>
     <string name="menu_openFav">Open Favorite</string>
     <string name="menu_delete">Видалити</string>
-    <string name="menu_edit">Змінити</string>
     <string name="menu_closeTab">Закрити вкладку</string>
     <string name="menu_download">Відкрити завантаження</string>
-    <string name="menu_fav">Встановити улюбленим</string>
-    <string name="menu_sc">Shortcut on home screen</string>
     <string name="menu_sort">Сортувати за…</string>
     <string name="menu_filter">Фільтр за кольором…</string>
     <string name="menu_share_link">Поділитися посиланням</string>
-    <string name="menu_save_home">Зберегти на головній</string>
-    <string name="menu_save_bookmark">Зберегти як закладку</string>
     <string name="menu_save_as">Зберегти як …</string>
-    <string name="menu_save_pdf">Зберегти в PDF</string>
     <string name="menu_shareClipboard">Copy to clipboard</string>
-    <string name="menu_other_searchSite">Пошук по сайту</string>
     <string name="link_you_copied">Link you copied</string>
     <!-- Dialog -->
     <string name="dialog_title_hint">Заголовок:</string>
@@ -61,25 +54,14 @@
     <string name="dialog_sortIcon">Сортувати за значками</string>
     <string name="dialog_sortDate">Sort by date</string>
     <!-- Settings -->
-    <string name="setting_label">Налаштування</string>
     <!-- browser setting -->
-    <string name="setting_title_dom">DOM Storage</string>
-    <string name="setting_title_save_data">Request \'Save Data\'</string>
-    <string name="setting_title_profiles_trustedList">Trusted websites</string>
-    <string name="setting_title_profiles_standardList">Standard websites</string>
-    <string name="setting_title_profiles_protectedList">Protected websites</string>
     <string name="setting_title_profiles_trusted">Trusted</string>
     <string name="setting_title_profiles_standard">Standard</string>
     <string name="setting_title_profiles_protected">Protected</string>
     <string name="setting_title_profiles_changed">Custom</string>
     <!-- browser start -->
-    <string name="setting_title_images">Зображення</string>
-    <string name="setting_title_cookie">Куки</string>
-    <string name="setting_title_javascript_popUp">Спливаюче вікно</string>
-    <string name="setting_title_javascript">JavaScript</string>
     <!-- browser clear -->
     <!-- App setting -->
-    <string name="setting_title_fingerPrint">Fingerprint protection</string>
     <string name="setting_theme_system">System</string>
     <!-- App behavior -->
     <string name="setting_title_confirm_exit">Підтвердити вихід з браузера</string>

@@ -34,20 +34,13 @@
     <string name="menu_quit">Avsluta</string>
     <string name="menu_openFav">Öppna favorit</string>
     <string name="menu_delete">Radera</string>
-    <string name="menu_edit">Redigera</string>
     <string name="menu_closeTab">Stäng flik</string>
     <string name="menu_download">Öppna nedladdningar</string>
-    <string name="menu_fav">Set as start site</string>
-    <string name="menu_sc">Genväg på hemskärmen</string>
     <string name="menu_sort">Sortera efter …</string>
     <string name="menu_filter">Filtrera på …</string>
     <string name="menu_share_link">Dela länk</string>
-    <string name="menu_save_home">Spara Hemma</string>
-    <string name="menu_save_bookmark">Spara som bokmärke</string>
     <string name="menu_save_as">Spara som …</string>
-    <string name="menu_save_pdf">Spara som PDF</string>
     <string name="menu_shareClipboard">Kopiera till urklipp</string>
-    <string name="menu_other_searchSite">Sök på sida</string>
     <string name="link_you_copied">Länk kopierad</string>
     <!-- Dialog -->
     <string name="dialog_title_hint">Titel:</string>
@@ -61,25 +54,14 @@
     <string name="dialog_sortIcon">Sortera efter ikon</string>
     <string name="dialog_sortDate">Sortera efter datum</string>
     <!-- Settings -->
-    <string name="setting_label">Inställningar</string>
     <!-- browser setting -->
-    <string name="setting_title_dom">DOM-lagring</string>
-    <string name="setting_title_save_data">Begär \'Spardata\'</string>
-    <string name="setting_title_profiles_trustedList">Betrodda webbplatser</string>
-    <string name="setting_title_profiles_standardList">Standardwebbplatser</string>
-    <string name="setting_title_profiles_protectedList">Skyddade webbplatser</string>
     <string name="setting_title_profiles_trusted">Betrodd</string>
     <string name="setting_title_profiles_standard">Standard</string>
     <string name="setting_title_profiles_protected">Skyddad</string>
     <string name="setting_title_profiles_changed">Anpassad</string>
     <!-- browser start -->
-    <string name="setting_title_images">Bilder</string>
-    <string name="setting_title_cookie">Cookies</string>
-    <string name="setting_title_javascript_popUp">Popup-fönster</string>
-    <string name="setting_title_javascript">JavaScript</string>
     <!-- browser clear -->
     <!-- App setting -->
-    <string name="setting_title_fingerPrint">Fingeravtrycksskydd</string>
     <string name="setting_theme_system">System</string>
     <!-- App behavior -->
     <string name="setting_title_confirm_exit">Bekräfta avslutning av webbläsaren</string>

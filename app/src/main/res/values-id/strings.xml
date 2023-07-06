@@ -34,20 +34,13 @@
     <string name="menu_quit">Keluar</string>
     <string name="menu_openFav">Buka Favorit</string>
     <string name="menu_delete">Hapus</string>
-    <string name="menu_edit">Sunting</string>
     <string name="menu_closeTab">Tutup tab</string>
     <string name="menu_download">Buka unduhan</string>
-    <string name="menu_fav">Simpan sebagai favorit</string>
-    <string name="menu_sc">Pintasan pada layar depan</string>
     <string name="menu_sort">Urutkan berdasarkan …</string>
     <string name="menu_filter">Saring berdasarkan …</string>
     <string name="menu_share_link">Bagikan tautan</string>
-    <string name="menu_save_home">Simpan di Beranda</string>
-    <string name="menu_save_bookmark">Simpan sebagai penanda</string>
     <string name="menu_save_as">Simpan sebagai …</string>
-    <string name="menu_save_pdf">Simpan sebagai PDF</string>
     <string name="menu_shareClipboard">Salin ke papan klip</string>
-    <string name="menu_other_searchSite">Cari di situs</string>
     <string name="link_you_copied">Tautan yang disalin</string>
     <!-- Dialog -->
     <string name="dialog_title_hint">Judul:</string>
@@ -61,25 +54,14 @@
     <string name="dialog_sortIcon">Urutkan berdasarkan icon</string>
     <string name="dialog_sortDate">Urutkan berdasarkan tanggal</string>
     <!-- Settings -->
-    <string name="setting_label">Pengaturan</string>
     <!-- browser setting -->
-    <string name="setting_title_dom">Penyimpanan DOM</string>
-    <string name="setting_title_save_data">Permintaan \'Simpan Data\'</string>
-    <string name="setting_title_profiles_trustedList">Situs web terpercaya</string>
-    <string name="setting_title_profiles_standardList">Situs web standar</string>
-    <string name="setting_title_profiles_protectedList">Situs web terlindungi</string>
     <string name="setting_title_profiles_trusted">Terpercaya</string>
     <string name="setting_title_profiles_standard">Standar</string>
     <string name="setting_title_profiles_protected">Terlindungi</string>
     <string name="setting_title_profiles_changed">Kustom</string>
     <!-- browser start -->
-    <string name="setting_title_images">Gambar</string>
-    <string name="setting_title_cookie">Cookie</string>
-    <string name="setting_title_javascript_popUp">Popup</string>
-    <string name="setting_title_javascript">JavaScript</string>
     <!-- browser clear -->
     <!-- App setting -->
-    <string name="setting_title_fingerPrint">Perlindungan fingerprint</string>
     <string name="setting_theme_system">Sistem</string>
     <!-- App behavior -->
     <string name="setting_title_confirm_exit">Konfirmasi penutupan browser</string>

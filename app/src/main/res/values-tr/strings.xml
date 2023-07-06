@@ -34,20 +34,13 @@
     <string name="menu_quit">Çıkış yap</string>
     <string name="menu_openFav">Başlangıç sayfasını aç</string>
     <string name="menu_delete">Sil</string>
-    <string name="menu_edit">Düzenle</string>
     <string name="menu_closeTab">Sekmeyi kapat</string>
     <string name="menu_download">İndirilenler</string>
-    <string name="menu_fav">Başlangıç sayfası olarak ayarla</string>
-    <string name="menu_sc">Ana ekrana ekle</string>
     <string name="menu_sort">Sırala …</string>
     <string name="menu_filter">Filtrele …</string>
     <string name="menu_share_link">Bağlantıyı paylaş</string>
-    <string name="menu_save_home">Ana sayfaya kaydet</string>
-    <string name="menu_save_bookmark">Yer işareti ekle</string>
     <string name="menu_save_as">Farklı kaydet …</string>
-    <string name="menu_save_pdf">PDF olarak kaydet</string>
     <string name="menu_shareClipboard">Panoya kopyala</string>
-    <string name="menu_other_searchSite">Sayfada bul</string>
     <string name="link_you_copied">Kopyaladığınız bağlantı</string>
     <!-- Dialog -->
     <string name="dialog_title_hint">Başlık:</string>
@@ -61,25 +54,14 @@
     <string name="dialog_sortIcon">Simgeye göre sırala</string>
     <string name="dialog_sortDate">Tarihe göre sırala</string>
     <!-- Settings -->
-    <string name="setting_label">Ayarlar</string>
     <!-- browser setting -->
-    <string name="setting_title_dom">DOM depolama</string>
-    <string name="setting_title_save_data">\'Veri kaydetme\' isteği</string>
-    <string name="setting_title_profiles_trustedList">Güvenilir web siteleri</string>
-    <string name="setting_title_profiles_standardList">Standart web siteleri</string>
-    <string name="setting_title_profiles_protectedList">Korunulan web siteleri</string>
     <string name="setting_title_profiles_trusted">Güvenilir</string>
     <string name="setting_title_profiles_standard">Standart</string>
     <string name="setting_title_profiles_protected">Korunulan</string>
     <string name="setting_title_profiles_changed">Özel</string>
     <!-- browser start -->
-    <string name="setting_title_images">Resimler</string>
-    <string name="setting_title_cookie">Çerezler</string>
-    <string name="setting_title_javascript_popUp">Açılır pencereler</string>
-    <string name="setting_title_javascript">JavaScript</string>
     <!-- browser clear -->
     <!-- App setting -->
-    <string name="setting_title_fingerPrint">Parmak izi koruması</string>
     <string name="setting_theme_system">Kendiliğinden (aygıt teması)</string>
     <!-- App behavior -->
     <string name="setting_title_confirm_exit">Tarayıcıdan çıkarken onayla</string>

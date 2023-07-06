@@ -34,20 +34,13 @@
     <string name="menu_quit">Sair</string>
     <string name="menu_openFav">Abrir Favorito</string>
     <string name="menu_delete">Apagar</string>
-    <string name="menu_edit">Editar</string>
     <string name="menu_closeTab">Fechar aba</string>
     <string name="menu_download">Abrir downloads</string>
-    <string name="menu_fav">Salvar como favorito</string>
-    <string name="menu_sc">Atalho na tela inicial</string>
     <string name="menu_sort">Ordenar por…</string>
     <string name="menu_filter">Filtrar por …</string>
     <string name="menu_share_link">Compartilhar link</string>
-    <string name="menu_save_home">Salvar em Início</string>
-    <string name="menu_save_bookmark">Salvar como favorito</string>
     <string name="menu_save_as">Salvar como …</string>
-    <string name="menu_save_pdf">Salvar como PDF</string>
     <string name="menu_shareClipboard">Copiar para área de transferência</string>
-    <string name="menu_other_searchSite">Procurar no site</string>
     <string name="link_you_copied">Link copiado</string>
     <!-- Dialog -->
     <string name="dialog_title_hint">Título:</string>
@@ -61,25 +54,14 @@
     <string name="dialog_sortIcon">Ordenar por ícone</string>
     <string name="dialog_sortDate">Ordenar por data</string>
     <!-- Settings -->
-    <string name="setting_label">Configurações</string>
     <!-- browser setting -->
-    <string name="setting_title_dom">Armazenamento DOM</string>
-    <string name="setting_title_save_data">Solicitar \'Economia de Dados\'</string>
-    <string name="setting_title_profiles_trustedList">Sites confiáveis</string>
-    <string name="setting_title_profiles_standardList">Sites padrão</string>
-    <string name="setting_title_profiles_protectedList">Sites protegidos</string>
     <string name="setting_title_profiles_trusted">Confiado</string>
     <string name="setting_title_profiles_standard">Padrão</string>
     <string name="setting_title_profiles_protected">Protegido</string>
     <string name="setting_title_profiles_changed">Personalizado</string>
     <!-- browser start -->
-    <string name="setting_title_images">Imagens</string>
-    <string name="setting_title_cookie">Cookies</string>
-    <string name="setting_title_javascript_popUp">Popups</string>
-    <string name="setting_title_javascript">JavaScript</string>
     <!-- browser clear -->
     <!-- App setting -->
-    <string name="setting_title_fingerPrint">Verificação de impressão</string>
     <string name="setting_theme_system">Sistema</string>
     <!-- App behavior -->
     <string name="setting_title_confirm_exit">Confirmar saída do navegador</string>

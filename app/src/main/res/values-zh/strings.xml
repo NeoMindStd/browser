@@ -34,20 +34,13 @@
     <string name="menu_quit">Quit</string>
     <string name="menu_openFav">開啟首頁</string>
     <string name="menu_delete">Delete</string>
-    <string name="menu_edit">Edit</string>
     <string name="menu_closeTab">關閉分頁</string>
     <string name="menu_download">開啟下載資料夾</string>
-    <string name="menu_fav">設為首頁</string>
-    <string name="menu_sc">於主屏幕新增捷徑</string>
     <string name="menu_sort">以…排序</string>
     <string name="menu_filter">以…篩選</string>
     <string name="menu_share_link">分享連結</string>
-    <string name="menu_save_home">釘選至主頁</string>
-    <string name="menu_save_bookmark">儲存為書籤</string>
     <string name="menu_save_as">儲存為…</string>
-    <string name="menu_save_pdf">儲存為PDF</string>
     <string name="menu_shareClipboard">複製到剪貼簿</string>
-    <string name="menu_other_searchSite">在網頁中尋找</string>
     <string name="link_you_copied">您已複製的連結</string>
     <!-- Dialog -->
     <string name="dialog_title_hint">標題：</string>
@@ -61,25 +54,14 @@
     <string name="dialog_sortIcon">按圖示排序</string>
     <string name="dialog_sortDate">按日期排序</string>
     <!-- Settings -->
-    <string name="setting_label">設定</string>
     <!-- browser setting -->
-    <string name="setting_title_dom">DOM 存儲</string>
-    <string name="setting_title_save_data">請求「儲存資料」</string>
-    <string name="setting_title_profiles_trustedList">可信赖的网站</string>
-    <string name="setting_title_profiles_standardList">标准网站</string>
-    <string name="setting_title_profiles_protectedList">受保护的网站</string>
     <string name="setting_title_profiles_trusted">受信任的</string>
     <string name="setting_title_profiles_standard">标准</string>
     <string name="setting_title_profiles_protected">受保护的</string>
     <string name="setting_title_profiles_changed">定制</string>
     <!-- browser start -->
-    <string name="setting_title_images">圖片</string>
-    <string name="setting_title_cookie">Cookies</string>
-    <string name="setting_title_javascript_popUp">弹出窗口</string>
-    <string name="setting_title_javascript">JavaScript</string>
     <!-- browser clear -->
     <!-- App setting -->
-    <string name="setting_title_fingerPrint">指纹保护</string>
     <string name="setting_theme_system">公共</string>
     <!-- App behavior -->
     <string name="setting_title_confirm_exit">確認退出瀏覽器</string>

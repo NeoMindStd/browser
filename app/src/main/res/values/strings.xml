@@ -39,22 +39,15 @@
     <string name="menu_quit">Quit</string>
     <string name="menu_openFav">Open Favorite</string>
     <string name="menu_delete">Delete</string>
-    <string name="menu_edit">Edit</string>
     <string name="menu_closeTab">Close tab</string>
     <string name="menu_download">Open downloads</string>
-    <string name="menu_fav">Save as favorite</string>
-    <string name="menu_sc">Shortcut on home screen</string>
     <string name="menu_sort">Sort by …</string>
     <string name="menu_filter">Filter by …</string>
 
     <string name="menu_share_link">Share link</string>
 
-    <string name="menu_save_home">Save at Home</string>
-    <string name="menu_save_bookmark">Save as bookmark</string>
     <string name="menu_save_as">Save as …</string>
-    <string name="menu_save_pdf">Save as PDF</string>
     <string name="menu_shareClipboard">Copy to clipboard</string>
-    <string name="menu_other_searchSite">Search on site</string>
     <string name="link_you_copied">Link you copied</string>
 
     <!-- Dialog -->
@@ -71,29 +64,16 @@
     <string name="dialog_sortDate">Sort by date</string>
 
     <!-- Settings -->
-    <string name="setting_label">Settings</string>
 
     <!-- browser setting -->
 
-    <string name="setting_title_dom">DOM Storage</string>
 
-
-    <string name="setting_title_save_data">Request \'Save Data\'</string>
-
-    <string name="setting_title_profiles_trustedList">Trusted websites</string>
-    <string name="setting_title_profiles_standardList">Standard websites</string>
-    <string name="setting_title_profiles_protectedList">Protected websites</string>
     <string name="setting_title_profiles_trusted">Trusted</string>
     <string name="setting_title_profiles_standard">Standard</string>
     <string name="setting_title_profiles_protected">Protected</string>
     <string name="setting_title_profiles_changed">Custom</string>
 
     <!-- browser start -->
-    <string name="setting_title_images">Images</string>
-    <string name="setting_title_cookie">Cookies</string>
-
-    <string name="setting_title_javascript_popUp">Popups</string>
-    <string name="setting_title_javascript">JavaScript</string>
 
 
     <!-- browser clear -->
@@ -101,7 +81,6 @@
 
     <!-- App setting -->
 
-    <string name="setting_title_fingerPrint">Fingerprint protection</string>
     <string name="setting_theme_system">System</string>
 
     <!-- App behavior -->

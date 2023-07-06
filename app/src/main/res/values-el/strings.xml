@@ -34,20 +34,13 @@
     <string name="menu_quit">Έξοδος</string>
     <string name="menu_openFav">Άνοιγμα Αγαπημένου</string>
     <string name="menu_delete">Διαγραφή</string>
-    <string name="menu_edit">Επεξεργασία</string>
     <string name="menu_closeTab">Κλείσιμο καρτέλας</string>
     <string name="menu_download">Άνοιγμα λήψεων</string>
-    <string name="menu_fav">Set as start site</string>
-    <string name="menu_sc">Συντόμευση στην αρχική οθόνη</string>
     <string name="menu_sort">Ταξινόμηση κατά …</string>
     <string name="menu_filter">Φιλτράρισμα κατά …</string>
     <string name="menu_share_link">Κοινοποίηση συνδέσμου</string>
-    <string name="menu_save_home">Αποθήκευση στην Αρχική</string>
-    <string name="menu_save_bookmark">Αποθήκευση ως σελιδοδείκτη</string>
     <string name="menu_save_as">Αποθήκευση ως …</string>
-    <string name="menu_save_pdf">Αποθήκευση ως PDF</string>
     <string name="menu_shareClipboard">Αντιγραφή στο πρόχειρο</string>
-    <string name="menu_other_searchSite">Αναζήτηση στον ιστότοπο</string>
     <string name="link_you_copied">Σύνδεσμος που αντιγράψατε</string>
     <!-- Dialog -->
     <string name="dialog_title_hint">Τίτλος:</string>
@@ -61,25 +54,14 @@
     <string name="dialog_sortIcon">Ταξινόμηση κατά εικονίδιο</string>
     <string name="dialog_sortDate">Ταξινόμηση κατά ημερομηνία</string>
     <!-- Settings -->
-    <string name="setting_label">Ρυθμίσεις</string>
     <!-- browser setting -->
-    <string name="setting_title_dom">Αποθήκευση DOM</string>
-    <string name="setting_title_save_data">Αίτημα \'Αποθήκευση Δεδομένων\'</string>
-    <string name="setting_title_profiles_trustedList">Αξιόπιστες ιστοσελίδες</string>
-    <string name="setting_title_profiles_standardList">Τυπικές ιστοσελίδες</string>
-    <string name="setting_title_profiles_protectedList">Προστατευμένες ιστοσελίδες</string>
     <string name="setting_title_profiles_trusted">Αξιόπιστο</string>
     <string name="setting_title_profiles_standard">Κανονικό</string>
     <string name="setting_title_profiles_protected">Προστατευμένο</string>
     <string name="setting_title_profiles_changed">Προσαρμοσμένο</string>
     <!-- browser start -->
-    <string name="setting_title_images">Εικόνες</string>
-    <string name="setting_title_cookie">Cookies</string>
-    <string name="setting_title_javascript_popUp">Αναδυόμενα</string>
-    <string name="setting_title_javascript">JavaScript</string>
     <!-- browser clear -->
     <!-- App setting -->
-    <string name="setting_title_fingerPrint">Προστασία δακτυλικών αποτυπωμάτων</string>
     <string name="setting_theme_system">Σύστημα</string>
     <!-- App behavior -->
     <string name="setting_title_confirm_exit">Επιβεβαίωση εξόδου προγράμματος περιήγησης</string>

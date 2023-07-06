@@ -34,20 +34,13 @@
     <string name="menu_quit">Выход</string>
     <string name="menu_openFav">Открыть главную</string>
     <string name="menu_delete">Удалить</string>
-    <string name="menu_edit">Изменить</string>
     <string name="menu_closeTab">Закрыть вкладку</string>
     <string name="menu_download">Открытые загрузки</string>
-    <string name="menu_fav">Сохранить как стартовую страницу</string>
-    <string name="menu_sc">Ярлык на главном экране</string>
     <string name="menu_sort">Сортировка по…</string>
     <string name="menu_filter">Фильтр по …</string>
     <string name="menu_share_link">Поделиться ссылкой</string>
-    <string name="menu_save_home">Сохранить на главной</string>
-    <string name="menu_save_bookmark">Сохранить как закладку</string>
     <string name="menu_save_as">Сохранить как …</string>
-    <string name="menu_save_pdf">Сохранить в PDF</string>
     <string name="menu_shareClipboard">Копировать в буфер</string>
-    <string name="menu_other_searchSite">Поиск по сайту</string>
     <string name="link_you_copied">Ссылка скопирована</string>
     <!-- Dialog -->
     <string name="dialog_title_hint">Заголовок:</string>
@@ -61,25 +54,14 @@
     <string name="dialog_sortIcon">Сортировать по значку</string>
     <string name="dialog_sortDate">Сортировать по дате</string>
     <!-- Settings -->
-    <string name="setting_label">Настройки</string>
     <!-- browser setting -->
-    <string name="setting_title_dom">Хранилище DOM</string>
-    <string name="setting_title_save_data">Запрос \'Сохранить данные\'</string>
-    <string name="setting_title_profiles_trustedList">Надежные веб-сайты</string>
-    <string name="setting_title_profiles_standardList">Стандартные веб-сайты</string>
-    <string name="setting_title_profiles_protectedList">Защищенные веб-сайты</string>
     <string name="setting_title_profiles_trusted">Проверенный</string>
     <string name="setting_title_profiles_standard">Стандарт</string>
     <string name="setting_title_profiles_protected">Защищенный</string>
     <string name="setting_title_profiles_changed">Пользовательский</string>
     <!-- browser start -->
-    <string name="setting_title_images">Изображения</string>
-    <string name="setting_title_cookie">Куки</string>
-    <string name="setting_title_javascript_popUp">Всплывающие окна</string>
-    <string name="setting_title_javascript">JavaScript</string>
     <!-- browser clear -->
     <!-- App setting -->
-    <string name="setting_title_fingerPrint">Защита отпечатков пальцев</string>
     <string name="setting_theme_system">Система</string>
     <!-- App behavior -->
     <string name="setting_title_confirm_exit">Подтвердить выход из браузера</string>

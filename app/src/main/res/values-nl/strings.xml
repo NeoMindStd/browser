@@ -34,20 +34,13 @@
     <string name="menu_quit">Afsluiten</string>
     <string name="menu_openFav">Favoriet openen</string>
     <string name="menu_delete">Verwijderen</string>
-    <string name="menu_edit">Bewerken</string>
     <string name="menu_closeTab">Tabblad sluiten</string>
     <string name="menu_download">Downloads openen</string>
-    <string name="menu_fav">Set as start site</string>
-    <string name="menu_sc">Snelkoppeling op startscherm</string>
     <string name="menu_sort">Sorteren op …</string>
     <string name="menu_filter">Filter op …</string>
     <string name="menu_share_link">Link delen</string>
-    <string name="menu_save_home">Opslaan op beginscherm</string>
-    <string name="menu_save_bookmark">Opslaan als bladwijzer</string>
     <string name="menu_save_as">Opslaan als…</string>
-    <string name="menu_save_pdf">Opslaan als PDF-bestand</string>
     <string name="menu_shareClipboard">Kopiëren naar klembord</string>
-    <string name="menu_other_searchSite">Zoek op site</string>
     <string name="link_you_copied">Link gekopieerd</string>
     <!-- Dialog -->
     <string name="dialog_title_hint">Titel:</string>
@@ -61,25 +54,14 @@
     <string name="dialog_sortIcon">Sorteren op pictogram</string>
     <string name="dialog_sortDate">Sorteren op datum</string>
     <!-- Settings -->
-    <string name="setting_label">Instellingen</string>
     <!-- browser setting -->
-    <string name="setting_title_dom">DOM Opslag</string>
-    <string name="setting_title_save_data">Verzoek \'Gegevens opslaan\'</string>
-    <string name="setting_title_profiles_trustedList">Vertrouwde websites</string>
-    <string name="setting_title_profiles_standardList">Standaard websites</string>
-    <string name="setting_title_profiles_protectedList">Beschermde websites</string>
     <string name="setting_title_profiles_trusted">Vertrouwd</string>
     <string name="setting_title_profiles_standard">Standaard</string>
     <string name="setting_title_profiles_protected">Beschermd</string>
     <string name="setting_title_profiles_changed">Aangepast</string>
     <!-- browser start -->
-    <string name="setting_title_images">Afbeeldingen</string>
-    <string name="setting_title_cookie">Koekjes</string>
-    <string name="setting_title_javascript_popUp">Popups</string>
-    <string name="setting_title_javascript">JavaScript</string>
     <!-- browser clear -->
     <!-- App setting -->
-    <string name="setting_title_fingerPrint">Vingerafdruk bescherming</string>
     <string name="setting_theme_system">Systeem</string>
     <!-- App behavior -->
     <string name="setting_title_confirm_exit">Afsluiten bevestigen</string>

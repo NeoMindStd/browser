@@ -34,20 +34,13 @@
     <string name="menu_quit">הפסק</string>
     <string name="menu_openFav">פתח את המועדף</string>
     <string name="menu_delete">מחק</string>
-    <string name="menu_edit">ערוך</string>
     <string name="menu_closeTab">סגור כרטיסייה</string>
     <string name="menu_download">פתח הורדות</string>
-    <string name="menu_fav">הגדר כאתר התחלה</string>
-    <string name="menu_sc">קיצור דרך במסך הבית</string>
     <string name="menu_sort">מיין לפי …</string>
     <string name="menu_filter">סנן לפי…</string>
     <string name="menu_share_link">שתף קישור</string>
-    <string name="menu_save_home">שמור בבית</string>
-    <string name="menu_save_bookmark">שמור כסימנייה</string>
     <string name="menu_save_as">שמור כ …</string>
-    <string name="menu_save_pdf">שמור כ-PDF</string>
     <string name="menu_shareClipboard">העתק ללוח</string>
-    <string name="menu_other_searchSite">חפש באתר</string>
     <string name="link_you_copied">Link you copied</string>
     <!-- Dialog -->
     <string name="dialog_title_hint">כותרת:</string>
@@ -61,25 +54,14 @@
     <string name="dialog_sortIcon">מיין לפי סמל</string>
     <string name="dialog_sortDate">מיין לפי תאריך</string>
     <!-- Settings -->
-    <string name="setting_label">הגדרות</string>
     <!-- browser setting -->
-    <string name="setting_title_dom">אחסון DOM</string>
-    <string name="setting_title_save_data">בקש \'שמור נתונים\'</string>
-    <string name="setting_title_profiles_trustedList">אתרים מהימנים</string>
-    <string name="setting_title_profiles_standardList">אתרים סטנדרטיים</string>
-    <string name="setting_title_profiles_protectedList">אתרים מוגנים</string>
     <string name="setting_title_profiles_trusted">מהימן</string>
     <string name="setting_title_profiles_standard">תקן</string>
     <string name="setting_title_profiles_protected">מוגן</string>
     <string name="setting_title_profiles_changed">המותאם אישית</string>
     <!-- browser start -->
-    <string name="setting_title_images">תמונות</string>
-    <string name="setting_title_cookie">עוגיות</string>
-    <string name="setting_title_javascript_popUp">חלונות קופצים</string>
-    <string name="setting_title_javascript">JavaScript</string>
     <!-- browser clear -->
     <!-- App setting -->
-    <string name="setting_title_fingerPrint">הגנה על טביעות אצבע</string>
     <string name="setting_theme_system">מערכת</string>
     <!-- App behavior -->
     <string name="setting_title_confirm_exit">אשר את יציאת הדפדפן</string>

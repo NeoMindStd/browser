@@ -34,20 +34,13 @@
     <string name="menu_quit">Ukončit</string>
     <string name="menu_openFav">Otevřít oblíbené</string>
     <string name="menu_delete">Smazat</string>
-    <string name="menu_edit">Upravit</string>
     <string name="menu_closeTab">Zavřít kartu</string>
     <string name="menu_download">Otevřít stažené</string>
-    <string name="menu_fav">Uložit jako oblíbené</string>
-    <string name="menu_sc">Zkratka na ploše</string>
     <string name="menu_sort">Třídit podle …</string>
     <string name="menu_filter">Filtrovat podle …</string>
     <string name="menu_share_link">Sdílet odkaz</string>
-    <string name="menu_save_home">Uložit na plochu</string>
-    <string name="menu_save_bookmark">Uložit jako záložku</string>
     <string name="menu_save_as">Uložit jako …</string>
-    <string name="menu_save_pdf">Uložit jako PDF</string>
     <string name="menu_shareClipboard">Kopírovat do schránky</string>
-    <string name="menu_other_searchSite">Hledat na stránce</string>
     <string name="link_you_copied">Odkaz, který jste zkopírovali</string>
     <!-- Dialog -->
     <string name="dialog_title_hint">Název:</string>
@@ -61,25 +54,14 @@
     <string name="dialog_sortIcon">Řadit podle ikony</string>
     <string name="dialog_sortDate">Řadit podle data</string>
     <!-- Settings -->
-    <string name="setting_label">Nastavení</string>
     <!-- browser setting -->
-    <string name="setting_title_dom">Úložiště DOM</string>
-    <string name="setting_title_save_data">Požadavek „Ušetřit data“</string>
-    <string name="setting_title_profiles_trustedList">Důvěryhodné weby</string>
-    <string name="setting_title_profiles_standardList">Standardní weby</string>
-    <string name="setting_title_profiles_protectedList">Chráněné weby</string>
     <string name="setting_title_profiles_trusted">Důvěryhodný</string>
     <string name="setting_title_profiles_standard">Standardní</string>
     <string name="setting_title_profiles_protected">Chráněný</string>
     <string name="setting_title_profiles_changed">Vlastní</string>
     <!-- browser start -->
-    <string name="setting_title_images">Obrázky</string>
-    <string name="setting_title_cookie">Cookies</string>
-    <string name="setting_title_javascript_popUp">Vyskakovací okna</string>
-    <string name="setting_title_javascript">JavaScript</string>
     <!-- browser clear -->
     <!-- App setting -->
-    <string name="setting_title_fingerPrint">Ochrana pomocí otisku prstu</string>
     <string name="setting_theme_system">Systém</string>
     <!-- App behavior -->
     <string name="setting_title_confirm_exit">Potvrdit ukončení prohlížeče</string>

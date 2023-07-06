@@ -34,20 +34,13 @@
     <string name="menu_quit">Wyjdź</string>
     <string name="menu_openFav">Otwórz ulubione</string>
     <string name="menu_delete">Usuń</string>
-    <string name="menu_edit">Edytuj</string>
     <string name="menu_closeTab">Zamknij kartę</string>
     <string name="menu_download">Pobrane</string>
-    <string name="menu_fav">Zapisz do ulubionych</string>
-    <string name="menu_sc">Skrót na ekranie głównym</string>
     <string name="menu_sort">Sortuj według …</string>
     <string name="menu_filter">Filtruj według …</string>
     <string name="menu_share_link">Udostępnij odnośnik</string>
-    <string name="menu_save_home">Dodaj do strony głównej</string>
-    <string name="menu_save_bookmark">Zapisz jako zakładkę</string>
     <string name="menu_save_as">Zapisz jako …</string>
-    <string name="menu_save_pdf">Zapisz jako PDF</string>
     <string name="menu_shareClipboard">Kopiuj do schowka</string>
-    <string name="menu_other_searchSite">Wyszukaj na stronie</string>
     <string name="link_you_copied">Link skopiowany</string>
     <!-- Dialog -->
     <string name="dialog_title_hint">Tytuł:</string>
@@ -61,25 +54,14 @@
     <string name="dialog_sortIcon">Sortuj według ikony</string>
     <string name="dialog_sortDate">Sortuj według daty</string>
     <!-- Settings -->
-    <string name="setting_label">Ustawienia</string>
     <!-- browser setting -->
-    <string name="setting_title_dom">Pamięć DOM</string>
-    <string name="setting_title_save_data">Wysyłaj żądanie \'Oszczędzaj dane\'</string>
-    <string name="setting_title_profiles_trustedList">Zaufane strony internetowe</string>
-    <string name="setting_title_profiles_standardList">Standardowe strony internetowe</string>
-    <string name="setting_title_profiles_protectedList">Chronione strony internetowe</string>
     <string name="setting_title_profiles_trusted">Zaufany</string>
     <string name="setting_title_profiles_standard">Standard</string>
     <string name="setting_title_profiles_protected">Chroniony</string>
     <string name="setting_title_profiles_changed">Własna</string>
     <!-- browser start -->
-    <string name="setting_title_images">Obrazy</string>
-    <string name="setting_title_cookie">Pliki cookie</string>
-    <string name="setting_title_javascript_popUp">Popupy</string>
-    <string name="setting_title_javascript">JavaScript</string>
     <!-- browser clear -->
     <!-- App setting -->
-    <string name="setting_title_fingerPrint">Ochrona przed fingerprintingiem</string>
     <string name="setting_theme_system">Systemowy</string>
     <!-- App behavior -->
     <string name="setting_title_confirm_exit">Potwierdzaj zamknięcie przeglądarki</string>
