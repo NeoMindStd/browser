@@ -44,31 +44,6 @@
 
     </PreferenceCategory>
 
-    <PreferenceCategory android:title="@string/privacy_redirect">
-
-        <de.baumann.browser.preferences.EditTextSwitchPreference
-                android:defaultValue="https://yewtu.be/"
-                android:key="sp_youTube_string"
-                android:selectable="true"
-                android:title="@string/privacy_redirect_youTube"
-                app:editTextSwitchKey="sp_youTube_switch"
-                app:useSimpleSummaryProvider="true" />
-
-        <de.baumann.browser.preferences.EditTextSwitchPreference
-                android:defaultValue="https://nitter.net/"
-                android:key="sp_twitter_string"
-                android:selectable="true"
-                android:title="@string/privacy_redirect_twitter"
-                app:editTextSwitchKey="sp_twitter_switch"
-                app:useSimpleSummaryProvider="true" />
-
-        <Preference
-                android:key="custom_redirects"
-                android:selectable="true"
-                android:title="@string/custom_redirects" />
-
-    </PreferenceCategory>
-
     <PreferenceCategory android:title="@string/setting_userScript">
 
         <de.baumann.browser.preferences.EditTextSwitchPreference

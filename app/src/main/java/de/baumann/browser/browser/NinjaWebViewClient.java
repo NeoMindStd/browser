@@ -466,9 +466,8 @@ public class NinjaWebViewClient extends WebViewClient {
 		else {
 			// handle the url by implementing your logic
 			if (url.startsWith("http://") || url.startsWith("https://")) {
-				String urlToLoad = BrowserUnit.redirectURL(ninjaWebView, sp, url);
-				this.ninjaWebView.initPreferences(urlToLoad);
-				ninjaWebView.loadUrl(urlToLoad);
+				this.ninjaWebView.initPreferences(url);
+				ninjaWebView.loadUrl(url);
 				return false;
 			} else {
 				try {

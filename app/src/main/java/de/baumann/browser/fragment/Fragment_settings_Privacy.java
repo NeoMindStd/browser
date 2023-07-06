@@ -117,8 +117,6 @@ public class Fragment_settings_Privacy extends BasePreferenceFragment
 			requireActivity().startActivity(intent);
 			return false;
 		});
-		Preference custom_redirects = findPreference("custom_redirects");
-		assert custom_redirects != null;
 	}
 
 	private void initSummary(Preference p) {

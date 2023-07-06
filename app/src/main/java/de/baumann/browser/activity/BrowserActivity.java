@@ -230,9 +230,7 @@ public class BrowserActivity extends AppCompatActivity implements BrowserControl
 
 		sp.edit()
 			.putInt("restart_changed", 0)
-			.putBoolean("pdf_create", false).putBoolean("redirect",
-				sp.getBoolean("sp_youTube_switch", false) || sp.getBoolean("sp_twitter_switch", false) || sp.getBoolean(
-					"sp_instagram_switch", false))
+			.putBoolean("pdf_create", false)
 			.putString("profile", sp.getString("profile_toStart", "profileStandard")).apply();
 
 		switch (Objects.requireNonNull(sp.getString("start_tab", "3"))) {
@@ -2091,20 +2089,6 @@ public class BrowserActivity extends AppCompatActivity implements BrowserControl
 			});
 			chip_toggleAudioBackground.setOnClickListener(v -> {
 				sp.edit().putBoolean("sp_audioBackground", !sp.getBoolean("sp_audioBackground", false)).apply();
-				dialog.cancel();
-			});
-
-			Chip chip_toggleRedirect = dialogView.findViewById(R.id.chip_toggleRedirect);
-			chip_toggleRedirect.setChecked(sp.getBoolean("redirect", false));
-			chip_toggleRedirect.setOnLongClickListener(view -> {
-				Toast.makeText(context, getString(R.string.privacy_redirect), Toast.LENGTH_SHORT).show();
-				return true;
-			});
-			chip_toggleRedirect.setOnClickListener(v -> {
-				if (sp.getBoolean("redirect", false))
-					sp.edit().putBoolean("redirect", false).apply();
-				else
-					sp.edit().putBoolean("redirect", true).apply();
 				dialog.cancel();
 			});
 

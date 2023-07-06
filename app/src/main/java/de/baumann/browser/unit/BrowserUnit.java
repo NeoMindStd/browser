@@ -32,8 +32,6 @@ import androidx.preference.PreferenceManager;
 import de.baumann.browser.R;
 import de.baumann.browser.activity.BrowserActivity;
 import de.baumann.browser.database.RecordAction;
-import de.baumann.browser.objects.CustomRedirect;
-import de.baumann.browser.objects.CustomRedirectsHelper;
 
 public class BrowserUnit {
 
@@ -200,49 +198,6 @@ public class BrowserUnit {
 		browserIntent.setPackage("de.baumann.browser");
 		Intent chooser = Intent.createChooser(browserIntent, context.getString(R.string.menu_open_with));
 		context.startActivity(chooser);
-	}
-
-	public static String redirectURL(WebView ninjaWebView, SharedPreferences sp, String url) {
-
-		String domain = HelperUnit.domain(url);
-		boolean redirect = sp.getBoolean("redirect", false);
-		if (!redirect)
-			return url;
-
-		try {
-			List<CustomRedirect> redirects = CustomRedirectsHelper.getRedirects(sp);
-
-			for (int i = 0; i < redirects.size(); i++) {
-				CustomRedirect customRedirect = redirects.get(i);
-				if (domain.contains(customRedirect.getSource())) {
-					ninjaWebView.stopLoading();
-					url = url.replace(customRedirect.getSource(), customRedirect.getTarget());
-					return url;
-				}
-			}
-		} catch (JSONException e) {
-			Log.e("Redirect error", e.toString());
-		}
-
-		if (sp.getBoolean("sp_youTube_switch", false) &&
-			domain.equals("youtube.com") || domain.equals("m.youtube.com")) {
-			ninjaWebView.stopLoading();
-			String substring = url.substring(url.indexOf("youtube.com") + 12);
-			url = sp.getString("sp_youTube_string", "https://yewtu.be/") + substring;
-			return url;
-		} else if (sp.getBoolean("sp_twitter_switch", false) &&
-			domain.equals("twitter.com") || domain.equals("m.twitter.com")) {
-			ninjaWebView.stopLoading();
-			String substring = url.substring(url.indexOf("twitter.com") + 12);
-			url = sp.getString("sp_twitter_string", "https://nitter.net/") + substring;
-			return url;
-		} else if (sp.getBoolean("sp_instagram_switch", false) && (domain.equals("instagram.com"))) {
-			ninjaWebView.stopLoading();
-			String substring = url.substring(url.indexOf("instagram.com") + 14);
-			url = sp.getString("sp_instagram_string", "https://bibliogram.pussthecat.org/") + substring;
-			return url;
-		}
-		return url;
 	}
 
 	public static void openInBackground(Activity activity, Intent intent, String url) {
