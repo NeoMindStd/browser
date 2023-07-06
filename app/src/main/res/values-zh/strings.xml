@@ -15,7 +15,6 @@
     <string name="album_title_home">Home</string>
     <string name="album_title_tab">已開啟的分頁</string>
     <string name="search_hint">Search</string>
-    <string name="create_new">新增</string>
     <string name="color_red">Red</string>
     <string name="color_pink">Pink</string>
     <string name="color_purple">紫</string>
@@ -59,7 +58,6 @@
     <string name="dialog_sign_in_password">密碼</string>
     <string name="dialog_title_download">下載此檔案？</string>
     <string name="dialog_content_resubmission">重新提交資料？</string>
-    <string name="dialog_content_ssl_error">網站的憑證不受信任，仍要造訪？</string>
     <string name="dialog_sortName">按名稱排序</string>
     <string name="dialog_sortIcon">按圖示排序</string>
     <string name="dialog_sortDate">按日期排序</string>
@@ -81,12 +79,6 @@
     <string name="setting_summary_search_engine_metager">Metager</string>
     <string name="setting_title_font">字体大小</string>
     <string name="setting_title_dom">DOM 存儲</string>
-    <string name="privacy_redirect">導向</string>
-    <string name="privacy_redirect_twitter">Twitter</string>
-    <string name="privacy_redirect_youTube">YouTube</string>
-    <string name="custom_redirects">自訂重定向</string>
-    <string name="source">來源</string>
-    <string name="target">目標</string>
     <string name="setting_title_save_data">請求「儲存資料」</string>
     <string name="setting_title_profiles">剖析</string>
     <string name="setting_title_profiles_edit">编辑简介</string>
@@ -98,7 +90,6 @@
     <string name="setting_title_profiles_standard">标准</string>
     <string name="setting_title_profiles_protected">受保护的</string>
     <string name="setting_title_profiles_changed">定制</string>
-    <string name="setting_title_profiles_active">形象</string>
     <string name="setting_title_profiles_dataUsage">数据使用情况</string>
     <string name="setting_title_profiles_privacy">隐私</string>
     <string name="setting_title_profiles_Security">安全问题</string>
@@ -109,11 +100,8 @@
     <string name="setting_title_javascript_popUp">弹出窗口</string>
     <string name="setting_title_javascript">JavaScript</string>
     <string name="setting_title_adblock">AdBlock</string>
-    <string name="setting_summary_adblock">啟用 AdBlock 阻擋惱人的廣告。網站也能更快開啟。</string>
-    <string name="setting_title_adblockHost">此內容已被封鎖</string>
     <string name="setting_title_location">位置</string>
     <string name="setting_title_history">歷史紀錄</string>
-    <string name="setting_title_autofill">表單資料</string>
     <string name="setting_summary_autofill">啟用表單數據保存（Android Nougat 及以下）或自動填充服務（Android Oreo 及以上）。</string>
     <!-- browser clear -->
     <string name="data_summary">所有文件都將導出到 SD 卡的“Documents/browser_backup/”目錄。</string>
@@ -130,7 +118,6 @@
     <string name="setting_title_data">備份</string>
     <string name="setting_filter">書籤分類</string>
     <string name="setting_title_fav">首頁</string>
-    <string name="setting_title_reload">向下滑動以重新加載</string>
     <string name="setting_title_searchEngine">自訂搜尋引擎</string>
     <string name="setting_title_userAgent">使用自訂的使用者代理</string>
     <string name="setting_title_clipboard_record">剪切板記錄</string>
@@ -186,7 +173,6 @@
     <string name="dialog_postOnWebsiteHint">要打開的網址。 將被保存以備下次使用。</string>
     <string name="dialog_postOnWebsite">在網站上發布</string>
     <!-- Whitelist -->
-    <string name="whitelist_menu_clear">清除</string>
     <string name="whitelist_edit_hint">域名</string>
     <string name="whitelist_add">新增</string>
     <string name="menu_desktopView">電腦版網站</string>

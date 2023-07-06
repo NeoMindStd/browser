@@ -15,7 +15,6 @@
     <string name="album_title_home">Ana sayfa</string>
     <string name="album_title_tab">Açık sekmeler</string>
     <string name="search_hint">Ara</string>
-    <string name="create_new">Yeni</string>
     <string name="color_red">Kırmızı</string>
     <string name="color_pink">Pembe</string>
     <string name="color_purple">Mor</string>
@@ -59,7 +58,6 @@
     <string name="dialog_sign_in_password">Şifre</string>
     <string name="dialog_title_download">Dosya indirilsin mi?</string>
     <string name="dialog_content_resubmission">Verileriniz yeniden gönderilsin mi?</string>
-    <string name="dialog_content_ssl_error">Sitenin sertifikası güvenilir değil. Yine de devam edilsin mi?</string>
     <string name="dialog_sortName">İsme göre sırala</string>
     <string name="dialog_sortIcon">Simgeye göre sırala</string>
     <string name="dialog_sortDate">Tarihe göre sırala</string>
@@ -81,12 +79,6 @@
     <string name="setting_summary_search_engine_metager">Metager</string>
     <string name="setting_title_font">Yazı boyutu</string>
     <string name="setting_title_dom">DOM depolama</string>
-    <string name="privacy_redirect">Yönlendir</string>
-    <string name="privacy_redirect_twitter">Twitter</string>
-    <string name="privacy_redirect_youTube">YouTube</string>
-    <string name="custom_redirects">Özel Yönlendirmeler</string>
-    <string name="source">Kaynak</string>
-    <string name="target">Hedef</string>
     <string name="setting_title_save_data">\'Veri kaydetme\' isteği</string>
     <string name="setting_title_profiles">Profiller</string>
     <string name="setting_title_profiles_edit">Profilleri düzenle</string>
@@ -98,7 +90,6 @@
     <string name="setting_title_profiles_standard">Standart</string>
     <string name="setting_title_profiles_protected">Korunulan</string>
     <string name="setting_title_profiles_changed">Özel</string>
-    <string name="setting_title_profiles_active">Profil</string>
     <string name="setting_title_profiles_dataUsage">Veri kullanımı</string>
     <string name="setting_title_profiles_privacy">Gizlilik</string>
     <string name="setting_title_profiles_Security">Güvenlik</string>
@@ -109,11 +100,8 @@
     <string name="setting_title_javascript_popUp">Açılır pencereler</string>
     <string name="setting_title_javascript">JavaScript</string>
     <string name="setting_title_adblock">Reklam engelleyici</string>
-    <string name="setting_summary_adblock">Can sıkıcı reklamları engellemek için reklam engelleyiciyi etkinleştirebilirsiniz. Bu özellik etkinleştirildiğinde siteler ayrıca daha hızlı yüklenir.</string>
-    <string name="setting_title_adblockHost">Engellenen içerik</string>
     <string name="setting_title_location">Konum</string>
     <string name="setting_title_history">Geçmiş</string>
-    <string name="setting_title_autofill">Otomatik doldur</string>
     <string name="setting_summary_autofill">Android Nougat ve altı sürümler için form verilerinin kaydedilmesini, Android Oreo ve üstü sürümler içinse otomatik doldurma hizmetini etkinleştirir.</string>
     <!-- browser clear -->
     <string name="data_summary">Tüm dosyalar cihazın \"Documents/browser_backup/\" dizinine aktarılacaktır.</string>
@@ -130,7 +118,6 @@
     <string name="setting_title_data">Yedekle</string>
     <string name="setting_filter">Yer işareti filtresi</string>
     <string name="setting_title_fav">Başlangıç sayfası</string>
-    <string name="setting_title_reload">Yenilemek için aşağı kaydır</string>
     <string name="setting_title_searchEngine">Özel arama motoru</string>
     <string name="setting_title_userAgent">Özel kullanıcı aracısı</string>
     <string name="setting_title_clipboard_record">Pano Kayıtları</string>
@@ -186,7 +173,6 @@
     <string name="dialog_postOnWebsiteHint">Açılacak URL\'yi seçin. Bir sonraki kullanım için kaydedilecektir.</string>
     <string name="dialog_postOnWebsite">Web sitesinde yayınla</string>
     <!-- Whitelist -->
-    <string name="whitelist_menu_clear">Temizle</string>
     <string name="whitelist_edit_hint">Alan adı</string>
     <string name="whitelist_add">Ekle</string>
     <string name="menu_desktopView">Masaüstü görünümü</string>

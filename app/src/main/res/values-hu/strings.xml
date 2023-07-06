@@ -15,7 +15,6 @@
     <string name="album_title_home">Kezdőlap</string>
     <string name="album_title_tab">Megnyitott lapok</string>
     <string name="search_hint">Keresés</string>
-    <string name="create_new">Új</string>
     <string name="color_red">Piros</string>
     <string name="color_pink">Rózsaszín</string>
     <string name="color_purple">Lila</string>
@@ -59,7 +58,6 @@
     <string name="dialog_sign_in_password">Jelszó</string>
     <string name="dialog_title_download">Letölti a fájlt?</string>
     <string name="dialog_content_resubmission">Újraküldi az adatait?</string>
-    <string name="dialog_content_ssl_error">A weboldal tanúsítványa nem megbízható. Mindenképpen továbblép?</string>
     <string name="dialog_sortName">Rendezés név szerint</string>
     <string name="dialog_sortIcon">Rendezés ikon szerint</string>
     <string name="dialog_sortDate">Rendezés dátum szerint</string>
@@ -81,12 +79,6 @@
     <string name="setting_summary_search_engine_metager">Metager</string>
     <string name="setting_title_font">Betűméret</string>
     <string name="setting_title_dom">DOM Storage</string>
-    <string name="privacy_redirect">Átirányítás</string>
-    <string name="privacy_redirect_twitter">Twitter</string>
-    <string name="privacy_redirect_youTube">YouTube</string>
-    <string name="custom_redirects">Saját Átirányítások</string>
-    <string name="source">Forrás</string>
-    <string name="target">Célpont</string>
     <string name="setting_title_save_data">\'Save Data\' kérése</string>
     <string name="setting_title_profiles">Profilok</string>
     <string name="setting_title_profiles_edit">Profilok szerkesztése</string>
@@ -98,7 +90,6 @@
     <string name="setting_title_profiles_standard">Általános</string>
     <string name="setting_title_profiles_protected">Védett</string>
     <string name="setting_title_profiles_changed">Egyéni</string>
-    <string name="setting_title_profiles_active">Profilok</string>
     <string name="setting_title_profiles_dataUsage">Adathasználat</string>
     <string name="setting_title_profiles_privacy">Adatvédelem</string>
     <string name="setting_title_profiles_Security">Biztonság</string>
@@ -109,11 +100,8 @@
     <string name="setting_title_javascript_popUp">Popupok</string>
     <string name="setting_title_javascript">JavaScript</string>
     <string name="setting_title_adblock">AdBlock</string>
-    <string name="setting_summary_adblock">AdBlock engedélyezése a bosszantó hirdetések blokkolására. A weboldalak is gyorsabban töltődnek be, ha engedélyezett.</string>
-    <string name="setting_title_adblockHost">Blokkolt tartalom</string>
     <string name="setting_title_location">Tartózkodási hely</string>
     <string name="setting_title_history">Előzmények</string>
-    <string name="setting_title_autofill">Űrlapadatok</string>
     <string name="setting_summary_autofill">Engedélyezze az űrlapadatok (Android Nougat és újabb) vagy az automatikus kitöltési szolgáltatás (Android Oreo és újabb) mentését.</string>
     <!-- browser clear -->
     <string name="data_summary">Minden fájl exportálódik az SD-kártya \"Documents/browser_backup/\" könyvtárába.</string>
@@ -130,7 +118,6 @@
     <string name="setting_title_data">Biztonsági másolat</string>
     <string name="setting_filter">Könyvjelző szűrő</string>
     <string name="setting_title_fav">Kedvenc</string>
-    <string name="setting_title_reload">Elutasítás lefelé húzással</string>
     <string name="setting_title_searchEngine">Egyedi keresőmotor</string>
     <string name="setting_title_userAgent">Egyedi user agent</string>
     <string name="setting_title_clipboard_record">Clipboard record</string>
@@ -186,7 +173,6 @@
     <string name="dialog_postOnWebsiteHint">URL megnyitásához. A következő használatra el lesz mentve.</string>
     <string name="dialog_postOnWebsite">Közzététel a weboldalon</string>
     <!-- Whitelist -->
-    <string name="whitelist_menu_clear">Törlés</string>
     <string name="whitelist_edit_hint">Tartomány</string>
     <string name="whitelist_add">Hozzáad</string>
     <string name="menu_desktopView">Asztali nézet</string>

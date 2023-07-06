@@ -15,7 +15,6 @@
     <string name="album_title_home">Accueil</string>
     <string name="album_title_tab">Onglets ouverts</string>
     <string name="search_hint">Chercher</string>
-    <string name="create_new">Nouveau</string>
     <string name="color_red">Rouge</string>
     <string name="color_pink">Rose</string>
     <string name="color_purple">Violet</string>
@@ -59,7 +58,6 @@
     <string name="dialog_sign_in_password">Mot de passe</string>
     <string name="dialog_title_download">Télécharger le fichier ?</string>
     <string name="dialog_content_resubmission">Soumettre vos données à nouveau ?</string>
-    <string name="dialog_content_ssl_error">Le certificat de ce site n\'est pas fiable. Continuer quand même ?</string>
     <string name="dialog_sortName">Trier par nom</string>
     <string name="dialog_sortIcon">Trier par icône</string>
     <string name="dialog_sortDate">Trier par date</string>
@@ -81,12 +79,6 @@
     <string name="setting_summary_search_engine_metager">Metager</string>
     <string name="setting_title_font">Taille de police</string>
     <string name="setting_title_dom">Stockage DOM</string>
-    <string name="privacy_redirect">Redirection</string>
-    <string name="privacy_redirect_twitter">Twitter</string>
-    <string name="privacy_redirect_youTube">YouTube</string>
-    <string name="custom_redirects">Redirections personnalisées</string>
-    <string name="source">Source</string>
-    <string name="target">Cible</string>
     <string name="setting_title_save_data">Demande \'Enregistrer les données\'</string>
     <string name="setting_title_profiles">Profils</string>
     <string name="setting_title_profiles_edit">Modifier les Profils</string>
@@ -98,7 +90,6 @@
     <string name="setting_title_profiles_standard">Standard</string>
     <string name="setting_title_profiles_protected">Protégé</string>
     <string name="setting_title_profiles_changed">Personnalisé</string>
-    <string name="setting_title_profiles_active">Profil</string>
     <string name="setting_title_profiles_dataUsage">Utilisation des données</string>
     <string name="setting_title_profiles_privacy">Vie privée</string>
     <string name="setting_title_profiles_Security">Sécurité</string>
@@ -109,11 +100,8 @@
     <string name="setting_title_javascript_popUp">Fenêtres contextuelles</string>
     <string name="setting_title_javascript">JavaScript</string>
     <string name="setting_title_adblock">AdBlock</string>
-    <string name="setting_summary_adblock">Activez AdBlock pour bloquer les publicités embêtantes. Les sites chargent aussi plus rapidement une fois activé.</string>
-    <string name="setting_title_adblockHost">Contenu bloqué</string>
     <string name="setting_title_location">Localisation</string>
     <string name="setting_title_history">Historique</string>
-    <string name="setting_title_autofill">Données de formulaire</string>
     <string name="setting_summary_autofill">Activer l\'enregistrement des données du formulaire (Android Nougat et en-dessous) ou le service de remplissage automatique (Android Oreo et au-dessus).</string>
     <!-- browser clear -->
     <string name="data_summary">Tous les fichiers seront exportés vers le répertoire \"Documents/browser_backup/\" de votre carte SD.</string>
@@ -130,7 +118,6 @@
     <string name="setting_title_data">Sauvegarde</string>
     <string name="setting_filter">Filtre de signet</string>
     <string name="setting_title_fav">Favoris</string>
-    <string name="setting_title_reload">Balayez vers le bas pour recharger</string>
     <string name="setting_title_searchEngine">Moteur de recherche personnalisé</string>
     <string name="setting_title_userAgent">Agent utilisateur personnalisé</string>
     <string name="setting_title_clipboard_record">Dossiers du presse-papiers</string>
@@ -186,7 +173,6 @@
     <string name="dialog_postOnWebsiteHint">URL à ouvrir. Sera sauvegardé pour la prochaine utilisation.</string>
     <string name="dialog_postOnWebsite">Voir sur le site</string>
     <!-- Whitelist -->
-    <string name="whitelist_menu_clear">Effacer</string>
     <string name="whitelist_edit_hint">Domaine</string>
     <string name="whitelist_add">Ajouter</string>
     <string name="menu_desktopView">Vue bureau</string>

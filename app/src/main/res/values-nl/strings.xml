@@ -15,7 +15,6 @@
     <string name="album_title_home">Startpagina</string>
     <string name="album_title_tab">Geopende Tabbladen</string>
     <string name="search_hint">Zoeken</string>
-    <string name="create_new">Nieuw</string>
     <string name="color_red">Rood</string>
     <string name="color_pink">Roze</string>
     <string name="color_purple">Paars</string>
@@ -59,7 +58,6 @@
     <string name="dialog_sign_in_password">Wachtwoord</string>
     <string name="dialog_title_download">Bestand downloaden?</string>
     <string name="dialog_content_resubmission">Uw gegevens opnieuw verzenden?</string>
-    <string name="dialog_content_ssl_error">Het certificaat van deze website is onvertrouwd. Wil je tóch doorgaan?</string>
     <string name="dialog_sortName">Sorteren op naam</string>
     <string name="dialog_sortIcon">Sorteren op pictogram</string>
     <string name="dialog_sortDate">Sorteren op datum</string>
@@ -81,12 +79,6 @@
     <string name="setting_summary_search_engine_metager">Metager</string>
     <string name="setting_title_font">Lettertypegrootte</string>
     <string name="setting_title_dom">DOM Opslag</string>
-    <string name="privacy_redirect">Doorverwijzen</string>
-    <string name="privacy_redirect_twitter">Twitter</string>
-    <string name="privacy_redirect_youTube">YouTube</string>
-    <string name="custom_redirects">Aangepaste Redirects</string>
-    <string name="source">Bron</string>
-    <string name="target">Doel</string>
     <string name="setting_title_save_data">Verzoek \'Gegevens opslaan\'</string>
     <string name="setting_title_profiles">Profielen</string>
     <string name="setting_title_profiles_edit">Profielen bewerken</string>
@@ -98,7 +90,6 @@
     <string name="setting_title_profiles_standard">Standaard</string>
     <string name="setting_title_profiles_protected">Beschermd</string>
     <string name="setting_title_profiles_changed">Aangepast</string>
-    <string name="setting_title_profiles_active">Profiel</string>
     <string name="setting_title_profiles_dataUsage">Gegevensgebruik</string>
     <string name="setting_title_profiles_privacy">Privacy</string>
     <string name="setting_title_profiles_Security">Beveiliging</string>
@@ -109,11 +100,8 @@
     <string name="setting_title_javascript_popUp">Popups</string>
     <string name="setting_title_javascript">JavaScript</string>
     <string name="setting_title_adblock">Advertentieblokkering</string>
-    <string name="setting_summary_adblock">Schakel advertentieblokkering in om vervelende reclame te blokkeren. Websites laden hierdoor ook sneller.</string>
-    <string name="setting_title_adblockHost">Geblokkeerde inhoud</string>
     <string name="setting_title_location">Locatie</string>
     <string name="setting_title_history">Geschiedenis</string>
-    <string name="setting_title_autofill">Formuliergegevens</string>
     <string name="setting_summary_autofill">Schakel het opslaan van formuliergegevens in (Android Nougat en hieronder) of autofill service (Android Oreo en hoger).</string>
     <!-- browser clear -->
     <string name="data_summary">Alle bestanden worden geëxporteerd naar de map \"Documents/browser_backup/\" van uw SD-card.</string>
@@ -130,7 +118,6 @@
     <string name="setting_title_data">Back-up</string>
     <string name="setting_filter">Bladwijzer filter</string>
     <string name="setting_title_fav">Favoriete</string>
-    <string name="setting_title_reload">Veeg omlaag om te herladen</string>
     <string name="setting_title_searchEngine">Aangepaste zoekmachine</string>
     <string name="setting_title_userAgent">Aangepaste user agent</string>
     <string name="setting_title_clipboard_record">Clipboard bestanden</string>
@@ -186,7 +173,6 @@
     <string name="dialog_postOnWebsiteHint">URL om te openen. Zal worden opgeslagen voor volgend gebruik.</string>
     <string name="dialog_postOnWebsite">Post op de website</string>
     <!-- Whitelist -->
-    <string name="whitelist_menu_clear">Wissen</string>
     <string name="whitelist_edit_hint">Domein</string>
     <string name="whitelist_add">Toevoegen</string>
     <string name="menu_desktopView">Bureaublad weergave</string>

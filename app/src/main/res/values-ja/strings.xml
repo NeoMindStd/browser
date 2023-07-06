@@ -15,7 +15,6 @@
     <string name="album_title_home">ホーム</string>
     <string name="album_title_tab">開かれたタブ</string>
     <string name="search_hint">検索</string>
-    <string name="create_new">新規</string>
     <string name="color_red">赤</string>
     <string name="color_pink">ピンク</string>
     <string name="color_purple">紫</string>
@@ -59,7 +58,6 @@
     <string name="dialog_sign_in_password">パスワード</string>
     <string name="dialog_title_download">ファイルをダウンロードしますか?</string>
     <string name="dialog_content_resubmission">データを再送信しますか?</string>
-    <string name="dialog_content_ssl_error">このサーバの証明書は信頼されていません。続行しますか?</string>
     <string name="dialog_sortName">名前順</string>
     <string name="dialog_sortIcon">アイコン順</string>
     <string name="dialog_sortDate">日付順</string>
@@ -81,12 +79,6 @@
     <string name="setting_summary_search_engine_metager">MetaGer</string>
     <string name="setting_title_font">フォントサイズ</string>
     <string name="setting_title_dom">ウェブストレージ</string>
-    <string name="privacy_redirect">リダイレクト</string>
-    <string name="privacy_redirect_twitter">Twitter</string>
-    <string name="privacy_redirect_youTube">YouTube</string>
-    <string name="custom_redirects">カスタムリダイレクト</string>
-    <string name="source">ソース</string>
-    <string name="target">目標</string>
     <string name="setting_title_save_data">「データを保存」のリクエスト</string>
     <string name="setting_title_profiles">プロファイル</string>
     <string name="setting_title_profiles_edit">プロファイルの編集</string>
@@ -98,7 +90,6 @@
     <string name="setting_title_profiles_standard">標準</string>
     <string name="setting_title_profiles_protected">保護済み</string>
     <string name="setting_title_profiles_changed">カスタム</string>
-    <string name="setting_title_profiles_active">プロファイル</string>
     <string name="setting_title_profiles_dataUsage">データ使用量</string>
     <string name="setting_title_profiles_privacy">プライバシー</string>
     <string name="setting_title_profiles_Security">セキュリティ</string>
@@ -109,11 +100,8 @@
     <string name="setting_title_javascript_popUp">ポップアップ</string>
     <string name="setting_title_javascript">JavaScript</string>
     <string name="setting_title_adblock">AdBlock</string>
-    <string name="setting_summary_adblock">AdBlock を有効にして迷惑な広告をブロックします。有効にするとサイトの読み込みが速くなります。</string>
-    <string name="setting_title_adblockHost">ブロックされた内容</string>
     <string name="setting_title_location">位置情報</string>
     <string name="setting_title_history">履歴</string>
-    <string name="setting_title_autofill">フォームの入力履歴</string>
     <string name="setting_summary_autofill">フォームのデータの保存 (Android 7 以下) または自動入力サービス (Android 8 以上) を有効にします。</string>
     <!-- browser clear -->
     <string name="data_summary">全てのファイルは SD カードの「Documents/browser_backup/」ディレクトリにエクスポートされます。</string>
@@ -130,7 +118,6 @@
     <string name="setting_title_data">バックアップ</string>
     <string name="setting_filter">ブックマークフィルター</string>
     <string name="setting_title_fav">スタートページ</string>
-    <string name="setting_title_reload">下にスワイプして再読み込み</string>
     <string name="setting_title_searchEngine">カスタム検索エンジン</string>
     <string name="setting_title_userAgent">カスタムユーザーエージェント</string>
     <string name="setting_title_clipboard_record">クリップボードの記録</string>
@@ -186,7 +173,6 @@
     <string name="dialog_postOnWebsiteHint">開くためのURL。次回の使用時に保存されます。</string>
     <string name="dialog_postOnWebsite">ウェブサイトに掲載</string>
     <!-- Whitelist -->
-    <string name="whitelist_menu_clear">消去</string>
     <string name="whitelist_edit_hint">ドメイン</string>
     <string name="whitelist_add">追加</string>
     <string name="menu_desktopView">デスクトップ表示</string>

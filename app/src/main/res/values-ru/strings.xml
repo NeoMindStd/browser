@@ -15,7 +15,6 @@
     <string name="album_title_home">Главная</string>
     <string name="album_title_tab">Открытые вкладки</string>
     <string name="search_hint">Поиск</string>
-    <string name="create_new">Новый</string>
     <string name="color_red">Красный</string>
     <string name="color_pink">Розовый</string>
     <string name="color_purple">Фиолетовый</string>
@@ -59,7 +58,6 @@
     <string name="dialog_sign_in_password">Пароль</string>
     <string name="dialog_title_download">Загрузить файл?</string>
     <string name="dialog_content_resubmission">Повторно отправить данные?</string>
-    <string name="dialog_content_ssl_error">Сертификат сайта не является доверенным. Всё равно продолжить?</string>
     <string name="dialog_sortName">Сортировать по названию</string>
     <string name="dialog_sortIcon">Сортировать по значку</string>
     <string name="dialog_sortDate">Сортировать по дате</string>
@@ -81,12 +79,6 @@
     <string name="setting_summary_search_engine_metager">Metager</string>
     <string name="setting_title_font">Размер шрифта</string>
     <string name="setting_title_dom">Хранилище DOM</string>
-    <string name="privacy_redirect">Перенаправить</string>
-    <string name="privacy_redirect_twitter">Twitter</string>
-    <string name="privacy_redirect_youTube">YouTube</string>
-    <string name="custom_redirects">Пользовательские редиректы</string>
-    <string name="source">Источник</string>
-    <string name="target">Цель</string>
     <string name="setting_title_save_data">Запрос \'Сохранить данные\'</string>
     <string name="setting_title_profiles">Профили</string>
     <string name="setting_title_profiles_edit">Редактирование профилей</string>
@@ -98,7 +90,6 @@
     <string name="setting_title_profiles_standard">Стандарт</string>
     <string name="setting_title_profiles_protected">Защищенный</string>
     <string name="setting_title_profiles_changed">Пользовательский</string>
-    <string name="setting_title_profiles_active">Профиль</string>
     <string name="setting_title_profiles_dataUsage">Использование данных</string>
     <string name="setting_title_profiles_privacy">Конфиденциальность</string>
     <string name="setting_title_profiles_Security">Безопасность</string>
@@ -109,11 +100,8 @@
     <string name="setting_title_javascript_popUp">Всплывающие окна</string>
     <string name="setting_title_javascript">JavaScript</string>
     <string name="setting_title_adblock">AdBlock</string>
-    <string name="setting_summary_adblock">Включите AdBlock, чтобы заблокировать раздражающую рекламу. Сайты загружаются быстрее при включении.</string>
-    <string name="setting_title_adblockHost">Блокированное содержимое</string>
     <string name="setting_title_location">Местоположение</string>
     <string name="setting_title_history">История</string>
-    <string name="setting_title_autofill">Данные формы:</string>
     <string name="setting_summary_autofill">Включить сохранение данных форм (Android Nougat и ниже) или службы автозаполнения (Android Oreo и выше).</string>
     <!-- browser clear -->
     <string name="data_summary">Все файлы будут экспортированы в каталог «Documents / browser_backup /» вашей SD-карты.</string>
@@ -130,7 +118,6 @@
     <string name="setting_title_data">Резервное копирование</string>
     <string name="setting_filter">Фильтр закладок</string>
     <string name="setting_title_fav">Домашняя страница</string>
-    <string name="setting_title_reload">Проведите вниз, чтобы перезагрузить</string>
     <string name="setting_title_searchEngine">Пользовательская поисковая система</string>
     <string name="setting_title_userAgent">Произвольный юзер-агент</string>
     <string name="setting_title_clipboard_record">Записи буфера обмена</string>
@@ -186,7 +173,6 @@
     <string name="dialog_postOnWebsiteHint">URL для открытия. Будет сохранен для следующего использования.</string>
     <string name="dialog_postOnWebsite">Разместить на сайте</string>
     <!-- Whitelist -->
-    <string name="whitelist_menu_clear">Очистить</string>
     <string name="whitelist_edit_hint">Домен</string>
     <string name="whitelist_add">Добавить</string>
     <string name="menu_desktopView">Десктопный вид</string>

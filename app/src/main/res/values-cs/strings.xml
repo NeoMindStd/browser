@@ -15,7 +15,6 @@
     <string name="album_title_home">Plocha</string>
     <string name="album_title_tab">Otevřené karty</string>
     <string name="search_hint">Hledat</string>
-    <string name="create_new">Nový</string>
     <string name="color_red">Červená</string>
     <string name="color_pink">Růžová</string>
     <string name="color_purple">Fialová</string>
@@ -59,7 +58,6 @@
     <string name="dialog_sign_in_password">Heslo</string>
     <string name="dialog_title_download">Stáhnout soubor?</string>
     <string name="dialog_content_resubmission">Znovu obnovit data?</string>
-    <string name="dialog_content_ssl_error">Certifikát webové stránky není důvěryhodný. Přesto pokračovat?</string>
     <string name="dialog_sortName">Řadit podle názvu</string>
     <string name="dialog_sortIcon">Řadit podle ikony</string>
     <string name="dialog_sortDate">Řadit podle data</string>
@@ -81,12 +79,6 @@
     <string name="setting_summary_search_engine_metager">Metager</string>
     <string name="setting_title_font">Velikost písma</string>
     <string name="setting_title_dom">Úložiště DOM</string>
-    <string name="privacy_redirect">Přesměrovat</string>
-    <string name="privacy_redirect_twitter">Twitter</string>
-    <string name="privacy_redirect_youTube">YouTube</string>
-    <string name="custom_redirects">Vlastní přesměrování</string>
-    <string name="source">Zdroj</string>
-    <string name="target">Cíl</string>
     <string name="setting_title_save_data">Požadavek „Ušetřit data“</string>
     <string name="setting_title_profiles">Profily</string>
     <string name="setting_title_profiles_edit">Upravit profily</string>
@@ -98,7 +90,6 @@
     <string name="setting_title_profiles_standard">Standardní</string>
     <string name="setting_title_profiles_protected">Chráněný</string>
     <string name="setting_title_profiles_changed">Vlastní</string>
-    <string name="setting_title_profiles_active">Profil</string>
     <string name="setting_title_profiles_dataUsage">Využití dat</string>
     <string name="setting_title_profiles_privacy">Soukromí</string>
     <string name="setting_title_profiles_Security">Zabezpečení</string>
@@ -109,11 +100,8 @@
     <string name="setting_title_javascript_popUp">Vyskakovací okna</string>
     <string name="setting_title_javascript">JavaScript</string>
     <string name="setting_title_adblock">AdBlock</string>
-    <string name="setting_summary_adblock">Zapněte AdBlock pro blokování obtěžujících reklam. Stránky se budou načítat rychleji.</string>
-    <string name="setting_title_adblockHost">Blokovaný obsah</string>
     <string name="setting_title_location">Poloha</string>
     <string name="setting_title_history">Historie</string>
-    <string name="setting_title_autofill">Data formulářů</string>
     <string name="setting_summary_autofill">Povolte ukládání dat formuláře (Android Nougat a nižší) nebo službu automatického vyplňování (Android Oreo a vyšší).</string>
     <!-- browser clear -->
     <string name="data_summary">Všechny soubory budou exportovány do adresáře „Documents/browser_backup/“ na vaší SD kartě.</string>
@@ -130,7 +118,6 @@
     <string name="setting_title_data">Záloha</string>
     <string name="setting_filter">Filtr záložek</string>
     <string name="setting_title_fav">Oblíbené</string>
-    <string name="setting_title_reload">Přejetím dolů znovu načtete</string>
     <string name="setting_title_searchEngine">Vlastní vyhledávač</string>
     <string name="setting_title_userAgent">Vlastní uživatelský agent</string>
     <string name="setting_title_clipboard_record">Záznam schránky</string>
@@ -186,7 +173,6 @@
     <string name="dialog_postOnWebsiteHint">URL pro otevření. Uloží se pro další použití.</string>
     <string name="dialog_postOnWebsite">Příspěvek na webových stránkách</string>
     <!-- Whitelist -->
-    <string name="whitelist_menu_clear">Vymazat</string>
     <string name="whitelist_edit_hint">Doména</string>
     <string name="whitelist_add">Přidat</string>
     <string name="menu_desktopView">Zobrazení pro PC</string>

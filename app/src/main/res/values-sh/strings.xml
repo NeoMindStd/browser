@@ -15,7 +15,6 @@
     <string name="album_title_home">Početna stranica</string>
     <string name="album_title_tab">Otvorene Kartice</string>
     <string name="search_hint">Traži</string>
-    <string name="create_new">New</string>
     <string name="color_red">Crvena</string>
     <string name="color_pink">Ružičasta</string>
     <string name="color_purple">Ljubičasta</string>
@@ -59,7 +58,6 @@
     <string name="dialog_sign_in_password">Šifra</string>
     <string name="dialog_title_download">Preuzmi datoteku?</string>
     <string name="dialog_content_resubmission">Ponovo poslati vaše podatke?</string>
-    <string name="dialog_content_ssl_error">Certifikat ove stranice nije pouzdan. Ipak nastavite?</string>
     <string name="dialog_sortName">Sortiraj po imenu</string>
     <string name="dialog_sortIcon">Sortiraj po ikoni</string>
     <string name="dialog_sortDate">Sortiraj po datumu</string>
@@ -81,12 +79,6 @@
     <string name="setting_summary_search_engine_metager">Metager</string>
     <string name="setting_title_font">Veličina slova</string>
     <string name="setting_title_dom">DOM skladište</string>
-    <string name="privacy_redirect">Preusmjeriti</string>
-    <string name="privacy_redirect_twitter">Twitter</string>
-    <string name="privacy_redirect_youTube">YouTube</string>
-    <string name="custom_redirects">Custom redirects</string>
-    <string name="source">Izvor</string>
-    <string name="target">Target</string>
     <string name="setting_title_save_data">Zahtjevnite \'Spašavanje Podataka\'</string>
     <string name="setting_title_profiles">Profili</string>
     <string name="setting_title_profiles_edit">Uredite profile</string>
@@ -98,7 +90,6 @@
     <string name="setting_title_profiles_standard">Standardni</string>
     <string name="setting_title_profiles_protected">Zaštićeni</string>
     <string name="setting_title_profiles_changed">Prilagođeni</string>
-    <string name="setting_title_profiles_active">Profil</string>
     <string name="setting_title_profiles_dataUsage">Korištenje dodataka</string>
     <string name="setting_title_profiles_privacy">Privatnost</string>
     <string name="setting_title_profiles_Security">Sigurnost</string>
@@ -109,11 +100,8 @@
     <string name="setting_title_javascript_popUp">Iskočke</string>
     <string name="setting_title_javascript">JavaScript</string>
     <string name="setting_title_adblock">AdBlock</string>
-    <string name="setting_summary_adblock">Omogućite AdBlock da biste blokirali dosadne reklame. Stranice se isto brže učitavaju kad je omogućen.</string>
-    <string name="setting_title_adblockHost">Blokirani sadržaji</string>
     <string name="setting_title_location">Lokacija</string>
     <string name="setting_title_history">Povijest</string>
-    <string name="setting_title_autofill">Formularni Podaci</string>
     <string name="setting_summary_autofill">Omogućite spašavanje formularskih podataka (Android Nougat i ispod) ili servis za automatsko ispunjavanje (Android Oreo i iznad).</string>
     <!-- browser clear -->
     <string name="data_summary">Sve datoteke će biti izvezene u direktorij \"Documents/browser_backup/\" na vašoj SD kartici.</string>
@@ -130,7 +118,6 @@
     <string name="setting_title_data">Sigurnosna kopija</string>
     <string name="setting_filter">Filter za bilješke</string>
     <string name="setting_title_fav">Omiljena</string>
-    <string name="setting_title_reload">Prevucite prema dolje za ponovno učitavanje</string>
     <string name="setting_title_searchEngine">Prilagođeni pretraživački stroj</string>
     <string name="setting_title_userAgent">Prilagođeni korisnički agent</string>
     <string name="setting_title_clipboard_record">Clipboard record</string>
@@ -186,7 +173,6 @@
     <string name="dialog_postOnWebsiteHint">URL za otvaranje. Biće sačuvan za sljedeću upotrebu.</string>
     <string name="dialog_postOnWebsite">Objavite na web stranici</string>
     <!-- Whitelist -->
-    <string name="whitelist_menu_clear">Očistiti</string>
     <string name="whitelist_edit_hint">Domena</string>
     <string name="whitelist_add">Dodati</string>
     <string name="menu_desktopView">Veliki prikaz</string>

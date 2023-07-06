@@ -15,7 +15,6 @@
     <string name="album_title_home">Inicio</string>
     <string name="album_title_tab">Pestañas abiertas</string>
     <string name="search_hint">Búsqueda</string>
-    <string name="create_new">Nuevo</string>
     <string name="color_red">Rojo</string>
     <string name="color_pink">Rosa</string>
     <string name="color_purple">Púrpura</string>
@@ -59,7 +58,6 @@
     <string name="dialog_sign_in_password">Contraseña</string>
     <string name="dialog_title_download">¿Descargar el archivo?</string>
     <string name="dialog_content_resubmission">¿Reenviar tus datos?</string>
-    <string name="dialog_content_ssl_error">El certificado del sitio no es seguro. ¿Continuar de todos modos?</string>
     <string name="dialog_sortName">Ordenar por nombre</string>
     <string name="dialog_sortIcon">Ordenar por icono</string>
     <string name="dialog_sortDate">Ordenar por fecha</string>
@@ -81,12 +79,6 @@
     <string name="setting_summary_search_engine_metager">Metager</string>
     <string name="setting_title_font">Tamaño de letra</string>
     <string name="setting_title_dom">Almacenamiento DOM</string>
-    <string name="privacy_redirect">Redirigir</string>
-    <string name="privacy_redirect_twitter">Twitter</string>
-    <string name="privacy_redirect_youTube">YouTube</string>
-    <string name="custom_redirects">Redirecciones personalizadas</string>
-    <string name="source">Origen</string>
-    <string name="target">Destinatario</string>
     <string name="setting_title_save_data">Solicitar \"reducir datos\"</string>
     <string name="setting_title_profiles">Perfiles</string>
     <string name="setting_title_profiles_edit">Editar perfil</string>
@@ -98,7 +90,6 @@
     <string name="setting_title_profiles_standard">Estándar</string>
     <string name="setting_title_profiles_protected">Protegido</string>
     <string name="setting_title_profiles_changed">Personalizado</string>
-    <string name="setting_title_profiles_active">Perfil</string>
     <string name="setting_title_profiles_dataUsage">Uso de datos</string>
     <string name="setting_title_profiles_privacy">Privacidad</string>
     <string name="setting_title_profiles_Security">Seguridad</string>
@@ -109,11 +100,8 @@
     <string name="setting_title_javascript_popUp">Popups</string>
     <string name="setting_title_javascript">JavaScript</string>
     <string name="setting_title_adblock">Bloqueador de anuncios</string>
-    <string name="setting_summary_adblock">Activar para bloquear anuncios molestos. También provocará que los sitios se carguen más rápido.</string>
-    <string name="setting_title_adblockHost">Contenido bloqueado</string>
     <string name="setting_title_location">Ubicación</string>
     <string name="setting_title_history">Historial</string>
-    <string name="setting_title_autofill">Datos de Formulario</string>
     <string name="setting_summary_autofill">Habilitar el guardado de datos de formulario (Android Nougat y más abajo) o servicio de autorelleno (Android Oreo y superior).</string>
     <!-- browser clear -->
     <string name="data_summary">Todos los archivos se exportarán al directorio \"Documentos / browser_backup /\" de su tarjeta SD.</string>
@@ -130,7 +118,6 @@
     <string name="setting_title_data">Respaldos</string>
     <string name="setting_filter">Filtro de marcadores</string>
     <string name="setting_title_fav">Favorito</string>
-    <string name="setting_title_reload">Deslice hacia abajo para refrescar</string>
     <string name="setting_title_searchEngine">Motor de búsqueda personalizado</string>
     <string name="setting_title_userAgent">Agente de usuario personalizado</string>
     <string name="setting_title_clipboard_record">Registro del portapapeles</string>
@@ -186,7 +173,6 @@
     <string name="dialog_postOnWebsiteHint">URL a abrir. Se guardará para el próximo uso.</string>
     <string name="dialog_postOnWebsite">Ver en el sitio web</string>
     <!-- Whitelist -->
-    <string name="whitelist_menu_clear">Limpiar</string>
     <string name="whitelist_edit_hint">Dominio</string>
     <string name="whitelist_add">Añadir</string>
     <string name="menu_desktopView">Vista escritorio</string>

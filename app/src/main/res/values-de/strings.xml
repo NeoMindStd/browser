@@ -15,7 +15,6 @@
     <string name="album_title_home">Start</string>
     <string name="album_title_tab">Tabs</string>
     <string name="search_hint">Suche</string>
-    <string name="create_new">Neu</string>
     <string name="color_red">Rot</string>
     <string name="color_pink">Pink</string>
     <string name="color_purple">Lila</string>
@@ -59,7 +58,6 @@
     <string name="dialog_sign_in_password">Passwort</string>
     <string name="dialog_title_download">Datei herunterladen?</string>
     <string name="dialog_content_resubmission">Daten noch einmal senden?</string>
-    <string name="dialog_content_ssl_error">Das Zertifikat der Seite ist nicht vertrauenswürdig. Trotzdem fortfahren?</string>
     <string name="dialog_sortName">Nach Namen sortieren</string>
     <string name="dialog_sortIcon">Nach Icon sortieren</string>
     <string name="dialog_sortDate">Nach Datum sortieren</string>
@@ -81,12 +79,6 @@
     <string name="setting_summary_search_engine_metager">Metager</string>
     <string name="setting_title_font">Schriftgröße</string>
     <string name="setting_title_dom">DOM-Speicher</string>
-    <string name="privacy_redirect">Umleitung</string>
-    <string name="privacy_redirect_twitter">Twitter</string>
-    <string name="privacy_redirect_youTube">YouTube</string>
-    <string name="custom_redirects">Eigene Weiterleitungen</string>
-    <string name="source">Quelle</string>
-    <string name="target">Ziel</string>
     <string name="setting_title_save_data">\"Daten sparen\" verlangen</string>
     <string name="setting_title_profiles">Profile</string>
     <string name="setting_title_profiles_edit">Profile bearbeiten</string>
@@ -98,7 +90,6 @@
     <string name="setting_title_profiles_standard">Standard</string>
     <string name="setting_title_profiles_protected">Geschützt</string>
     <string name="setting_title_profiles_changed">Eigenes Profil</string>
-    <string name="setting_title_profiles_active">Pofil</string>
     <string name="setting_title_profiles_dataUsage">Datennutzung</string>
     <string name="setting_title_profiles_privacy">Privatsphäre</string>
     <string name="setting_title_profiles_Security">Sicherheit</string>
@@ -109,11 +100,8 @@
     <string name="setting_title_javascript_popUp">Popups</string>
     <string name="setting_title_javascript">JavaScript</string>
     <string name="setting_title_adblock">AdBlock</string>
-    <string name="setting_summary_adblock">Aktiviere AdBlock, um lästige Werbung zu blockieren. Websites laden auch schneller, falls eingeschaltet.</string>
-    <string name="setting_title_adblockHost">Blockierter Inhalt</string>
     <string name="setting_title_location">Standortbestimmung</string>
     <string name="setting_title_history">Verlauf</string>
-    <string name="setting_title_autofill">Formulardaten</string>
     <string name="setting_summary_autofill">Aktiviere das Speichern von Formulardaten (Android Nougat und älter) oder den Autofill-Service (Android Oreo und neuer).</string>
     <!-- browser clear -->
     <string name="data_summary">Alle Dateien werden in das Verzeichnis \"Documents/browser_backup/\" Ihrer SD-Karte exportiert.</string>
@@ -130,7 +118,6 @@
     <string name="setting_title_data">Sicherung</string>
     <string name="setting_filter">Lesezeichen-Filter</string>
     <string name="setting_title_fav">Startseite</string>
-    <string name="setting_title_reload">Nach unten ziehen, um neu zu laden</string>
     <string name="setting_title_searchEngine">Nutzerdefinierte Suchmaschine</string>
     <string name="setting_title_userAgent">Eigener Useragent</string>
     <string name="setting_title_clipboard_record">Zwischenablage</string>
@@ -186,7 +173,6 @@
     <string name="dialog_postOnWebsiteHint">Zu öffnende URL. Wird für die nächste Verwendung gespeichert.</string>
     <string name="dialog_postOnWebsite">Auf Webseite posten</string>
     <!-- Whitelist -->
-    <string name="whitelist_menu_clear">Löschen</string>
     <string name="whitelist_edit_hint">Domain</string>
     <string name="whitelist_add">Hinzufügen</string>
     <string name="menu_desktopView">Desktop-Ansicht</string>

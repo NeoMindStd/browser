@@ -15,7 +15,6 @@
     <string name="album_title_home">صفحه خانگی</string>
     <string name="album_title_tab">زبانه های باز</string>
     <string name="search_hint">جستجو</string>
-    <string name="create_new">جدید</string>
     <string name="color_red">قرمز</string>
     <string name="color_pink">صورتی</string>
     <string name="color_purple">بنفش</string>
@@ -59,7 +58,6 @@
     <string name="dialog_sign_in_password">گذرواژه</string>
     <string name="dialog_title_download">فایل بارگیری شود؟</string>
     <string name="dialog_content_resubmission">درخواست دوباره ارسال شود؟</string>
-    <string name="dialog_content_ssl_error">مجوز سایت مورد نظر مورد اعتماد نمی باشد،در هر صورت ادامه دهم؟</string>
     <string name="dialog_sortName">مرتب سازی بر اساس نام</string>
     <string name="dialog_sortIcon">مرتب‌سازی بر اساس تصویر</string>
     <string name="dialog_sortDate">مرتب‌سازی بر اساس تاریخ</string>
@@ -81,12 +79,6 @@
     <string name="setting_summary_search_engine_metager">Metager</string>
     <string name="setting_title_font">اندازه قلم</string>
     <string name="setting_title_dom">محل ذخیره DOM</string>
-    <string name="privacy_redirect">هدایت</string>
-    <string name="privacy_redirect_twitter">توییتر</string>
-    <string name="privacy_redirect_youTube">یوتیوب</string>
-    <string name="custom_redirects">تغییرمسیرهای سفارشی</string>
-    <string name="source">منبع</string>
-    <string name="target">هدف</string>
     <string name="setting_title_save_data">درخواست صرفه جویی داده</string>
     <string name="setting_title_profiles">نمایه‌ ها</string>
     <string name="setting_title_profiles_edit">ویرایش نمایه ها</string>
@@ -98,7 +90,6 @@
     <string name="setting_title_profiles_standard">استاندارد</string>
     <string name="setting_title_profiles_protected">حفاظت شده</string>
     <string name="setting_title_profiles_changed">سفارشی</string>
-    <string name="setting_title_profiles_active">نمایه</string>
     <string name="setting_title_profiles_dataUsage">مصرف داده</string>
     <string name="setting_title_profiles_privacy">خصوصی</string>
     <string name="setting_title_profiles_Security">امنیت</string>
@@ -109,11 +100,8 @@
     <string name="setting_title_javascript_popUp">بالا پر</string>
     <string name="setting_title_javascript">جاواسکریپت</string>
     <string name="setting_title_adblock">مسدودسازی تبلیغات</string>
-    <string name="setting_summary_adblock">با فعال سازی این گزینه، مانع نمایش تبلیغات آزار دهنده شوید،همچنین سرعت بارگیری سایت ها را بهبود بخشید.</string>
-    <string name="setting_title_adblockHost">محتوای مسدود شده</string>
     <string name="setting_title_location">مکان جاری</string>
     <string name="setting_title_history">تاریخچه</string>
-    <string name="setting_title_autofill">محتوای فرم</string>
     <string name="setting_summary_autofill">ذخیره‌سازی محتوای فرم ( اندروید ٧ و پایین‌تر) یا سرویس تکمیل خودکار ( اندروید ۸ و بالاتر) را فعال کنید.</string>
     <!-- browser clear -->
     <string name="data_summary">همه فایلها به پوشه \"Documents/browser_backup/\" کارت حافظه شما صادر می شوند.</string>
@@ -130,7 +118,6 @@
     <string name="setting_title_data">پشتیبان گیری</string>
     <string name="setting_filter">جداسازی نشانک ها</string>
     <string name="setting_title_fav">مورد علاقه</string>
-    <string name="setting_title_reload">برای بارگیری مجدد انگشت خود را به پایین بکشید</string>
     <string name="setting_title_searchEngine">موتور جستجوی سفارشی</string>
     <string name="setting_title_userAgent">سفارشی سازی نماینده کاربری </string>
     <string name="setting_title_clipboard_record">Clipboard record</string>
@@ -187,7 +174,6 @@
     <string name="dialog_postOnWebsiteHint">آدرس اینترنتی برای باز کردن برای استفاده بعدی ذخیره می شود.</string>
     <string name="dialog_postOnWebsite">در وب سایت ارسال کنید</string>
     <!-- Whitelist -->
-    <string name="whitelist_menu_clear">پاک کن</string>
     <string name="whitelist_edit_hint">دامنه</string>
     <string name="whitelist_add">افزودن</string>
     <string name="menu_desktopView">DesktopPC نماي</string>

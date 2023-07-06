@@ -15,7 +15,6 @@
     <string name="album_title_home">Hem</string>
     <string name="album_title_tab">Öppnade flikar</string>
     <string name="search_hint">Sök</string>
-    <string name="create_new">Nya</string>
     <string name="color_red">Röd</string>
     <string name="color_pink">Rosa</string>
     <string name="color_purple">Lila</string>
@@ -59,7 +58,6 @@
     <string name="dialog_sign_in_password">Lösenord</string>
     <string name="dialog_title_download">Ladda ner filen?</string>
     <string name="dialog_content_resubmission">Skicka data på nytt?</string>
-    <string name="dialog_content_ssl_error">Certifikatet för webbplatsen är inte betrott. Fortsätt ändå?</string>
     <string name="dialog_sortName">Sortera efter namn</string>
     <string name="dialog_sortIcon">Sortera efter ikon</string>
     <string name="dialog_sortDate">Sortera efter datum</string>
@@ -81,12 +79,6 @@
     <string name="setting_summary_search_engine_metager">Metager</string>
     <string name="setting_title_font">Teckenstorlek</string>
     <string name="setting_title_dom">DOM-lagring</string>
-    <string name="privacy_redirect">Omdirigera</string>
-    <string name="privacy_redirect_twitter">Twitter</string>
-    <string name="privacy_redirect_youTube">YouTube</string>
-    <string name="custom_redirects">Anpassade omdirigeringar</string>
-    <string name="source">Källkod</string>
-    <string name="target">Pricktavla</string>
     <string name="setting_title_save_data">Begär \'Spardata\'</string>
     <string name="setting_title_profiles">Profiler</string>
     <string name="setting_title_profiles_edit">Redigera profiler</string>
@@ -98,7 +90,6 @@
     <string name="setting_title_profiles_standard">Standard</string>
     <string name="setting_title_profiles_protected">Skyddad</string>
     <string name="setting_title_profiles_changed">Anpassad</string>
-    <string name="setting_title_profiles_active">Profil</string>
     <string name="setting_title_profiles_dataUsage">Dataanvändning</string>
     <string name="setting_title_profiles_privacy">Sekretess</string>
     <string name="setting_title_profiles_Security">Säkerhet</string>
@@ -109,11 +100,8 @@
     <string name="setting_title_javascript_popUp">Popup-fönster</string>
     <string name="setting_title_javascript">JavaScript</string>
     <string name="setting_title_adblock">AdBlock</string>
-    <string name="setting_summary_adblock">Aktivera AdBlock för att blockera irriterande annonser. Webbplatser laddar också snabbare när det är aktiverat.</string>
-    <string name="setting_title_adblockHost">Blockerat innehåll</string>
     <string name="setting_title_location">Plats</string>
     <string name="setting_title_history">Historik</string>
-    <string name="setting_title_autofill">Formulärdata</string>
     <string name="setting_summary_autofill">Aktivera sparande av formulärdata (Android Nougat eller lägre) eller autofyllningstjänst (Android Oreo eller högre).</string>
     <!-- browser clear -->
     <string name="data_summary">Alla filer kommer att exporteras till \"Documents/browser_backup/\" på ditt SD-kort.</string>
@@ -130,7 +118,6 @@
     <string name="setting_title_data">Säkerhetskopiering</string>
     <string name="setting_filter">Bokmärkesfilter</string>
     <string name="setting_title_fav">Favorit</string>
-    <string name="setting_title_reload">Dra ner för att ladda om</string>
     <string name="setting_title_searchEngine">Anpassad sökmotor</string>
     <string name="setting_title_userAgent">Anpassad användaragent</string>
     <string name="setting_title_clipboard_record">Urklipp post</string>
@@ -186,7 +173,6 @@
     <string name="dialog_postOnWebsiteHint">URL att öppna. Kommer sparas för nästa användning.</string>
     <string name="dialog_postOnWebsite">Publicera på webbplats</string>
     <!-- Whitelist -->
-    <string name="whitelist_menu_clear">Rensa</string>
     <string name="whitelist_edit_hint">Domän</string>
     <string name="whitelist_add">Lägg till</string>
     <string name="menu_desktopView">Skrivbordsvy</string>

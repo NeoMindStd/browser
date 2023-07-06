@@ -309,7 +309,6 @@
                             app:chipIconTint="@drawable/bg_chip_icon_state" />
 
                     <com.google.android.material.chip.Chip
-                            android:id="@+id/chip_adBlock"
                             style="@style/Widget.Material3.Chip.Suggestion"
                             android:layout_width="wrap_content"
                             app:chipIcon="@drawable/icon_adblock"
@@ -333,7 +332,6 @@
                             app:chipIconTint="@drawable/bg_chip_icon_state" />
 
                     <com.google.android.material.chip.Chip
-                            android:id="@+id/chip_location"
                             style="@style/Widget.Material3.Chip.Suggestion"
                             android:layout_width="wrap_content"
                             app:chipIcon="@drawable/icon_location"
@@ -503,7 +501,6 @@
                         app:chipIconTint="@drawable/bg_chip_icon_state" />
 
                 <com.google.android.material.chip.Chip
-                        android:id="@+id/chip_toggleRedirect"
                         style="@style/Widget.Material3.Chip.Suggestion"
                         android:layout_width="wrap_content"
                         android:layout_gravity="center"

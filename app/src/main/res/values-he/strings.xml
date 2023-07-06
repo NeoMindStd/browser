@@ -15,7 +15,6 @@
     <string name="album_title_home">בית</string>
     <string name="album_title_tab">כרטיסיות נפתחות</string>
     <string name="search_hint">לחפש</string>
-    <string name="create_new">חדש</string>
     <string name="color_red">אדום</string>
     <string name="color_pink">ורוד</string>
     <string name="color_purple">סגול</string>
@@ -59,7 +58,6 @@
     <string name="dialog_sign_in_password">סיסמה</string>
     <string name="dialog_title_download">להוריד את הקובץ?</string>
     <string name="dialog_content_resubmission">לשלוח מחדש את הנתונים שלך?</string>
-    <string name="dialog_content_ssl_error">האישור של האתר אינו מהימן. להמשיך בכל זאת?</string>
     <string name="dialog_sortName">מיין לפי שם</string>
     <string name="dialog_sortIcon">מיין לפי סמל</string>
     <string name="dialog_sortDate">מיין לפי תאריך</string>
@@ -81,12 +79,6 @@
     <string name="setting_summary_search_engine_metager">metager</string>
     <string name="setting_title_font">גודל גופן</string>
     <string name="setting_title_dom">אחסון DOM</string>
-    <string name="privacy_redirect">הפניה מחדש</string>
-    <string name="privacy_redirect_twitter">טוויטר</string>
-    <string name="privacy_redirect_youTube">יוטיוב</string>
-    <string name="custom_redirects">הפניות מותאמות</string>
-    <string name="source">מקור</string>
-    <string name="target">מטרה</string>
     <string name="setting_title_save_data">בקש \'שמור נתונים\'</string>
     <string name="setting_title_profiles">פרופילים</string>
     <string name="setting_title_profiles_edit">ערוך פרופילים</string>
@@ -98,7 +90,6 @@
     <string name="setting_title_profiles_standard">תקן</string>
     <string name="setting_title_profiles_protected">מוגן</string>
     <string name="setting_title_profiles_changed">המותאם אישית</string>
-    <string name="setting_title_profiles_active">פרופיל</string>
     <string name="setting_title_profiles_dataUsage">שימוש בנתונים</string>
     <string name="setting_title_profiles_privacy">פרטיות</string>
     <string name="setting_title_profiles_Security">ביטחון</string>
@@ -109,11 +100,8 @@
     <string name="setting_title_javascript_popUp">חלונות קופצים</string>
     <string name="setting_title_javascript">JavaScript</string>
     <string name="setting_title_adblock">AdBlock</string>
-    <string name="setting_summary_adblock">אפשר AdBlock כדי לחסום מודעות מעצבנות. אתרים גם נטענים מהר יותר כשהם מופעלים.</string>
-    <string name="setting_title_adblockHost">תוכן חסום</string>
     <string name="setting_title_location">מקום</string>
     <string name="setting_title_history">היסטוריה</string>
-    <string name="setting_title_autofill">טופס מידע</string>
     <string name="setting_summary_autofill">אפשר שמירת נתוני טפסים (אנדרואיד נוגט ומטה) או שירות מילוי אוטומטי (אנדרואיד אוראו ומעלה).</string>
     <!-- browser clear -->
     <string name="data_summary">כל הקבצים ייוצאו לספריית \"Documents/browser_backup/\" של כרטיס ה-SD שלכם.</string>
@@ -130,7 +118,6 @@
     <string name="setting_title_data">גיבוי</string>
     <string name="setting_filter">מסנן סימניות</string>
     <string name="setting_title_fav">אהוב</string>
-    <string name="setting_title_reload">החלק מטה כדי לטעון מחדש</string>
     <string name="setting_title_searchEngine">מנוע חיפוש מותאם אישית</string>
     <string name="setting_title_userAgent">סוכן משתמש מותאם אישית</string>
     <string name="setting_title_clipboard_record">Clipboard record</string>
@@ -186,7 +173,6 @@
     <string name="dialog_postOnWebsiteHint">כתובת אתר לפתיחה. יישמר לשימוש הבא.</string>
     <string name="dialog_postOnWebsite">פרסם באתר</string>
     <!-- Whitelist -->
-    <string name="whitelist_menu_clear">נקה</string>
     <string name="whitelist_edit_hint">תחום</string>
     <string name="whitelist_add">הוסף</string>
     <string name="menu_desktopView">תצוגת שולחן עבודה</string>

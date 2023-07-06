@@ -15,7 +15,6 @@
     <string name="album_title_home">Início</string>
     <string name="album_title_tab">Abas abertas</string>
     <string name="search_hint">Pesquisar</string>
-    <string name="create_new">Nova</string>
     <string name="color_red">Vermelho</string>
     <string name="color_pink">Rosa</string>
     <string name="color_purple">Roxo</string>
@@ -59,7 +58,6 @@
     <string name="dialog_sign_in_password">Senha</string>
     <string name="dialog_title_download">Baixar o arquivo?</string>
     <string name="dialog_content_resubmission">Reenviar os seus dados?</string>
-    <string name="dialog_content_ssl_error">O certificado do site não é de confiança. Continuar?</string>
     <string name="dialog_sortName">Ordenar por nome</string>
     <string name="dialog_sortIcon">Ordenar por ícone</string>
     <string name="dialog_sortDate">Ordenar por data</string>
@@ -81,12 +79,6 @@
     <string name="setting_summary_search_engine_metager">Metager</string>
     <string name="setting_title_font">Tamanho de letra</string>
     <string name="setting_title_dom">Armazenamento DOM</string>
-    <string name="privacy_redirect">Redirecionar</string>
-    <string name="privacy_redirect_twitter">Twitter</string>
-    <string name="privacy_redirect_youTube">Youtube</string>
-    <string name="custom_redirects">Redirecionamentos personalizados</string>
-    <string name="source">Origem</string>
-    <string name="target">Destino</string>
     <string name="setting_title_save_data">Solicitar \'Economia de Dados\'</string>
     <string name="setting_title_profiles">Perfis</string>
     <string name="setting_title_profiles_edit">Editar Perfis</string>
@@ -98,7 +90,6 @@
     <string name="setting_title_profiles_standard">Padrão</string>
     <string name="setting_title_profiles_protected">Protegido</string>
     <string name="setting_title_profiles_changed">Personalizado</string>
-    <string name="setting_title_profiles_active">Perfil</string>
     <string name="setting_title_profiles_dataUsage">Utilização dos dados</string>
     <string name="setting_title_profiles_privacy">Privacidade</string>
     <string name="setting_title_profiles_Security">Segurança</string>
@@ -109,11 +100,8 @@
     <string name="setting_title_javascript_popUp">Popups</string>
     <string name="setting_title_javascript">JavaScript</string>
     <string name="setting_title_adblock">AdBlock</string>
-    <string name="setting_summary_adblock">Habilita o AdBlock para bloquear anúncios irritantes. Sites também carregam mais rápido quando ativado.</string>
-    <string name="setting_title_adblockHost">Conteúdo bloqueado</string>
     <string name="setting_title_location">Localização</string>
     <string name="setting_title_history">Histórico</string>
-    <string name="setting_title_autofill">Dados de formulário</string>
     <string name="setting_summary_autofill">Ativar o salvamento de dados de formulário (Android Nougat e abaixo) ou o serviço de autopreenchimento (Android Oreo e superior).</string>
     <!-- browser clear -->
     <string name="data_summary">Todos os arquivos serão exportados para o diretório \"Documents / browser_backup /\" do seu cartão SD.</string>
@@ -130,7 +118,6 @@
     <string name="setting_title_data">Backup</string>
     <string name="setting_filter">Filtro de favoritos</string>
     <string name="setting_title_fav">Favorito</string>
-    <string name="setting_title_reload">Deslize para baixo para fechar</string>
     <string name="setting_title_searchEngine">Mecanismo de pesquisa customizado</string>
     <string name="setting_title_userAgent">User agent personalizado</string>
     <string name="setting_title_clipboard_record">Registros da área de transferência</string>
@@ -186,7 +173,6 @@
     <string name="dialog_postOnWebsiteHint">URL para abrir. Será guardada para o próximo uso.</string>
     <string name="dialog_postOnWebsite">Publicar no site</string>
     <!-- Whitelist -->
-    <string name="whitelist_menu_clear">Limpar</string>
     <string name="whitelist_edit_hint">Domínio</string>
     <string name="whitelist_add">Adicionar</string>
     <string name="menu_desktopView">Visualização para área de trabalho</string>

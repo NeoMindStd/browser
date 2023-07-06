@@ -15,7 +15,6 @@
     <string name="album_title_home">Home</string>
     <string name="album_title_tab">Opened Tabs</string>
     <string name="search_hint">Search</string>
-    <string name="create_new">New</string>
     <string name="color_red">Red</string>
     <string name="color_pink">Pink</string>
     <string name="color_purple">Purple</string>
@@ -59,7 +58,6 @@
     <string name="dialog_sign_in_password">Password</string>
     <string name="dialog_title_download">Download the file?</string>
     <string name="dialog_content_resubmission">Resubmit your data?</string>
-    <string name="dialog_content_ssl_error">The certificate of the site is not trusted. Proceed anyway?</string>
     <string name="dialog_sortName">Sort by name</string>
     <string name="dialog_sortIcon">Sort by icon</string>
     <string name="dialog_sortDate">Sort by date</string>
@@ -81,12 +79,6 @@
     <string name="setting_summary_search_engine_metager">Metager</string>
     <string name="setting_title_font">Font size</string>
     <string name="setting_title_dom">DOM Storage</string>
-    <string name="privacy_redirect">Redirect</string>
-    <string name="privacy_redirect_twitter">Twitter</string>
-    <string name="privacy_redirect_youTube">YouTube</string>
-    <string name="custom_redirects">Custom redirects</string>
-    <string name="source">Source</string>
-    <string name="target">Target</string>
     <string name="setting_title_save_data">Request \'Save Data\'</string>
     <string name="setting_title_profiles">Profiles</string>
     <string name="setting_title_profiles_edit">Edit profiles</string>
@@ -98,7 +90,6 @@
     <string name="setting_title_profiles_standard">Standard</string>
     <string name="setting_title_profiles_protected">Protected</string>
     <string name="setting_title_profiles_changed">Custom</string>
-    <string name="setting_title_profiles_active">Profile</string>
     <string name="setting_title_profiles_dataUsage">Data usage</string>
     <string name="setting_title_profiles_privacy">Privacy</string>
     <string name="setting_title_profiles_Security">Security</string>
@@ -109,11 +100,8 @@
     <string name="setting_title_javascript_popUp">Popups</string>
     <string name="setting_title_javascript">JavaScript</string>
     <string name="setting_title_adblock">AdBlock</string>
-    <string name="setting_summary_adblock">Enable AdBlock to block annoying ads. Sites also load faster when enabled.</string>
-    <string name="setting_title_adblockHost">Blocked content</string>
     <string name="setting_title_location">Location</string>
     <string name="setting_title_history">History</string>
-    <string name="setting_title_autofill">Form Data</string>
     <string name="setting_summary_autofill">Enable the saving of form data (Android Nougat and below) or autofill service (Android Oreo and above).</string>
     <!-- browser clear -->
     <string name="data_summary">All files will be exported to the \"Documents/browser_backup/\" directory of your SD-card.</string>
@@ -130,7 +118,6 @@
     <string name="setting_title_data">Backup</string>
     <string name="setting_filter">Bookmark filter</string>
     <string name="setting_title_fav">Favorite</string>
-    <string name="setting_title_reload">Swipe down to reload</string>
     <string name="setting_title_searchEngine">Custom search engine</string>
     <string name="setting_title_userAgent">Custom user agent</string>
     <string name="setting_title_clipboard_record">Clipboard record</string>
@@ -186,7 +173,6 @@
     <string name="dialog_postOnWebsiteHint">URL to open. Will be saved for next use.</string>
     <string name="dialog_postOnWebsite">Post on website</string>
     <!-- Whitelist -->
-    <string name="whitelist_menu_clear">Clear</string>
     <string name="whitelist_edit_hint">Domain</string>
     <string name="whitelist_add">Add</string>
     <string name="menu_desktopView">Desktop view</string>
