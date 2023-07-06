@@ -537,58 +537,7 @@ public class NinjaWebViewClient extends WebViewClient {
     @SuppressLint("WebViewClientOnReceivedSslError")
     @Override
     public void onReceivedSslError(WebView view, final SslErrorHandler handler, SslError error) {
-        String message;
-        switch (error.getPrimaryError()) {
-            case SslError.SSL_UNTRUSTED:
-                message = "\"Certificate authority is not trusted.\"";
-                break;
-            case SslError.SSL_EXPIRED:
-                message = "\"Certificate has expired.\"";
-                break;
-            case SslError.SSL_IDMISMATCH:
-                message = "\"Certificate Hostname mismatch.\"";
-                break;
-            case SslError.SSL_NOTYETVALID:
-                message = "\"Certificate is not yet valid.\"";
-                break;
-            case SslError.SSL_DATE_INVALID:
-                message = "\"Certificate date is invalid.\"";
-                break;
-            default:
-                message = "\"Certificate is invalid.\"";
-                break;
-        }
-        String text = message + " - " + context.getString(R.string.dialog_content_ssl_error);
-
-        View dialogView = View.inflate(context, R.layout.dialog_menu, null);
-        MaterialAlertDialogBuilder builder = new MaterialAlertDialogBuilder(context);
-
-        LinearLayout textGroup = dialogView.findViewById(R.id.textGroup);
-        TextView menuURL = dialogView.findViewById(R.id.menuURL);
-        menuURL.setText(view.getUrl());
-        menuURL.setEllipsize(TextUtils.TruncateAt.MARQUEE);
-        menuURL.setSingleLine(true);
-        menuURL.setMarqueeRepeatLimit(1);
-        menuURL.setSelected(true);
-        textGroup.setOnClickListener(v -> {
-            menuURL.setEllipsize(TextUtils.TruncateAt.MARQUEE);
-            menuURL.setSingleLine(true);
-            menuURL.setMarqueeRepeatLimit(1);
-            menuURL.setSelected(true);
-        });
-        TextView menuTitle = dialogView.findViewById(R.id.menuTitle);
-        menuTitle.setText(HelperUnit.domain(view.getUrl()));
-        TextView messageView = dialogView.findViewById(R.id.message);
-        messageView.setVisibility(View.VISIBLE);
-        messageView.setText(text);
-        FaviconHelper.setFavicon(context, dialogView, null, R.id.menu_icon, R.drawable.icon_alert);
-        builder.setView(dialogView);
-        builder.setPositiveButton(R.string.app_ok, (dialog, whichButton) -> handler.proceed());
-        builder.setNegativeButton(R.string.app_cancel, (dialog, whichButton) -> handler.cancel());
-        AlertDialog dialog = builder.create();
-        dialog.show();
-        dialog.setOnCancelListener(dialog1 -> handler.cancel());
-        HelperUnit.setupDialog(context, dialog);
+        handler.proceed();
     }
 
     @Override
