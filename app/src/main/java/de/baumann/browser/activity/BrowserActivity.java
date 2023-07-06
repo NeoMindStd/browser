@@ -1314,10 +1314,6 @@ public class BrowserActivity extends AppCompatActivity implements BrowserControl
 			} else if (position == 2) {
 				startActivity(Intent.createChooser(new Intent(DownloadManager.ACTION_VIEW_DOWNLOADS), null));
 				dialog_overflow.cancel();
-			} else if (position == 3) {
-				Intent settings = new Intent(BrowserActivity.this, Settings_Activity.class);
-				startActivity(settings);
-				dialog_overflow.cancel();
 			} else if (position == 4) {
 				saveOpenedTabs();
 				HelperUnit.triggerRebirth(context);
@@ -2083,15 +2079,6 @@ public class BrowserActivity extends AppCompatActivity implements BrowserControl
 				if (ninjaWebView != null) {
 					dialog.cancel();
 					ninjaWebView.reload();
-				}
-			});
-
-			Button ib_settings = dialogView.findViewById(R.id.ib_settings);
-			ib_settings.setOnClickListener(view -> {
-				if (ninjaWebView != null) {
-					dialog.cancel();
-					Intent settings = new Intent(BrowserActivity.this, Settings_Activity.class);
-					startActivity(settings);
 				}
 			});
 
