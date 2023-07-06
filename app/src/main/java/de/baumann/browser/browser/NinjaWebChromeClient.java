@@ -2,25 +2,15 @@ package de.baumann.browser.browser;
 
 import java.util.Objects;
 
-import android.app.Activity;
 import android.content.Context;
-import android.content.SharedPreferences;
-import android.graphics.Bitmap;
 import android.net.Uri;
 import android.view.View;
-import android.webkit.GeolocationPermissions;
-import android.webkit.PermissionRequest;
 import android.webkit.ValueCallback;
 import android.webkit.WebChromeClient;
 import android.webkit.WebResourceRequest;
 import android.webkit.WebView;
 import android.webkit.WebViewClient;
-import androidx.appcompat.app.AlertDialog;
-import androidx.preference.PreferenceManager;
-import com.google.android.material.dialog.MaterialAlertDialogBuilder;
-import de.baumann.browser.R;
 import de.baumann.browser.unit.BrowserUnit;
-import de.baumann.browser.unit.HelperUnit;
 import de.baumann.browser.view.NinjaWebView;
 
 public class NinjaWebChromeClient extends WebChromeClient {
@@ -36,7 +26,6 @@ public class NinjaWebChromeClient extends WebChromeClient {
 	public void onProgressChanged(WebView view, int progress) {
 		super.onProgressChanged(view, progress);
 		ninjaWebView.updateTitle(progress);
-		ninjaWebView.updateFavicon(view.getUrl());
 		if (Objects.requireNonNull(view.getTitle()).isEmpty())
 			ninjaWebView.updateTitle(view.getUrl(), view.getUrl());
 		else
@@ -78,12 +67,6 @@ public class NinjaWebChromeClient extends WebChromeClient {
 		WebChromeClient.FileChooserParams fileChooserParams) {
 		NinjaWebView.getBrowserController().showFileChooser(filePathCallback);
 		return true;
-	}
-
-	@Override
-	public void onReceivedIcon(WebView view, Bitmap icon) {
-		ninjaWebView.setFavicon(icon);
-		super.onReceivedIcon(view, icon);
 	}
 
 	@Override

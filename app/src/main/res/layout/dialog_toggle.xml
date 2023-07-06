@@ -348,6 +348,7 @@
                         android:layout_width="match_parent"
                         android:layout_height="wrap_content"
                         android:gravity="center">
+
                     <com.google.android.material.chip.Chip
                             android:id="@+id/chip_history"
                             style="@style/Widget.Material3.Chip.Suggestion"

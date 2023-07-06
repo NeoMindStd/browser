@@ -12,7 +12,6 @@ import java.util.Objects;
 
 import android.annotation.SuppressLint;
 import android.annotation.TargetApi;
-import android.app.Activity;
 import android.app.Notification;
 import android.app.NotificationChannel;
 import android.app.NotificationManager;
@@ -22,7 +21,6 @@ import android.content.Intent;
 import android.content.SharedPreferences;
 import android.content.res.Configuration;
 import android.content.res.Resources;
-import android.graphics.Bitmap;
 import android.graphics.Color;
 import android.os.Build;
 import android.text.TextUtils;
@@ -40,7 +38,6 @@ import android.widget.GridView;
 import android.widget.LinearLayout;
 import android.widget.TextView;
 import androidx.annotation.NonNull;
-import androidx.annotation.Nullable;
 import androidx.appcompat.app.AlertDialog;
 import androidx.core.app.NotificationCompat;
 import androidx.preference.PreferenceManager;
@@ -60,9 +57,6 @@ import de.baumann.browser.browser.List_trusted;
 import de.baumann.browser.browser.NinjaDownloadListener;
 import de.baumann.browser.browser.NinjaWebChromeClient;
 import de.baumann.browser.browser.NinjaWebViewClient;
-import de.baumann.browser.database.FaviconHelper;
-import de.baumann.browser.database.Record;
-import de.baumann.browser.database.RecordAction;
 import de.baumann.browser.unit.BrowserUnit;
 import de.baumann.browser.unit.HelperUnit;
 
@@ -84,7 +78,6 @@ public class NinjaWebView extends WebView implements AlbumController {
 	private List_trusted listTrusted;
 	private List_standard listStandard;
 	private List_protected listProtected;
-	private Bitmap favicon;
 	private SharedPreferences sp;
 	private boolean foreground;
 
@@ -529,7 +522,6 @@ public class NinjaWebView extends WebView implements AlbumController {
 	public synchronized void loadUrl(@NonNull String url) {
 		InputMethodManager imm = (InputMethodManager)this.context.getSystemService(Context.INPUT_METHOD_SERVICE);
 		imm.hideSoftInputFromWindow(this.getWindowToken(), 0);
-		favicon = null;
 		stopped = false;
 
 		if (url.startsWith("http://")) {
@@ -559,7 +551,6 @@ public class NinjaWebView extends WebView implements AlbumController {
 			TextView message = dialogView.findViewById(R.id.message);
 			message.setVisibility(View.VISIBLE);
 			message.setText(R.string.toast_unsecured);
-			FaviconHelper.setFavicon(context, dialogView, null, R.id.menu_icon, R.drawable.icon_alert);
 			builder.setView(dialogView);
 
 			AlertDialog dialog = builder.create();
@@ -610,7 +601,6 @@ public class NinjaWebView extends WebView implements AlbumController {
 
 	public void setAlbumTitle(String title, String url) {
 		album.setAlbumTitle(title, url);
-		FaviconHelper.setFavicon(context, getAlbumView(), url, R.id.faviconView, R.drawable.icon_image_broken);
 	}
 
 	@Override
@@ -636,10 +626,6 @@ public class NinjaWebView extends WebView implements AlbumController {
 
 	public synchronized void updateTitle(String title, String url) {
 		album.setAlbumTitle(title, url);
-	}
-
-	public synchronized void updateFavicon(String url) {
-		FaviconHelper.setFavicon(context, getAlbumView(), url, R.id.faviconView, R.drawable.icon_image_broken);
 	}
 
 	@Override
@@ -717,31 +703,6 @@ public class NinjaWebView extends WebView implements AlbumController {
 				WebSettingsCompat.setAlgorithmicDarkeningAllowed(s, true);
 				sp.edit().putBoolean("setAlgorithmicDarkeningAllowed", true).apply();
 			}
-		}
-	}
-
-	public void resetFavicon() {
-		this.favicon = null;
-	}
-
-	@Nullable
-	@Override
-	public Bitmap getFavicon() {
-		return favicon;
-	}
-
-	public void setFavicon(Bitmap favicon) {
-		this.favicon = favicon;
-		//Save faviconView for existing bookmarks or start site entries
-		FaviconHelper faviconHelper = new FaviconHelper(context);
-		RecordAction action = new RecordAction(context);
-		action.open(false);
-		List<Record> list;
-		list = action.listEntries((Activity)context);
-		action.close();
-		for (Record listItem : list) {
-			if (listItem.getURL().equals(getUrl()) && faviconHelper.getFavicon(listItem.getURL()) == null)
-				faviconHelper.addFavicon(this.context, getUrl(), getFavicon());
 		}
 	}
 

@@ -5,7 +5,6 @@ import java.util.List;
 import java.util.Locale;
 
 import android.content.Context;
-import android.graphics.Bitmap;
 import android.util.TypedValue;
 import android.view.LayoutInflater;
 import android.view.View;
@@ -17,7 +16,6 @@ import androidx.annotation.NonNull;
 import androidx.core.content.res.ResourcesCompat;
 import com.google.android.material.card.MaterialCardView;
 import de.baumann.browser.R;
-import de.baumann.browser.database.FaviconHelper;
 import de.baumann.browser.database.Record;
 
 public class AdapterRecord extends ArrayAdapter<Record> {
@@ -103,14 +101,7 @@ public class AdapterRecord extends ArrayAdapter<Record> {
 			holder.cardView.setCardBackgroundColor(color);
 		}
 
-		FaviconHelper faviconHelper = new FaviconHelper(context);
-		Bitmap bitmap = faviconHelper.getFavicon(record.getURL());
-
-		if (bitmap != null) {
-			holder.favicon.setImageBitmap(bitmap);
-		} else {
-			holder.favicon.setImageResource(R.drawable.icon_image_broken);
-		}
+		holder.favicon.setImageResource(R.drawable.icon_image_broken);
 
 		return view;
 	}

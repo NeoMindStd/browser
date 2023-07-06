@@ -11,7 +11,6 @@ import java.util.List;
 import java.util.Objects;
 import java.util.concurrent.atomic.AtomicInteger;
 
-import android.Manifest;
 import android.animation.ObjectAnimator;
 import android.annotation.SuppressLint;
 import android.app.Activity;
@@ -26,7 +25,6 @@ import android.content.Context;
 import android.content.Intent;
 import android.content.IntentFilter;
 import android.content.SharedPreferences;
-import android.content.pm.PackageManager;
 import android.content.res.Configuration;
 import android.content.res.Resources;
 import android.graphics.Bitmap;
@@ -78,7 +76,6 @@ import androidx.appcompat.app.AlertDialog;
 import androidx.appcompat.app.AppCompatActivity;
 import androidx.appcompat.widget.PopupMenu;
 import androidx.cardview.widget.CardView;
-import androidx.core.app.ActivityCompat;
 import androidx.core.content.ContextCompat;
 import androidx.preference.PreferenceManager;
 import androidx.webkit.WebSettingsCompat;
@@ -104,7 +101,6 @@ import de.baumann.browser.browser.DataURIParser;
 import de.baumann.browser.browser.List_protected;
 import de.baumann.browser.browser.List_standard;
 import de.baumann.browser.browser.List_trusted;
-import de.baumann.browser.database.FaviconHelper;
 import de.baumann.browser.database.Record;
 import de.baumann.browser.database.RecordAction;
 import de.baumann.browser.unit.BrowserUnit;
@@ -1078,7 +1074,6 @@ public class BrowserActivity extends AppCompatActivity implements BrowserControl
 		AlertDialog dialog_overflow = builder.create();
 		dialog_overflow.show();
 		HelperUnit.setupDialog(context, dialog_overflow);
-		FaviconHelper.setFavicon(context, dialogView, url, R.id.menu_icon, R.drawable.icon_image_broken);
 
 		LinearLayout textGroup = dialogView.findViewById(R.id.textGroup);
 		TextView overflowURL = dialogView.findViewById(R.id.overflowURL);
@@ -1433,12 +1428,7 @@ public class BrowserActivity extends AppCompatActivity implements BrowserControl
 		ImageView menu_icon = dialogView.findViewById(R.id.menu_icon);
 
 		if (type == SRC_ANCHOR_TYPE) {
-			FaviconHelper faviconHelper = new FaviconHelper(context);
-			Bitmap bitmap = faviconHelper.getFavicon(url);
-			if (bitmap != null)
-				menu_icon.setImageBitmap(bitmap);
-			else
-				menu_icon.setImageResource(R.drawable.icon_link);
+			menu_icon.setImageResource(R.drawable.icon_link);
 		} else if (type == IMAGE_TYPE)
 			menu_icon.setImageResource(R.drawable.icon_image);
 		else
@@ -1569,7 +1559,6 @@ public class BrowserActivity extends AppCompatActivity implements BrowserControl
 		TextView menuTitle = dialogView.findViewById(R.id.menuTitle);
 		menuTitle.setText(title);
 
-		FaviconHelper.setFavicon(context, dialogView, url, R.id.menu_icon, R.drawable.icon_image_broken);
 		builder.setView(dialogView);
 		AlertDialog dialog = builder.create();
 		dialog.show();
@@ -1671,7 +1660,6 @@ public class BrowserActivity extends AppCompatActivity implements BrowserControl
 					});
 					TextView menuTitleEdit = dialogViewSubMenu.findViewById(R.id.menuTitleEdit);
 					menuTitleEdit.setText(HelperUnit.domain(url));
-					FaviconHelper.setFavicon(context, dialogViewSubMenu, null, R.id.menu_icon, R.drawable.icon_edit);
 
 					LinearLayout editButtonsLayout = dialogViewSubMenu.findViewById(R.id.editButtonsLayout);
 					editButtonsLayout.setVisibility(View.VISIBLE);
@@ -1800,8 +1788,6 @@ public class BrowserActivity extends AppCompatActivity implements BrowserControl
 			TextView dialog_titleProfile = dialogView.findViewById(R.id.dialog_titleProfile);
 			ninjaWebView.putProfileBoolean("", dialog_titleProfile, chip_profile_trusted, chip_profile_standard,
 				chip_profile_protected, chip_profile_changed);
-
-			FaviconHelper.setFavicon(context, dialogView, url, R.id.menu_icon, R.drawable.icon_image_broken);
 
 			LinearLayout textGroup = dialogView.findViewById(R.id.textGroup);
 			TextView overflowURL = dialogView.findViewById(R.id.overflowURL);
@@ -2240,9 +2226,6 @@ public class BrowserActivity extends AppCompatActivity implements BrowserControl
 	}
 
 	private void save_atHome(final String title, final String url) {
-		FaviconHelper faviconHelper = new FaviconHelper(context);
-		faviconHelper.addFavicon(context, ninjaWebView.getUrl(), ninjaWebView.getFavicon());
-
 		RecordAction action = new RecordAction(context);
 		action.open(true);
 		if (action.checkUrl(url, RecordUnit.TABLE_START))
@@ -2339,8 +2322,6 @@ public class BrowserActivity extends AppCompatActivity implements BrowserControl
 	}
 
 	private void saveBookmark() {
-		FaviconHelper faviconHelper = new FaviconHelper(context);
-		faviconHelper.addFavicon(context, ninjaWebView.getUrl(), ninjaWebView.getFavicon());
 		RecordAction action = new RecordAction(context);
 		action.open(true);
 		if (action.checkUrl(ninjaWebView.getUrl(), RecordUnit.TABLE_BOOKMARK))
@@ -2630,7 +2611,6 @@ public class BrowserActivity extends AppCompatActivity implements BrowserControl
 			TextView menuTitle = dialogView.findViewById(R.id.menuTitle);
 			menuTitle.setText(titleDialog);
 
-			FaviconHelper.setFavicon(context, dialogView, urlDialog, R.id.menu_icon, R.drawable.icon_image_broken);
 			builder.setView(dialogView);
 			AlertDialog dialog = builder.create();
 			dialog.show();
@@ -2691,7 +2671,6 @@ public class BrowserActivity extends AppCompatActivity implements BrowserControl
 			View dialogView = View.inflate(context, R.layout.dialog_menu, null);
 			builder.setView(dialogView);
 			AlertDialog dialog = builder.create();
-			FaviconHelper.setFavicon(context, dialogView, url, R.id.menu_icon, R.drawable.icon_link);
 
 			LinearLayout textGroup = dialogView.findViewById(R.id.textGroup);
 			TextView menuURL = dialogView.findViewById(R.id.menuURL);

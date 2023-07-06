@@ -33,12 +33,7 @@ import com.google.android.material.dialog.MaterialAlertDialogBuilder;
 import com.google.android.material.textfield.TextInputEditText;
 import com.google.android.material.textfield.TextInputLayout;
 import de.baumann.browser.R;
-import de.baumann.browser.database.FaviconHelper;
-import de.baumann.browser.database.Record;
-import de.baumann.browser.database.RecordAction;
-import de.baumann.browser.unit.BrowserUnit;
 import de.baumann.browser.unit.HelperUnit;
-import de.baumann.browser.unit.RecordUnit;
 import de.baumann.browser.view.NinjaWebView;
 
 public class NinjaWebViewClient extends WebViewClient {
@@ -85,7 +80,6 @@ public class NinjaWebViewClient extends WebViewClient {
 	public void onPageStarted(WebView view, String url, Bitmap favicon) {
 
 		ninjaWebView.setStopped(false);
-		ninjaWebView.resetFavicon();
 
 		super.onPageStarted(view, url, favicon);
 
@@ -404,7 +398,7 @@ public class NinjaWebViewClient extends WebViewClient {
 				"Object.defineProperty(navigator, 'keyboard',{value:null});" +
 				"Object.defineProperty(navigator, 'sendBeacon',{value:null});", null);
 
-				view.evaluateJavascript("" + "Object.defineProperty(navigator, 'mediaDevices',{value:null});", null);
+			view.evaluateJavascript("" + "Object.defineProperty(navigator, 'mediaDevices',{value:null});", null);
 		}
 	}
 
@@ -519,7 +513,6 @@ public class NinjaWebViewClient extends WebViewClient {
 		TextView messageView = dialogView.findViewById(R.id.message);
 		messageView.setVisibility(View.VISIBLE);
 		messageView.setText(R.string.dialog_content_resubmission);
-		FaviconHelper.setFavicon(context, dialogView, null, R.id.menu_icon, R.drawable.icon_alert);
 		builder.setView(dialogView);
 		builder.setPositiveButton(R.string.app_ok, (dialog, whichButton) -> resend.sendToTarget());
 		builder.setNegativeButton(R.string.app_cancel, (dialog, whichButton) -> doNotResend.sendToTarget());
@@ -571,7 +564,6 @@ public class NinjaWebViewClient extends WebViewClient {
 		});
 		TextView menuTitleEdit = dialogView.findViewById(R.id.menuTitleEdit);
 		menuTitleEdit.setText(view.getTitle());
-		FaviconHelper.setFavicon(context, dialogView, null, R.id.menu_icon, R.drawable.icon_alert);
 
 		AlertDialog dialog = builder.create();
 		dialog.show();

@@ -9,7 +9,6 @@ import java.util.List;
 import java.util.Set;
 
 import android.content.Context;
-import android.graphics.Bitmap;
 import android.view.LayoutInflater;
 import android.view.View;
 import android.view.ViewGroup;
@@ -19,7 +18,6 @@ import android.widget.Filterable;
 import android.widget.ImageView;
 import android.widget.TextView;
 import de.baumann.browser.R;
-import de.baumann.browser.database.FaviconHelper;
 import de.baumann.browser.database.Record;
 
 public class AdapterSearch extends BaseAdapter implements Filterable {
@@ -109,14 +107,7 @@ public class AdapterSearch extends BaseAdapter implements Filterable {
 			holder.iconView.setImageResource(R.drawable.icon_paste);
 		}
 
-		FaviconHelper faviconHelper = new FaviconHelper(context);
-		Bitmap bitmap = faviconHelper.getFavicon(item.url);
-
-		if (bitmap != null) {
-			holder.favicon.setImageBitmap(bitmap);
-		} else {
-			holder.favicon.setImageResource(R.drawable.icon_image_broken);
-		}
+		holder.favicon.setImageResource(R.drawable.icon_image_broken);
 
 		return view;
 	}

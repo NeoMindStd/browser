@@ -30,7 +30,6 @@ import java.util.List;
 import java.util.Locale;
 import java.util.Objects;
 
-import android.Manifest;
 import android.app.Activity;
 import android.app.Dialog;
 import android.app.DownloadManager;
@@ -72,7 +71,6 @@ import de.baumann.browser.R;
 import de.baumann.browser.activity.BrowserActivity;
 import de.baumann.browser.browser.BrowserController;
 import de.baumann.browser.browser.DataURIParser;
-import de.baumann.browser.database.FaviconHelper;
 import de.baumann.browser.view.GridItem;
 import de.baumann.browser.view.NinjaToast;
 import de.baumann.browser.view.NinjaWebView;
@@ -121,7 +119,6 @@ public class HelperUnit {
 			});
 			TextView menuTitleEdit = dialogView.findViewById(R.id.menuTitleEdit);
 			menuTitleEdit.setText(titleMenu);
-			FaviconHelper.setFavicon(activity, dialogView, null, R.id.menu_icon, R.drawable.icon_save_as);
 
 			builder.setView(dialogView);
 
@@ -400,7 +397,6 @@ public class HelperUnit {
 		});
 		TextView menuTitleEdit = dialogView.findViewById(R.id.menuTitleEdit);
 		menuTitleEdit.setText(titleMenu);
-		FaviconHelper.setFavicon(activity, dialogView, null, R.id.menu_icon, R.drawable.icon_save_as);
 
 		builder.setView(dialogView);
 		builder.setTitle(R.string.menu_save_as);

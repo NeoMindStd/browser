@@ -5,12 +5,9 @@ import static android.content.Context.*;
 import static androidx.core.app.NotificationCompat.*;
 
 import java.io.File;
-import java.util.List;
 import java.util.Locale;
 import java.util.Objects;
 import java.util.regex.Pattern;
-
-import org.json.JSONException;
 
 import android.app.Activity;
 import android.app.Notification;
@@ -26,7 +23,6 @@ import android.os.Build;
 import android.os.Environment;
 import android.util.Log;
 import android.webkit.CookieManager;
-import android.webkit.WebView;
 import androidx.core.app.NotificationCompat;
 import androidx.preference.PreferenceManager;
 import de.baumann.browser.R;

@@ -31,7 +31,6 @@ import android.widget.Toast;
 import androidx.appcompat.app.AlertDialog;
 import com.google.android.material.dialog.MaterialAlertDialogBuilder;
 import de.baumann.browser.R;
-import de.baumann.browser.database.FaviconHelper;
 import de.baumann.browser.unit.BackupUnit;
 import de.baumann.browser.unit.HelperUnit;
 import de.baumann.browser.view.GridAdapter;
@@ -94,7 +93,6 @@ public class NinjaDownloadListener implements DownloadListener {
 		TextView message = dialogView.findViewById(R.id.message);
 		message.setVisibility(View.VISIBLE);
 		message.setText(text);
-		FaviconHelper.setFavicon(context, dialogView, null, R.id.menu_icon, R.drawable.icon_download);
 		builder.setView(dialogView);
 
 		AlertDialog dialog = builder.create();
