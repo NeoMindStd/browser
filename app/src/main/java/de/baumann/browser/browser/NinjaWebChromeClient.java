@@ -81,14 +81,6 @@ public class NinjaWebChromeClient extends WebChromeClient {
 	}
 
 	@Override
-	public void onGeolocationPermissionsShowPrompt(String origin, GeolocationPermissions.Callback callback) {
-		Activity activity = (Activity)ninjaWebView.getContext();
-		HelperUnit.grantPermissionsLoc(activity);
-		callback.invoke(origin, true, false);
-		super.onGeolocationPermissionsShowPrompt(origin, callback);
-	}
-
-	@Override
 	public void onReceivedIcon(WebView view, Bitmap icon) {
 		ninjaWebView.setFavicon(icon);
 		super.onReceivedIcon(view, icon);

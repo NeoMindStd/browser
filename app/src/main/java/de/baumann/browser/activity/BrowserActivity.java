@@ -343,12 +343,6 @@ public class BrowserActivity extends AppCompatActivity implements BrowserControl
 	public void onResume() {
 		super.onResume();
 
-		if (sp.getBoolean("sp_camera", false)) {
-			if (ContextCompat.checkSelfPermission(this, Manifest.permission.CAMERA)
-				!= PackageManager.PERMISSION_GRANTED) {
-				ActivityCompat.requestPermissions(this, new String[] {Manifest.permission.CAMERA}, 1);
-			}
-		}
 		if (sp.getInt("restart_changed", 1) == 1) {
 			saveOpenedTabs();
 			HelperUnit.triggerRebirth(context);
@@ -2021,42 +2015,6 @@ public class BrowserActivity extends AppCompatActivity implements BrowserControl
 			chip_history.setOnClickListener(v -> {
 				ninjaWebView.setProfileChanged();
 				ninjaWebView.putProfileBoolean("_saveHistory", dialog_titleProfile, chip_profile_trusted,
-					chip_profile_standard, chip_profile_protected, chip_profile_changed);
-			});
-
-			Chip chip_location = dialogView.findViewById(R.id.chip_location);
-			chip_location.setChecked(ninjaWebView.getBoolean("_location"));
-			chip_location.setOnLongClickListener(view -> {
-				Toast.makeText(context, getString(R.string.setting_title_location), Toast.LENGTH_SHORT).show();
-				return true;
-			});
-			chip_location.setOnClickListener(v -> {
-				ninjaWebView.setProfileChanged();
-				ninjaWebView.putProfileBoolean("_location", dialog_titleProfile, chip_profile_trusted,
-					chip_profile_standard, chip_profile_protected, chip_profile_changed);
-			});
-
-			Chip chip_microphone = dialogView.findViewById(R.id.chip_microphone);
-			chip_microphone.setChecked(ninjaWebView.getBoolean("_microphone"));
-			chip_microphone.setOnLongClickListener(view -> {
-				Toast.makeText(context, getString(R.string.setting_title_microphone), Toast.LENGTH_SHORT).show();
-				return true;
-			});
-			chip_microphone.setOnClickListener(v -> {
-				ninjaWebView.setProfileChanged();
-				ninjaWebView.putProfileBoolean("_microphone", dialog_titleProfile, chip_profile_trusted,
-					chip_profile_standard, chip_profile_protected, chip_profile_changed);
-			});
-
-			Chip chip_camera = dialogView.findViewById(R.id.chip_camera);
-			chip_camera.setChecked(ninjaWebView.getBoolean("_camera"));
-			chip_camera.setOnLongClickListener(view -> {
-				Toast.makeText(context, getString(R.string.setting_title_camera), Toast.LENGTH_SHORT).show();
-				return true;
-			});
-			chip_camera.setOnClickListener(v -> {
-				ninjaWebView.setProfileChanged();
-				ninjaWebView.putProfileBoolean("_camera", dialog_titleProfile, chip_profile_trusted,
 					chip_profile_standard, chip_profile_protected, chip_profile_changed);
 			});
 

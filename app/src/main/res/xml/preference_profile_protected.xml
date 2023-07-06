@@ -20,25 +20,6 @@
     </PreferenceCategory>
 
     <PreferenceCategory android:title="@string/setting_title_profiles_privacy">
-
-        <SwitchPreferenceCompat
-                android:defaultValue="false"
-                android:icon="@drawable/icon_location"
-                android:key="profileProtected_location"
-                android:summary="@string/setting_title_location" />
-
-        <SwitchPreferenceCompat
-                android:defaultValue="false"
-                android:icon="@drawable/icon_camera"
-                android:key="profileProtected_camera"
-                android:summary="@string/setting_title_camera" />
-
-        <SwitchPreferenceCompat
-                android:defaultValue="false"
-                android:icon="@drawable/icon_microphone"
-                android:key="profileProtected_microphone"
-                android:summary="@string/setting_title_microphone" />
-
         <SwitchPreferenceCompat
                 android:defaultValue="true"
                 android:icon="@drawable/icon_history"
@@ -73,13 +54,6 @@
     </PreferenceCategory>
 
     <PreferenceCategory android:title="@string/setting_title_profiles_Security">
-
-
-        <SwitchPreferenceCompat
-                android:defaultValue="true"
-                android:icon="@drawable/icon_adblock"
-                android:key="profileProtected_adBlock"
-                android:summary="@string/setting_title_adblock" />
 
         <SwitchPreferenceCompat
                 android:defaultValue="true"

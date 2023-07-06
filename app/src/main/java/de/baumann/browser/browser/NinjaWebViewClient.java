@@ -66,22 +66,6 @@ public class NinjaWebViewClient extends WebViewClient {
 
 		if (sp.getBoolean("onPageFinished", false))
 			view.evaluateJavascript(Objects.requireNonNull(sp.getString("sp_onPageFinished", "")), null);
-
-		if (ninjaWebView.isSaveData())
-			view.evaluateJavascript(
-				"var links=document.getElementsByTagName('video'); for(let i=0;i<links.length;i++){links[i].pause()};",
-				null);
-
-		if (ninjaWebView.isHistory()) {
-			RecordAction action = new RecordAction(ninjaWebView.getContext());
-			action.open(true);
-			if (action.checkUrl(ninjaWebView.getUrl(), RecordUnit.TABLE_HISTORY))
-				action.deleteURL(ninjaWebView.getUrl(), RecordUnit.TABLE_HISTORY);
-			action.addHistory(
-				new Record(ninjaWebView.getTitle(), ninjaWebView.getUrl(), System.currentTimeMillis(), 0, 0,
-					ninjaWebView.isDesktopMode(), false, 0));
-			action.close();
-		}
 	}
 
 	@Override
@@ -420,7 +404,6 @@ public class NinjaWebViewClient extends WebViewClient {
 				"Object.defineProperty(navigator, 'keyboard',{value:null});" +
 				"Object.defineProperty(navigator, 'sendBeacon',{value:null});", null);
 
-			if (!ninjaWebView.isCamera())
 				view.evaluateJavascript("" + "Object.defineProperty(navigator, 'mediaDevices',{value:null});", null);
 		}
 	}

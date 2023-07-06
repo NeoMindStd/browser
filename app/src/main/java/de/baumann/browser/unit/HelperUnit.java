@@ -78,61 +78,7 @@ import de.baumann.browser.view.NinjaToast;
 import de.baumann.browser.view.NinjaWebView;
 
 public class HelperUnit {
-
-	private static final int REQUEST_CODE_ASK_PERMISSIONS_1 = 1234;
-	private static final int REQUEST_CODE_ASK_PERMISSIONS_2 = 12345;
-	private static final int REQUEST_CODE_ASK_PERMISSIONS_3 = 123456;
 	private static SharedPreferences sp;
-
-	public static void grantPermissionsLoc(final Activity activity) {
-		int hasACCESS_FINE_LOCATION = activity.checkSelfPermission(Manifest.permission.ACCESS_FINE_LOCATION);
-		if (hasACCESS_FINE_LOCATION != PackageManager.PERMISSION_GRANTED) {
-			MaterialAlertDialogBuilder builder = new MaterialAlertDialogBuilder(activity);
-			builder.setIcon(R.drawable.icon_alert);
-			builder.setTitle(R.string.setting_title_location);
-			builder.setMessage(R.string.app_permission);
-			builder.setPositiveButton(R.string.app_ok, (dialog, whichButton) -> activity.requestPermissions(
-				new String[] {Manifest.permission.ACCESS_FINE_LOCATION}, REQUEST_CODE_ASK_PERMISSIONS_1));
-			builder.setNegativeButton(R.string.app_cancel, (dialog, whichButton) -> dialog.cancel());
-			AlertDialog dialog = builder.create();
-			dialog.show();
-			HelperUnit.setupDialog(activity, dialog);
-		}
-	}
-
-	public static void grantPermissionsCamera(final Activity activity) {
-		int camera = activity.checkSelfPermission(Manifest.permission.CAMERA);
-		if (camera != PackageManager.PERMISSION_GRANTED) {
-			MaterialAlertDialogBuilder builder = new MaterialAlertDialogBuilder(activity);
-			builder.setIcon(R.drawable.icon_alert);
-			builder.setTitle(R.string.setting_title_camera);
-			builder.setMessage(R.string.app_permission);
-			builder.setPositiveButton(R.string.app_ok,
-				(dialog, whichButton) -> activity.requestPermissions(new String[] {Manifest.permission.CAMERA},
-					REQUEST_CODE_ASK_PERMISSIONS_2));
-			builder.setNegativeButton(R.string.app_cancel, (dialog, whichButton) -> dialog.cancel());
-			AlertDialog dialog = builder.create();
-			dialog.show();
-			HelperUnit.setupDialog(activity, dialog);
-		}
-	}
-
-	public static void grantPermissionsMic(final Activity activity) {
-		int mic = activity.checkSelfPermission(Manifest.permission.RECORD_AUDIO);
-		if (mic != PackageManager.PERMISSION_GRANTED) {
-			MaterialAlertDialogBuilder builder = new MaterialAlertDialogBuilder(activity);
-			builder.setIcon(R.drawable.icon_alert);
-			builder.setTitle(R.string.setting_title_microphone);
-			builder.setMessage(R.string.app_permission);
-			builder.setPositiveButton(R.string.app_ok,
-				(dialog, whichButton) -> activity.requestPermissions(new String[] {Manifest.permission.RECORD_AUDIO},
-					REQUEST_CODE_ASK_PERMISSIONS_3));
-			builder.setNegativeButton(R.string.app_cancel, (dialog, whichButton) -> dialog.cancel());
-			AlertDialog dialog = builder.create();
-			dialog.show();
-			HelperUnit.setupDialog(activity, dialog);
-		}
-	}
 
 	public static void saveAs(final Activity activity, String titleMenu, final String url, final String name,
 		Dialog dialogParent) {

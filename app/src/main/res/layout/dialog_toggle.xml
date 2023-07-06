@@ -350,31 +350,6 @@
                         android:layout_width="match_parent"
                         android:layout_height="wrap_content"
                         android:gravity="center">
-
-                    <com.google.android.material.chip.Chip
-                            android:id="@+id/chip_camera"
-                            style="@style/Widget.Material3.Chip.Suggestion"
-                            android:layout_width="wrap_content"
-                            app:chipIcon="@drawable/icon_camera"
-                            app:chipIconEnabled="true"
-                            app:textEndPadding="0dp"
-                            app:textStartPadding="0dp"
-                            android:layout_height="wrap_content"
-                            app:chipBackgroundColor="@drawable/bg_chip_state_list"
-                            app:chipIconTint="@drawable/bg_chip_icon_state" />
-
-                    <com.google.android.material.chip.Chip
-                            android:id="@+id/chip_microphone"
-                            style="@style/Widget.Material3.Chip.Suggestion"
-                            android:layout_width="wrap_content"
-                            app:chipIcon="@drawable/icon_microphone"
-                            app:chipIconEnabled="true"
-                            app:textEndPadding="0dp"
-                            app:textStartPadding="0dp"
-                            android:layout_height="wrap_content"
-                            app:chipBackgroundColor="@drawable/bg_chip_state_list"
-                            app:chipIconTint="@drawable/bg_chip_icon_state" />
-
                     <com.google.android.material.chip.Chip
                             android:id="@+id/chip_history"
                             style="@style/Widget.Material3.Chip.Suggestion"
