@@ -565,73 +565,9 @@ public class BrowserActivity extends AppCompatActivity implements BrowserControl
 		AtomicInteger intPage = new AtomicInteger();
 
 		NavigationBarView.OnItemSelectedListener navListener = menuItem -> {
-			if (menuItem.getItemId() == R.id.page_1) {
-				tab_container.setVisibility(View.GONE);
-				listView.setVisibility(View.VISIBLE);
-				omniBox_overview.setImageResource(R.drawable.icon_web);
-				overViewTab = getString(R.string.album_title_home);
-				intPage.set(R.id.page_1);
-			} else if (menuItem.getItemId() == R.id.page_2) {
-				tab_container.setVisibility(View.GONE);
-				listView.setVisibility(View.VISIBLE);
-				omniBox_overview.setImageResource(R.drawable.icon_bookmark);
-				overViewTab = getString(R.string.album_title_bookmarks);
-				intPage.set(R.id.page_2);
-			} else if (menuItem.getItemId() == R.id.page_3) {
-				tab_container.setVisibility(View.GONE);
-				listView.setVisibility(View.VISIBLE);
-				omniBox_overview.setImageResource(R.drawable.icon_history);
-				overViewTab = getString(R.string.album_title_history);
-				intPage.set(R.id.page_3);
-			} else if (menuItem.getItemId() == R.id.page_4) {
-				PopupMenu popup = new PopupMenu(this, bottom_navigation.findViewById(R.id.page_2));
-				if (bottom_navigation.getSelectedItemId() == R.id.page_1)
-					popup.inflate(R.menu.menu_list_start);
-				else if (bottom_navigation.getSelectedItemId() == R.id.page_2)
-					popup.inflate(R.menu.menu_list_bookmark);
-				else if (bottom_navigation.getSelectedItemId() == R.id.page_3)
-					popup.inflate(R.menu.menu_list_history);
-				else if (bottom_navigation.getSelectedItemId() == R.id.page_0)
-					popup.inflate(R.menu.menu_list_tabs);
-				popup.setOnMenuItemClickListener(item -> {
-					if (item.getItemId() == R.id.menu_sortName) {
-						if (overViewTab.equals(getString(R.string.album_title_bookmarks))) {
-							sp.edit().putString("sort_bookmark", "title").apply();
-							bottom_navigation.setSelectedItemId(R.id.page_2);
-						} else if (overViewTab.equals(getString(R.string.album_title_home))) {
-							sp.edit().putString("sort_startSite", "title").apply();
-							bottom_navigation.setSelectedItemId(R.id.page_1);
-						}
-					} else if (item.getItemId() == R.id.menu_sortIcon) {
-						sp.edit().putString("sort_bookmark", "time").apply();
-						bottom_navigation.setSelectedItemId(R.id.page_2);
-					} else if (item.getItemId() == R.id.menu_sortDate) {
-						sp.edit().putString("sort_startSite", "ordinal").apply();
-						bottom_navigation.setSelectedItemId(R.id.page_1);
-					} else if (item.getItemId() == R.id.menu_filter) {
-						showDialogFilter();
-					} else if (item.getItemId() == R.id.menu_help) {
-						Uri webpage = Uri.parse("https://github.com/scoute-dich/browser/wiki/Overview");
-						BrowserUnit.intentURL(this, webpage);
-					}
-					return true;
-				});
-				popup.show();
-				popup.setOnDismissListener(v -> {
-					if (intPage.intValue() == R.id.page_1)
-						bottom_navigation.setSelectedItemId(R.id.page_1);
-					else if (intPage.intValue() == R.id.page_2)
-						bottom_navigation.setSelectedItemId(R.id.page_2);
-					else if (intPage.intValue() == R.id.page_3)
-						bottom_navigation.setSelectedItemId(R.id.page_3);
-					else if (intPage.intValue() == R.id.page_0)
-						bottom_navigation.setSelectedItemId(R.id.page_0);
-				});
-			} else if (menuItem.getItemId() == R.id.page_0) {
-				intPage.set(R.id.page_0);
-				tab_container.setVisibility(View.VISIBLE);
-				listView.setVisibility(View.GONE);
-			}
+			intPage.set(R.id.page_0);
+			tab_container.setVisibility(View.VISIBLE);
+			listView.setVisibility(View.GONE);
 			return true;
 		};
 
