@@ -198,7 +198,6 @@ public class BrowserActivity extends AppCompatActivity implements BrowserControl
 
 		sp.edit()
 			.putInt("restart_changed", 0)
-			.putBoolean("pdf_create", false)
 			.putString("profile", sp.getString("profile_toStart", "profileStandard")).apply();
 
 		switch (Objects.requireNonNull(sp.getString("start_tab", "3"))) {
@@ -312,19 +311,6 @@ public class BrowserActivity extends AppCompatActivity implements BrowserControl
 		if (sp.getInt("restart_changed", 1) == 1) {
 			saveOpenedTabs();
 			HelperUnit.triggerRebirth(context);
-		}
-		if (sp.getBoolean("pdf_create", false)) {
-			sp.edit().putBoolean("pdf_create", false).apply();
-			MaterialAlertDialogBuilder builder = new MaterialAlertDialogBuilder(context);
-			builder.setTitle(R.string.menu_download);
-			builder.setIcon(R.drawable.icon_alert);
-			builder.setMessage(R.string.toast_downloadComplete);
-			builder.setPositiveButton(R.string.app_ok, (dialog, whichButton) -> startActivity(
-				new Intent(Intent.createChooser(new Intent(DownloadManager.ACTION_VIEW_DOWNLOADS), null))));
-			builder.setNegativeButton(R.string.app_cancel, (dialog, whichButton) -> dialog.cancel());
-			AlertDialog dialog = builder.create();
-			dialog.show();
-			HelperUnit.setupDialog(context, dialog);
 		}
 		dispatchIntent(getIntent());
 	}
