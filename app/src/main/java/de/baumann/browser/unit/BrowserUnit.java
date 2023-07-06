@@ -17,7 +17,6 @@ import android.app.PendingIntent;
 import android.content.Context;
 import android.content.Intent;
 import android.content.SharedPreferences;
-import android.content.pm.ShortcutManager;
 import android.net.Uri;
 import android.os.Build;
 import android.os.Environment;
@@ -27,7 +26,6 @@ import androidx.core.app.NotificationCompat;
 import androidx.preference.PreferenceManager;
 import de.baumann.browser.R;
 import de.baumann.browser.activity.BrowserActivity;
-import de.baumann.browser.database.RecordAction;
 
 public class BrowserUnit {
 
@@ -140,13 +138,6 @@ public class BrowserUnit {
 		}
 	}
 
-	public static void clearHome(Context context) {
-		RecordAction action = new RecordAction(context);
-		action.open(true);
-		action.clearTable(RecordUnit.TABLE_START);
-		action.close();
-	}
-
 	public static void clearCache(Context context) {
 		try {
 			File dir = context.getCacheDir();
@@ -162,28 +153,6 @@ public class BrowserUnit {
 		cookieManager.flush();
 		cookieManager.removeAllCookies(value -> {
 		});
-	}
-
-	public static void clearBookmark(Context context) {
-		RecordAction action = new RecordAction(context);
-		action.open(true);
-		action.clearTable(RecordUnit.TABLE_BOOKMARK);
-		action.close();
-		if (Build.VERSION.SDK_INT >= Build.VERSION_CODES.N_MR1) {
-			ShortcutManager shortcutManager = context.getSystemService(ShortcutManager.class);
-			Objects.requireNonNull(shortcutManager).removeAllDynamicShortcuts();
-		}
-	}
-
-	public static void clearHistory(Context context) {
-		RecordAction action = new RecordAction(context);
-		action.open(true);
-		action.clearTable(RecordUnit.TABLE_HISTORY);
-		action.close();
-		if (Build.VERSION.SDK_INT >= Build.VERSION_CODES.N_MR1) {
-			ShortcutManager shortcutManager = context.getSystemService(ShortcutManager.class);
-			Objects.requireNonNull(shortcutManager).removeAllDynamicShortcuts();
-		}
 	}
 
 	public static void intentURL(Context context, Uri uri) {
