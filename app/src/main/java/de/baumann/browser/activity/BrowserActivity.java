@@ -98,9 +98,6 @@ import de.baumann.browser.browser.AlbumController;
 import de.baumann.browser.browser.BrowserContainer;
 import de.baumann.browser.browser.BrowserController;
 import de.baumann.browser.browser.DataURIParser;
-import de.baumann.browser.browser.List_protected;
-import de.baumann.browser.browser.List_standard;
-import de.baumann.browser.browser.List_trusted;
 import de.baumann.browser.database.Record;
 import de.baumann.browser.database.RecordAction;
 import de.baumann.browser.unit.BrowserUnit;
@@ -153,9 +150,6 @@ public class BrowserActivity extends AppCompatActivity implements BrowserControl
 	private Activity activity;
 	private Context context;
 	private SharedPreferences sp;
-	private List_trusted listTrusted;
-	private List_standard listStandard;
-	private List_protected listProtected;
 	private ObjectAnimator animation;
 	private long newIcon;
 	private long filterBy;
@@ -938,7 +932,6 @@ public class BrowserActivity extends AppCompatActivity implements BrowserControl
 		if (url != null) {
 
 			progressBar.setVisibility(View.GONE);
-			listTrusted = new List_trusted(context);
 			ninjaWebView.setProfileIcon(omniBox_tab);
 
 			if (Objects.requireNonNull(ninjaWebView.getTitle()).isEmpty())
@@ -1759,10 +1752,6 @@ public class BrowserActivity extends AppCompatActivity implements BrowserControl
 	}
 
 	private void showDialogFastToggle() {
-
-		listTrusted = new List_trusted(context);
-		listStandard = new List_standard(context);
-		listProtected = new List_protected(context);
 		ninjaWebView = (NinjaWebView)currentAlbumController;
 		String url = ninjaWebView.getUrl();
 
@@ -1772,18 +1761,9 @@ public class BrowserActivity extends AppCompatActivity implements BrowserControl
 			View dialogView = View.inflate(context, R.layout.dialog_toggle, null);
 			builder.setView(dialogView);
 
-			Chip chip_profile_standard = dialogView.findViewById(R.id.chip_profile_standard);
-			Chip chip_profile_trusted = dialogView.findViewById(R.id.chip_profile_trusted);
-			Chip chip_profile_changed = dialogView.findViewById(R.id.chip_profile_changed);
-			Chip chip_profile_protected = dialogView.findViewById(R.id.chip_profile_protected);
-
 			TextView dialog_warning = dialogView.findViewById(R.id.dialog_titleDomain);
 			dialog_warning.setText(HelperUnit.domain(url));
 			dialog_warning.setEllipsize(TextUtils.TruncateAt.END);
-
-			TextView dialog_titleProfile = dialogView.findViewById(R.id.dialog_titleProfile);
-			ninjaWebView.putProfileBoolean("", dialog_titleProfile, chip_profile_trusted, chip_profile_standard,
-				chip_profile_protected, chip_profile_changed);
 
 			LinearLayout textGroup = dialogView.findViewById(R.id.textGroup);
 			TextView overflowURL = dialogView.findViewById(R.id.overflowURL);
@@ -1804,221 +1784,6 @@ public class BrowserActivity extends AppCompatActivity implements BrowserControl
 			AlertDialog dialog = builder.create();
 			dialog.show();
 			HelperUnit.setupDialog(context, dialog);
-
-			//ProfileControl
-
-			Chip chip_setProfileTrusted = dialogView.findViewById(R.id.chip_setProfileTrusted);
-			chip_setProfileTrusted.setChecked(listTrusted.isWhite(url));
-			chip_setProfileTrusted.setOnClickListener(v -> {
-				if (listTrusted.isWhite(ninjaWebView.getUrl()))
-					listTrusted.removeDomain(HelperUnit.domain(url));
-				else {
-					listTrusted.addDomain(HelperUnit.domain(url));
-					listStandard.removeDomain(HelperUnit.domain(url));
-					listProtected.removeDomain(HelperUnit.domain(url));
-				}
-				ninjaWebView.reload();
-				dialog.cancel();
-			});
-			chip_setProfileTrusted.setOnLongClickListener(view -> {
-				Toast.makeText(context, getString(R.string.setting_title_profiles_trustedList), Toast.LENGTH_SHORT)
-					.show();
-				return true;
-			});
-
-			Chip chip_setProfileProtected = dialogView.findViewById(R.id.chip_setProfileProtected);
-			chip_setProfileProtected.setChecked(listProtected.isWhite(url));
-			chip_setProfileProtected.setOnClickListener(v -> {
-				if (listProtected.isWhite(ninjaWebView.getUrl()))
-					listProtected.removeDomain(HelperUnit.domain(url));
-				else {
-					listProtected.addDomain(HelperUnit.domain(url));
-					listTrusted.removeDomain(HelperUnit.domain(url));
-					listStandard.removeDomain(HelperUnit.domain(url));
-				}
-				ninjaWebView.reload();
-				dialog.cancel();
-			});
-			chip_setProfileProtected.setOnLongClickListener(view -> {
-				Toast.makeText(context, getString(R.string.setting_title_profiles_protectedList), Toast.LENGTH_SHORT)
-					.show();
-				return true;
-			});
-
-			Chip chip_setProfileStandard = dialogView.findViewById(R.id.chip_setProfileStandard);
-			chip_setProfileStandard.setChecked(listStandard.isWhite(url));
-			chip_setProfileStandard.setOnClickListener(v -> {
-				if (listStandard.isWhite(ninjaWebView.getUrl()))
-					listStandard.removeDomain(HelperUnit.domain(url));
-				else {
-					listStandard.addDomain(HelperUnit.domain(url));
-					listTrusted.removeDomain(HelperUnit.domain(url));
-					listProtected.removeDomain(HelperUnit.domain(url));
-				}
-				ninjaWebView.reload();
-				dialog.cancel();
-			});
-			chip_setProfileStandard.setOnLongClickListener(view -> {
-				Toast.makeText(context, getString(R.string.setting_title_profiles_standardList), Toast.LENGTH_SHORT)
-					.show();
-				return true;
-			});
-
-			chip_profile_trusted.setChecked(
-				Objects.equals(sp.getString("profile", "profileTrusted"), "profileTrusted"));
-			chip_profile_trusted.setOnClickListener(v -> {
-				sp.edit().putString("profile", "profileTrusted").apply();
-				ninjaWebView.reload();
-				dialog.cancel();
-			});
-			chip_profile_trusted.setOnLongClickListener(view -> {
-				Toast.makeText(context, getString(R.string.setting_title_profiles_trusted), Toast.LENGTH_SHORT).show();
-				return true;
-			});
-
-			chip_profile_standard.setChecked(
-				Objects.equals(sp.getString("profile", "profileTrusted"), "profileStandard"));
-			chip_profile_standard.setOnClickListener(v -> {
-				sp.edit().putString("profile", "profileStandard").apply();
-				ninjaWebView.reload();
-				dialog.cancel();
-			});
-			chip_profile_standard.setOnLongClickListener(view -> {
-				Toast.makeText(context, getString(R.string.setting_title_profiles_standard), Toast.LENGTH_SHORT).show();
-				return true;
-			});
-
-			chip_profile_protected.setChecked(
-				Objects.equals(sp.getString("profile", "profileTrusted"), "profileProtected"));
-			chip_profile_protected.setOnClickListener(v -> {
-				sp.edit().putString("profile", "profileProtected").apply();
-				ninjaWebView.reload();
-				dialog.cancel();
-			});
-			chip_profile_protected.setOnLongClickListener(view -> {
-				Toast.makeText(context, getString(R.string.setting_title_profiles_protected), Toast.LENGTH_SHORT)
-					.show();
-				return true;
-			});
-
-			chip_profile_changed.setChecked(
-				Objects.equals(sp.getString("profile", "profileTrusted"), "profileChanged"));
-			chip_profile_changed.setOnClickListener(v -> {
-				sp.edit().putString("profile", "profileChanged").apply();
-				ninjaWebView.reload();
-				dialog.cancel();
-			});
-			chip_profile_changed.setOnLongClickListener(view -> {
-				Toast.makeText(context, getString(R.string.setting_title_profiles_changed), Toast.LENGTH_SHORT).show();
-				return true;
-			});
-			// CheckBox
-
-			Chip chip_image = dialogView.findViewById(R.id.chip_image);
-			chip_image.setChecked(ninjaWebView.getBoolean("_images"));
-			chip_image.setOnLongClickListener(view -> {
-				Toast.makeText(context, getString(R.string.setting_title_images), Toast.LENGTH_SHORT).show();
-				return true;
-			});
-			chip_image.setOnClickListener(v -> {
-				ninjaWebView.setProfileChanged();
-				ninjaWebView.putProfileBoolean("_images", dialog_titleProfile, chip_profile_trusted,
-					chip_profile_standard, chip_profile_protected, chip_profile_changed);
-			});
-
-			Chip chip_javaScript = dialogView.findViewById(R.id.chip_javaScript);
-			chip_javaScript.setChecked(ninjaWebView.getBoolean("_javascript"));
-			chip_javaScript.setOnLongClickListener(view -> {
-				Toast.makeText(context, getString(R.string.setting_title_javascript), Toast.LENGTH_SHORT).show();
-				return true;
-			});
-			chip_javaScript.setOnClickListener(v -> {
-				ninjaWebView.setProfileChanged();
-				ninjaWebView.putProfileBoolean("_javascript", dialog_titleProfile, chip_profile_trusted,
-					chip_profile_standard, chip_profile_protected, chip_profile_changed);
-			});
-
-			Chip chip_javaScriptPopUp = dialogView.findViewById(R.id.chip_javaScriptPopUp);
-			chip_javaScriptPopUp.setChecked(ninjaWebView.getBoolean("_javascriptPopUp"));
-			chip_javaScriptPopUp.setOnLongClickListener(view -> {
-				Toast.makeText(context, getString(R.string.setting_title_javascript_popUp), Toast.LENGTH_SHORT).show();
-				return true;
-			});
-			chip_javaScriptPopUp.setOnClickListener(v -> {
-				ninjaWebView.setProfileChanged();
-				ninjaWebView.putProfileBoolean("_javascriptPopUp", dialog_titleProfile, chip_profile_trusted,
-					chip_profile_standard, chip_profile_protected, chip_profile_changed);
-			});
-
-			Chip chip_cookie = dialogView.findViewById(R.id.chip_cookie);
-			chip_cookie.setChecked(ninjaWebView.getBoolean("_cookies"));
-			chip_cookie.setOnLongClickListener(view -> {
-				Toast.makeText(context, getString(R.string.setting_title_cookie), Toast.LENGTH_SHORT).show();
-				return true;
-			});
-			chip_cookie.setOnClickListener(v -> {
-				ninjaWebView.setProfileChanged();
-				ninjaWebView.putProfileBoolean("_cookies", dialog_titleProfile, chip_profile_trusted,
-					chip_profile_standard, chip_profile_protected, chip_profile_changed);
-			});
-
-			Chip chip_fingerprint = dialogView.findViewById(R.id.chip_Fingerprint);
-			chip_fingerprint.setChecked(ninjaWebView.getBoolean("_fingerPrintProtection"));
-			chip_fingerprint.setOnLongClickListener(view -> {
-				Toast.makeText(context, getString(R.string.setting_title_fingerPrint), Toast.LENGTH_SHORT).show();
-				return true;
-			});
-			chip_fingerprint.setOnClickListener(v -> {
-				ninjaWebView.setProfileChanged();
-				ninjaWebView.putProfileBoolean("_fingerPrintProtection", dialog_titleProfile, chip_profile_trusted,
-					chip_profile_standard, chip_profile_protected, chip_profile_changed);
-			});
-
-			Chip chip_saveData = dialogView.findViewById(R.id.chip_saveData);
-			chip_saveData.setChecked(ninjaWebView.getBoolean("_saveData"));
-			chip_saveData.setOnLongClickListener(view -> {
-				Toast.makeText(context, getString(R.string.setting_title_save_data), Toast.LENGTH_SHORT).show();
-				return true;
-			});
-			chip_saveData.setOnClickListener(v -> {
-				ninjaWebView.setProfileChanged();
-				ninjaWebView.putProfileBoolean("_saveData", dialog_titleProfile, chip_profile_trusted,
-					chip_profile_standard, chip_profile_protected, chip_profile_changed);
-			});
-
-			Chip chip_history = dialogView.findViewById(R.id.chip_history);
-			chip_history.setChecked(ninjaWebView.getBoolean("_saveHistory"));
-			chip_history.setOnLongClickListener(view -> {
-				Toast.makeText(context, getString(R.string.album_title_history), Toast.LENGTH_SHORT).show();
-				return true;
-			});
-			chip_history.setOnClickListener(v -> {
-				ninjaWebView.setProfileChanged();
-				ninjaWebView.putProfileBoolean("_saveHistory", dialog_titleProfile, chip_profile_trusted,
-					chip_profile_standard, chip_profile_protected, chip_profile_changed);
-			});
-
-			Chip chip_dom = dialogView.findViewById(R.id.chip_dom);
-			chip_dom.setChecked(ninjaWebView.getBoolean("_dom"));
-			chip_dom.setOnLongClickListener(view -> {
-				Toast.makeText(context, getString(R.string.setting_title_dom), Toast.LENGTH_SHORT).show();
-				return true;
-			});
-			chip_dom.setOnClickListener(v -> {
-				ninjaWebView.setProfileChanged();
-				ninjaWebView.putProfileBoolean("_dom", dialog_titleProfile, chip_profile_trusted, chip_profile_standard,
-					chip_profile_protected, chip_profile_changed);
-			});
-
-			if (listTrusted.isWhite(url) || listStandard.isWhite(url) || listProtected.isWhite(url)) {
-				TypedValue typedValue = new TypedValue();
-				Resources.Theme theme = context.getTheme();
-				theme.resolveAttribute(R.attr.colorError, typedValue, true);
-				int color = typedValue.data;
-				MaterialCardView cardView = dialogView.findViewById(R.id.editProfile);
-				cardView.setVisibility(View.GONE);
-				dialog_warning.setTextColor(color);
-			}
 
 			Chip chip_toggleNightView = dialogView.findViewById(R.id.chip_toggleNightView);
 			int nightModeFlags = getResources().getConfiguration().uiMode & Configuration.UI_MODE_NIGHT_MASK;

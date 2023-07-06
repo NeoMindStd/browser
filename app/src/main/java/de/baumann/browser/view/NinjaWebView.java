@@ -51,9 +51,6 @@ import de.baumann.browser.R;
 import de.baumann.browser.activity.BrowserActivity;
 import de.baumann.browser.browser.AlbumController;
 import de.baumann.browser.browser.BrowserController;
-import de.baumann.browser.browser.List_protected;
-import de.baumann.browser.browser.List_standard;
-import de.baumann.browser.browser.List_trusted;
 import de.baumann.browser.browser.NinjaDownloadListener;
 import de.baumann.browser.browser.NinjaWebChromeClient;
 import de.baumann.browser.browser.NinjaWebViewClient;
@@ -75,9 +72,6 @@ public class NinjaWebView extends WebView implements AlbumController {
 	private NinjaWebChromeClient webChromeClient;
 	private NinjaDownloadListener downloadListener;
 	private String profile;
-	private List_trusted listTrusted;
-	private List_standard listStandard;
-	private List_protected listProtected;
 	private SharedPreferences sp;
 	private boolean foreground;
 
@@ -100,9 +94,6 @@ public class NinjaWebView extends WebView implements AlbumController {
 		this.fingerPrintProtection = sp.getBoolean(profile + "_fingerPrintProtection", true);
 
 		this.stopped = false;
-		this.listTrusted = new List_trusted(this.context);
-		this.listStandard = new List_standard(this.context);
-		this.listProtected = new List_protected(this.context);
 		this.album = new AdapterTabs(this.context, this, browserController);
 		this.webViewClient = new NinjaWebViewClient(this) {
 			@Override
@@ -240,13 +231,6 @@ public class NinjaWebView extends WebView implements AlbumController {
 				webSettings.setSaveFormData(false);
 		}
 
-		if (listTrusted.isWhite(url))
-			profile = "profileTrusted";
-		else if (listStandard.isWhite(url))
-			profile = "profileStandard";
-		else if (listProtected.isWhite(url))
-			profile = "profileProtected";
-
 		webSettings.setMixedContentMode(WebSettings.MIXED_CONTENT_COMPATIBILITY_MODE);
 		webSettings.setMediaPlaybackRequiresUserGesture(sp.getBoolean(profile + "_saveData", true));
 		webSettings.setBlockNetworkImage(!sp.getBoolean(profile + "_images", true));
@@ -293,17 +277,6 @@ public class NinjaWebView extends WebView implements AlbumController {
 		Resources.Theme theme = context.getTheme();
 		theme.resolveAttribute(R.attr.colorError, typedValue, true);
 		int color = typedValue.data;
-
-		if (listTrusted.isWhite(url)) {
-			omniBox_tab.setImageResource(R.drawable.icon_profile_trusted);
-			omniBox_tab.getDrawable().mutate().setTint(color);
-		} else if (listStandard.isWhite(url)) {
-			omniBox_tab.setImageResource(R.drawable.icon_profile_standard);
-			omniBox_tab.getDrawable().mutate().setTint(color);
-		} else if (listProtected.isWhite(url)) {
-			omniBox_tab.setImageResource(R.drawable.icon_profile_protected);
-			omniBox_tab.getDrawable().mutate().setTint(color);
-		}
 	}
 
 	public void setProfileDefaultValues() {
@@ -498,11 +471,6 @@ public class NinjaWebView extends WebView implements AlbumController {
 	public synchronized void stopLoading() {
 		stopped = true;
 		super.stopLoading();
-	}
-
-	public synchronized void reloadWithoutInit() {  //needed for camera usage without deactivating "save_data"
-		stopped = false;
-		super.reload();
 	}
 
 	@Override
