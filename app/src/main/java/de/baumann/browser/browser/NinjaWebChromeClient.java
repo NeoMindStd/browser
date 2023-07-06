@@ -89,45 +89,6 @@ public class NinjaWebChromeClient extends WebChromeClient {
 	}
 
 	@Override
-	public void onPermissionRequest(final PermissionRequest request) {
-		SharedPreferences sp = PreferenceManager.getDefaultSharedPreferences(ninjaWebView.getContext());
-		Activity activity = (Activity)ninjaWebView.getContext();
-		String[] resources = request.getResources();
-		for (String resource : resources) {
-			if (PermissionRequest.RESOURCE_VIDEO_CAPTURE.equals(resource)) {
-				if (sp.getBoolean(ninjaWebView.getProfile() + "_camera", false)) {
-					HelperUnit.grantPermissionsCamera(activity);
-					if (ninjaWebView.getSettings().getMediaPlaybackRequiresUserGesture())
-						ninjaWebView.getSettings().setMediaPlaybackRequiresUserGesture(false);
-					//fix conflict with save data option. Temporarily switch off setMediaPlaybackRequiresUserGesture
-					ninjaWebView.reloadWithoutInit();
-					request.grant(request.getResources());
-				}
-			} else if (PermissionRequest.RESOURCE_AUDIO_CAPTURE.equals(resource)) {
-				if (sp.getBoolean(ninjaWebView.getProfile() + "_microphone", false)) {
-					HelperUnit.grantPermissionsMic(activity);
-					request.grant(request.getResources());
-				}
-			} else if (PermissionRequest.RESOURCE_PROTECTED_MEDIA_ID.equals(resource)) {
-				if (sp.getBoolean("sp_drm", true)) {
-					request.grant(request.getResources());
-				} else {
-					MaterialAlertDialogBuilder builder = new MaterialAlertDialogBuilder(ninjaWebView.getContext());
-					builder.setIcon(R.drawable.icon_alert);
-					builder.setTitle(R.string.app_warning);
-					builder.setMessage(R.string.hint_DRM_Media);
-					builder.setPositiveButton(R.string.app_ok,
-						(dialog, whichButton) -> request.grant(request.getResources()));
-					builder.setNegativeButton(R.string.app_cancel, (dialog, whichButton) -> request.deny());
-					AlertDialog dialog = builder.create();
-					dialog.show();
-					HelperUnit.setupDialog(ninjaWebView.getContext(), dialog);
-				}
-			}
-		}
-	}
-
-	@Override
 	public void onReceivedIcon(WebView view, Bitmap icon) {
 		ninjaWebView.setFavicon(icon);
 		super.onReceivedIcon(view, icon);
