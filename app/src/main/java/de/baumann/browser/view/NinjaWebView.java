@@ -73,7 +73,6 @@ public class NinjaWebView extends WebView implements AlbumController {
 
     public boolean fingerPrintProtection;
     public boolean history;
-    public boolean adBlock;
     public boolean saveData;
     public boolean camera;
     public boolean isBackPressed;
@@ -113,7 +112,6 @@ public class NinjaWebView extends WebView implements AlbumController {
         this.isBackPressed = false;
         this.fingerPrintProtection = sp.getBoolean(profile + "_fingerPrintProtection", true);
         this.history = sp.getBoolean(profile + "_history", true);
-        this.adBlock = sp.getBoolean(profile + "_adBlock", false);
         this.saveData = sp.getBoolean(profile + "_saveData", false);
         this.camera = sp.getBoolean(profile + "_camera", false);
 
@@ -269,7 +267,6 @@ public class NinjaWebView extends WebView implements AlbumController {
 
         fingerPrintProtection = sp.getBoolean(profile + "_fingerPrintProtection", true);
         history = sp.getBoolean(profile + "_saveHistory", true);
-        adBlock = sp.getBoolean(profile + "_adBlock", true);
         saveData = sp.getBoolean(profile + "_saveData", true);
         camera = sp.getBoolean(profile + "_camera", true);
 
@@ -322,7 +319,6 @@ public class NinjaWebView extends WebView implements AlbumController {
         sp.edit()
                 .putBoolean("profileTrusted_saveData", true)
                 .putBoolean("profileTrusted_images", true)
-                .putBoolean("profileTrusted_adBlock", true)
                 .putBoolean("profileTrusted_location", false)
                 .putBoolean("profileTrusted_fingerPrintProtection", false)
                 .putBoolean("profileTrusted_cookies", true)
@@ -335,7 +331,6 @@ public class NinjaWebView extends WebView implements AlbumController {
 
                 .putBoolean("profileStandard_saveData", true)
                 .putBoolean("profileStandard_images", true)
-                .putBoolean("profileStandard_adBlock", true)
                 .putBoolean("profileStandard_location", false)
                 .putBoolean("profileStandard_fingerPrintProtection", true)
                 .putBoolean("profileStandard_cookies", false)
@@ -348,7 +343,6 @@ public class NinjaWebView extends WebView implements AlbumController {
 
                 .putBoolean("profileProtected_saveData", true)
                 .putBoolean("profileProtected_images", true)
-                .putBoolean("profileProtected_adBlock", true)
                 .putBoolean("profileProtected_location", false)
                 .putBoolean("profileProtected_fingerPrintProtection", true)
                 .putBoolean("profileProtected_cookies", false)
@@ -363,7 +357,6 @@ public class NinjaWebView extends WebView implements AlbumController {
     public void setProfileChanged() {
         sp.edit().putBoolean("profileChanged_saveData", sp.getBoolean(profile + "_saveData", true))
                 .putBoolean("profileChanged_images", sp.getBoolean(profile + "_images", true))
-                .putBoolean("profileChanged_adBlock", sp.getBoolean(profile + "_adBlock", true))
                 .putBoolean("profileChanged_location", sp.getBoolean(profile + "_location", false))
                 .putBoolean("profileChanged_fingerPrintProtection", sp.getBoolean(profile + "_fingerPrintProtection", true))
                 .putBoolean("profileChanged_cookies", sp.getBoolean(profile + "_cookies", false))
@@ -393,9 +386,6 @@ public class NinjaWebView extends WebView implements AlbumController {
                 break;
             case "_fingerPrintProtection":
                 sp.edit().putBoolean("profileChanged_fingerPrintProtection", !sp.getBoolean("profileChanged_fingerPrintProtection", true)).apply();
-                break;
-            case "_adBlock":
-                sp.edit().putBoolean("profileChanged_adBlock", !sp.getBoolean("profileChanged_adBlock", true)).apply();
                 break;
             case "_saveData":
                 sp.edit().putBoolean("profileChanged_saveData", !sp.getBoolean("profileChanged_saveData", true)).apply();
@@ -464,8 +454,6 @@ public class NinjaWebView extends WebView implements AlbumController {
                 return sp.getBoolean(profile + "_cookies", false);
             case "_fingerPrintProtection":
                 return sp.getBoolean(profile + "_fingerPrintProtection", true);
-            case "_adBlock":
-                return sp.getBoolean(profile + "_adBlock", true);
             case "_saveData":
                 return sp.getBoolean(profile + "_saveData", true);
             case "_saveHistory":
@@ -692,10 +680,6 @@ public class NinjaWebView extends WebView implements AlbumController {
 
     public boolean isHistory() {
         return history;
-    }
-
-    public boolean isAdBlock() {
-        return adBlock;
     }
 
     public boolean isSaveData() {

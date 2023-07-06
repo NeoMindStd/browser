@@ -1833,17 +1833,6 @@ public class BrowserActivity extends AppCompatActivity implements BrowserControl
                 ninjaWebView.putProfileBoolean("_fingerPrintProtection", dialog_titleProfile, chip_profile_trusted, chip_profile_standard, chip_profile_protected, chip_profile_changed);
             });
 
-            Chip chip_adBlock = dialogView.findViewById(R.id.chip_adBlock);
-            chip_adBlock.setChecked(ninjaWebView.getBoolean("_adBlock"));
-            chip_adBlock.setOnLongClickListener(view -> {
-                Toast.makeText(context, getString(R.string.setting_title_adblock), Toast.LENGTH_SHORT).show();
-                return true;
-            });
-            chip_adBlock.setOnClickListener(v -> {
-                ninjaWebView.setProfileChanged();
-                ninjaWebView.putProfileBoolean("_adBlock", dialog_titleProfile, chip_profile_trusted, chip_profile_standard, chip_profile_protected, chip_profile_changed);
-            });
-
             Chip chip_saveData = dialogView.findViewById(R.id.chip_saveData);
             chip_saveData.setChecked(ninjaWebView.getBoolean("_saveData"));
             chip_saveData.setOnLongClickListener(view -> {

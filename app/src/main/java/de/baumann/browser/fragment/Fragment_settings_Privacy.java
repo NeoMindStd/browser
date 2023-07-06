@@ -26,7 +26,6 @@ import java.util.Objects;
 import de.baumann.browser.R;
 import de.baumann.browser.activity.ProfilesList;
 import de.baumann.browser.activity.Settings_Profile;
-import de.baumann.browser.browser.AdBlock;
 import de.baumann.browser.preferences.BasePreferenceFragment;
 import de.baumann.browser.view.GridAdapter;
 import de.baumann.browser.view.GridItem;
@@ -41,10 +40,6 @@ public class Fragment_settings_Privacy extends BasePreferenceFragment implements
         assert context != null;
         initSummary(getPreferenceScreen());
         SharedPreferences sp = PreferenceManager.getDefaultSharedPreferences(context);
-
-        Preference sp_ad_block = findPreference("sp_ad_block");
-        assert sp_ad_block != null;
-        sp_ad_block.setSummary(getString(R.string.setting_summary_adblock) + "\n\n" + AdBlock.getHostsDate(getContext()));
 
         Preference settings_profile = findPreference("settings_profile");
         assert settings_profile != null;
@@ -153,9 +148,6 @@ public class Fragment_settings_Privacy extends BasePreferenceFragment implements
 
     @Override
     public void onSharedPreferenceChanged(final SharedPreferences sp, String key) {
-        if (key.equals("ab_hosts")) {
-            AdBlock.downloadHosts(getActivity());
-        }
         updatePrefSummary(findPreference(key));
     }
 

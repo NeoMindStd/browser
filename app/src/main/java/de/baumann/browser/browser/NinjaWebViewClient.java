@@ -50,7 +50,6 @@ public class NinjaWebViewClient extends WebViewClient {
     private final NinjaWebView ninjaWebView;
     private final Context context;
     private final SharedPreferences sp;
-    private final AdBlock adBlock;
 
 
     public NinjaWebViewClient(NinjaWebView ninjaWebView) {
@@ -58,7 +57,6 @@ public class NinjaWebViewClient extends WebViewClient {
         this.ninjaWebView = ninjaWebView;
         this.context = ninjaWebView.getContext();
         this.sp = PreferenceManager.getDefaultSharedPreferences(context);
-        this.adBlock = new AdBlock(this.context);
     }
 
     @Override
@@ -491,12 +489,6 @@ public class NinjaWebViewClient extends WebViewClient {
 
     @Override
     public WebResourceResponse shouldInterceptRequest(WebView view, WebResourceRequest request) {
-        if (ninjaWebView.isAdBlock() && adBlock.isAd(request.getUrl().toString()))
-            return new WebResourceResponse(
-                    BrowserUnit.MIME_TYPE_TEXT_PLAIN,
-                    BrowserUnit.URL_ENCODING,
-                    new ByteArrayInputStream("".getBytes())
-            );
         return super.shouldInterceptRequest(view, request);
     }
 
