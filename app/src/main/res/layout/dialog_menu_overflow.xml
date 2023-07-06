@@ -1,79 +1,79 @@
 <?xml version="1.0" encoding="utf-8"?>
 
 <LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
-    xmlns:app="http://schemas.android.com/apk/res-auto"
-    xmlns:tools="http://schemas.android.com/tools"
-    android:layout_width="match_parent"
-    android:layout_height="wrap_content"
-    android:orientation="vertical"
-    tools:ignore="ContentDescription">
-
-    <com.google.android.material.card.MaterialCardView
-        style="@style/Widget.Material3.CardView.Filled"
-        android:id="@+id/albumCardView"
+        xmlns:app="http://schemas.android.com/apk/res-auto"
+        xmlns:tools="http://schemas.android.com/tools"
         android:layout_width="match_parent"
         android:layout_height="wrap_content"
-        android:backgroundTint="?attr/colorSecondaryContainer"
-        android:layout_marginStart="15dp"
-        android:layout_marginEnd="15dp"
-        android:layout_marginTop="15dp" >
+        android:orientation="vertical"
+        tools:ignore="ContentDescription">
+
+    <com.google.android.material.card.MaterialCardView
+            style="@style/Widget.Material3.CardView.Filled"
+            android:id="@+id/albumCardView"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:backgroundTint="?attr/colorSecondaryContainer"
+            android:layout_marginStart="15dp"
+            android:layout_marginEnd="15dp"
+            android:layout_marginTop="15dp">
 
         <RelativeLayout
-            android:layout_width="wrap_content"
-            android:layout_height="wrap_content">
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content">
 
             <com.google.android.material.card.MaterialCardView
-                android:id="@+id/cardView"
-                style="@style/Widget.Material3.CardView.Filled"
-                android:layout_width="25dp"
-                android:layout_height="25dp"
-                android:layout_alignParentStart="true"
-                android:layout_centerInParent="true"
-                android:layout_marginStart="10dp"
-                android:backgroundTint="@android:color/transparent"
-                app:cardCornerRadius="3dp">
-
-                <ImageView
-                    android:id="@+id/menu_icon"
+                    android:id="@+id/cardView"
+                    style="@style/Widget.Material3.CardView.Filled"
                     android:layout_width="25dp"
                     android:layout_height="25dp"
-                    android:scaleType="fitCenter"
-                    tools:ignore="ContentDescription" />
+                    android:layout_alignParentStart="true"
+                    android:layout_centerInParent="true"
+                    android:layout_marginStart="10dp"
+                    android:backgroundTint="@android:color/transparent"
+                    app:cardCornerRadius="3dp">
+
+                <ImageView
+                        android:id="@+id/menu_icon"
+                        android:layout_width="25dp"
+                        android:layout_height="25dp"
+                        android:scaleType="fitCenter"
+                        tools:ignore="ContentDescription" />
 
             </com.google.android.material.card.MaterialCardView>
 
             <LinearLayout
-                android:layout_width="match_parent"
-                android:layout_height="wrap_content"
-                android:id="@+id/textGroup"
-                android:orientation="vertical"
-                android:gravity="center_vertical"
-                android:layout_marginBottom="10dp"
-                android:layout_marginTop="10dp"
-                android:layout_marginStart="15dp"
-                android:layout_marginEnd="10dp"
-                android:layout_alignParentEnd="true"
-                android:layout_toEndOf="@id/cardView">
-
-                <TextView
-                    android:id="@+id/overflowTitle"
                     android:layout_width="match_parent"
                     android:layout_height="wrap_content"
-                    android:layout_marginBottom="2dp"
-                    android:ellipsize="end"
-                    android:includeFontPadding="false"
-                    android:maxLines="1"
-                    android:textAppearance="?attr/textAppearanceBodyLarge"
-                    android:textStyle="bold"/>
+                    android:id="@+id/textGroup"
+                    android:orientation="vertical"
+                    android:gravity="center_vertical"
+                    android:layout_marginBottom="10dp"
+                    android:layout_marginTop="10dp"
+                    android:layout_marginStart="15dp"
+                    android:layout_marginEnd="10dp"
+                    android:layout_alignParentEnd="true"
+                    android:layout_toEndOf="@id/cardView">
 
                 <TextView
-                    android:id="@+id/overflowURL"
-                    android:layout_width="match_parent"
-                    android:layout_height="wrap_content"
-                    android:ellipsize="end"
-                    android:includeFontPadding="false"
-                    android:maxLines="1"
-                    android:textAppearance="?attr/textAppearanceBodySmall"/>
+                        android:id="@+id/overflowTitle"
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:layout_marginBottom="2dp"
+                        android:ellipsize="end"
+                        android:includeFontPadding="false"
+                        android:maxLines="1"
+                        android:textAppearance="?attr/textAppearanceBodyLarge"
+                        android:textStyle="bold" />
+
+                <TextView
+                        android:id="@+id/overflowURL"
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:ellipsize="end"
+                        android:includeFontPadding="false"
+                        android:maxLines="1"
+                        android:textAppearance="?attr/textAppearanceBodySmall" />
 
             </LinearLayout>
 
@@ -82,69 +82,68 @@
     </com.google.android.material.card.MaterialCardView>
 
     <com.google.android.material.tabs.TabLayout
-        android:id="@+id/tabLayout"
-        android:layout_width="match_parent"
-        android:layout_height="wrap_content"
-        android:layout_marginTop="10dp"
-        android:background="?attr/colorSurface"
-        app:tabMode="fixed">
+            android:id="@+id/tabLayout"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="10dp"
+            android:background="?attr/colorSurface"
+            app:tabMode="fixed">
 
         <com.google.android.material.tabs.TabItem
-            android:layout_width="wrap_content"
-            android:layout_height="wrap_content"
-            android:icon="@drawable/icon_tab"
-            />
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:icon="@drawable/icon_tab" />
 
         <com.google.android.material.tabs.TabItem
-            android:layout_width="wrap_content"
-            android:layout_height="wrap_content"
-            android:icon="@drawable/icon_menu_share" />
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:icon="@drawable/icon_menu_share" />
 
         <com.google.android.material.tabs.TabItem
-            android:layout_width="wrap_content"
-            android:layout_height="wrap_content"
-            android:icon="@drawable/icon_menu_save" />
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:icon="@drawable/icon_menu_save" />
 
         <com.google.android.material.tabs.TabItem
-            android:layout_width="wrap_content"
-            android:layout_height="wrap_content"
-            android:icon="@drawable/icon_dots" />
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:icon="@drawable/icon_dots" />
 
     </com.google.android.material.tabs.TabLayout>
 
     <com.google.android.material.divider.MaterialDivider
-        android:layout_width="match_parent"
-        android:layout_height="wrap_content"/>
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content" />
 
     <RelativeLayout
-        android:layout_width="wrap_content"
-        android:layout_height="wrap_content"
-        android:layout_marginBottom="10dp"
-        android:layout_marginTop="10dp">
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginBottom="10dp"
+            android:layout_marginTop="10dp">
 
         <GridView
-            android:id="@+id/overflow_tab"
-            android:layout_width="match_parent"
-            android:layout_height="wrap_content"
-            android:numColumns="1" />
+                android:id="@+id/overflow_tab"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:numColumns="1" />
 
         <GridView
-            android:id="@+id/overflow_share"
-            android:layout_width="match_parent"
-            android:layout_height="wrap_content"
-            android:numColumns="1" />
+                android:id="@+id/overflow_share"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:numColumns="1" />
 
         <GridView
-            android:id="@+id/overflow_save"
-            android:layout_width="match_parent"
-            android:layout_height="wrap_content"
-            android:numColumns="1" />
+                android:id="@+id/overflow_save"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:numColumns="1" />
 
         <GridView
-            android:id="@+id/overflow_other"
-            android:layout_width="match_parent"
-            android:layout_height="wrap_content"
-            android:numColumns="1" />
+                android:id="@+id/overflow_other"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:numColumns="1" />
 
     </RelativeLayout>
 

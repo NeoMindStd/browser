@@ -1,96 +1,96 @@
 <?xml version="1.0" encoding="utf-8"?>
 
 <PreferenceScreen xmlns:android="http://schemas.android.com/apk/res/android"
-    xmlns:app="http://schemas.android.com/apk/res-auto">
+        xmlns:app="http://schemas.android.com/apk/res-auto">
 
 
     <SwitchPreferenceCompat
-        android:defaultValue="true"
-        android:key="sp_drm"
-        android:summary="@string/hint_DRM_Media"/>
+            android:defaultValue="true"
+            android:key="sp_drm"
+            android:summary="@string/hint_DRM_Media" />
 
     <SwitchPreferenceCompat
-        android:defaultValue="true"
-        android:key="sp_autofill"
-        android:summary="@string/setting_summary_autofill" />
+            android:defaultValue="true"
+            android:key="sp_autofill"
+            android:summary="@string/setting_summary_autofill" />
 
     <PreferenceCategory android:title="@string/setting_title_profiles">
 
         <ListPreference
-            android:defaultValue="profileStandard"
-            android:entries="@array/profileToStart_entries"
-            android:entryValues="@array/profileToStart_values"
-            android:key="profile_toStart"
-            android:title="@string/setting_title_profiles_startApp" />
+                android:defaultValue="profileStandard"
+                android:entries="@array/profileToStart_entries"
+                android:entryValues="@array/profileToStart_values"
+                android:key="profile_toStart"
+                android:title="@string/setting_title_profiles_startApp" />
 
         <Preference
-            android:key="settings_profile"
-            android:summary="@string/setting_title_profiles_edit" />
+                android:key="settings_profile"
+                android:summary="@string/setting_title_profiles_edit" />
 
         <Preference
-            android:icon="@drawable/icon_profile_trusted"
-            android:key="edit_trusted"
-            android:summary="@string/setting_title_profiles_trustedList" />
+                android:icon="@drawable/icon_profile_trusted"
+                android:key="edit_trusted"
+                android:summary="@string/setting_title_profiles_trustedList" />
 
         <Preference
-            android:icon="@drawable/icon_profile_standard"
-            android:key="edit_standard"
-            android:summary="@string/setting_title_profiles_standardList" />
+                android:icon="@drawable/icon_profile_standard"
+                android:key="edit_standard"
+                android:summary="@string/setting_title_profiles_standardList" />
 
         <Preference
-            android:icon="@drawable/icon_profile_protected"
-            android:key="edit_protected"
-            android:summary="@string/setting_title_profiles_protectedList" />
+                android:icon="@drawable/icon_profile_protected"
+                android:key="edit_protected"
+                android:summary="@string/setting_title_profiles_protectedList" />
 
     </PreferenceCategory>
 
     <PreferenceCategory android:title="@string/privacy_redirect">
 
         <de.baumann.browser.preferences.EditTextSwitchPreference
-            android:defaultValue="https://yewtu.be/"
-            android:key="sp_youTube_string"
-            android:selectable="true"
-            android:title="@string/privacy_redirect_youTube"
-            app:editTextSwitchKey="sp_youTube_switch"
-            app:useSimpleSummaryProvider="true" />
+                android:defaultValue="https://yewtu.be/"
+                android:key="sp_youTube_string"
+                android:selectable="true"
+                android:title="@string/privacy_redirect_youTube"
+                app:editTextSwitchKey="sp_youTube_switch"
+                app:useSimpleSummaryProvider="true" />
 
         <de.baumann.browser.preferences.EditTextSwitchPreference
-            android:defaultValue="https://nitter.net/"
-            android:key="sp_twitter_string"
-            android:selectable="true"
-            android:title="@string/privacy_redirect_twitter"
-            app:editTextSwitchKey="sp_twitter_switch"
-            app:useSimpleSummaryProvider="true" />
+                android:defaultValue="https://nitter.net/"
+                android:key="sp_twitter_string"
+                android:selectable="true"
+                android:title="@string/privacy_redirect_twitter"
+                app:editTextSwitchKey="sp_twitter_switch"
+                app:useSimpleSummaryProvider="true" />
 
         <Preference
-            android:key="custom_redirects"
-            android:selectable="true"
-            android:title="@string/custom_redirects" />
+                android:key="custom_redirects"
+                android:selectable="true"
+                android:title="@string/custom_redirects" />
 
     </PreferenceCategory>
 
     <PreferenceCategory android:title="@string/setting_userScript">
 
         <de.baumann.browser.preferences.EditTextSwitchPreference
-            android:key="sp_onPageStarted"
-            android:selectable="true"
-            android:title="onPageStarted"
-            app:editTextSwitchKey="onPageStarted"
-            app:useSimpleSummaryProvider="true" />
+                android:key="sp_onPageStarted"
+                android:selectable="true"
+                android:title="onPageStarted"
+                app:editTextSwitchKey="onPageStarted"
+                app:useSimpleSummaryProvider="true" />
 
         <de.baumann.browser.preferences.EditTextSwitchPreference
-            android:key="sp_onPageFinished"
-            android:selectable="true"
-            android:title="onPageFinished"
-            app:editTextSwitchKey="onPageFinished"
-            app:useSimpleSummaryProvider="true" />
+                android:key="sp_onPageFinished"
+                android:selectable="true"
+                android:title="onPageFinished"
+                app:editTextSwitchKey="onPageFinished"
+                app:useSimpleSummaryProvider="true" />
 
         <de.baumann.browser.preferences.EditTextSwitchPreference
-            android:key="sp_onLoadResource"
-            android:selectable="true"
-            android:title="onLoadResource"
-            app:editTextSwitchKey="onLoadResource"
-            app:useSimpleSummaryProvider="true" />
+                android:key="sp_onLoadResource"
+                android:selectable="true"
+                android:title="onLoadResource"
+                app:editTextSwitchKey="onLoadResource"
+                app:useSimpleSummaryProvider="true" />
 
     </PreferenceCategory>
 

@@ -5,70 +5,70 @@
     <PreferenceCategory android:title="@string/setting_title_profiles_dataUsage">
 
         <SwitchPreferenceCompat
-            android:defaultValue="true"
-            android:icon="@drawable/icon_image"
-            android:key="profileProtected_images"
-            android:summary="@string/setting_title_images" />
+                android:defaultValue="true"
+                android:icon="@drawable/icon_image"
+                android:key="profileProtected_images"
+                android:summary="@string/setting_title_images" />
 
 
         <SwitchPreferenceCompat
-            android:defaultValue="true"
-            android:icon="@drawable/icon_savedata"
-            android:key="profileProtected_saveData"
-            android:summary="@string/setting_title_save_data" />
+                android:defaultValue="true"
+                android:icon="@drawable/icon_savedata"
+                android:key="profileProtected_saveData"
+                android:summary="@string/setting_title_save_data" />
 
     </PreferenceCategory>
 
     <PreferenceCategory android:title="@string/setting_title_profiles_privacy">
 
         <SwitchPreferenceCompat
-            android:defaultValue="false"
-            android:icon="@drawable/icon_location"
-            android:key="profileProtected_location"
-            android:summary="@string/setting_title_location" />
+                android:defaultValue="false"
+                android:icon="@drawable/icon_location"
+                android:key="profileProtected_location"
+                android:summary="@string/setting_title_location" />
 
         <SwitchPreferenceCompat
-            android:defaultValue="false"
-            android:icon="@drawable/icon_camera"
-            android:key="profileProtected_camera"
-            android:summary="@string/setting_title_camera" />
+                android:defaultValue="false"
+                android:icon="@drawable/icon_camera"
+                android:key="profileProtected_camera"
+                android:summary="@string/setting_title_camera" />
 
         <SwitchPreferenceCompat
-            android:defaultValue="false"
-            android:icon="@drawable/icon_microphone"
-            android:key="profileProtected_microphone"
-            android:summary="@string/setting_title_microphone" />
+                android:defaultValue="false"
+                android:icon="@drawable/icon_microphone"
+                android:key="profileProtected_microphone"
+                android:summary="@string/setting_title_microphone" />
 
         <SwitchPreferenceCompat
-            android:defaultValue="true"
-            android:icon="@drawable/icon_history"
-            android:key="profileProtected_saveHistory"
-            android:summary="@string/setting_title_history" />
+                android:defaultValue="true"
+                android:icon="@drawable/icon_history"
+                android:key="profileProtected_saveHistory"
+                android:summary="@string/setting_title_history" />
 
         <SwitchPreferenceCompat
-            android:defaultValue="false"
-            android:icon="@drawable/icon_cookie"
-            android:key="profileProtected_cookies"
-            android:summary="@string/setting_title_cookie" />
+                android:defaultValue="false"
+                android:icon="@drawable/icon_cookie"
+                android:key="profileProtected_cookies"
+                android:summary="@string/setting_title_cookie" />
 
         <SwitchPreferenceCompat
-            android:defaultValue="false"
-            android:icon="@drawable/icon_dom"
-            android:key="profileProtected_dom"
-            android:summary="@string/setting_title_dom" />
+                android:defaultValue="false"
+                android:icon="@drawable/icon_dom"
+                android:key="profileProtected_dom"
+                android:summary="@string/setting_title_dom" />
 
 
         <SwitchPreferenceCompat
-            android:defaultValue="false"
-            android:icon="@drawable/icon_java"
-            android:key="profileProtected_javascript"
-            android:summary="@string/setting_title_javascript" />
+                android:defaultValue="false"
+                android:icon="@drawable/icon_java"
+                android:key="profileProtected_javascript"
+                android:summary="@string/setting_title_javascript" />
 
         <SwitchPreferenceCompat
-            android:defaultValue="false"
-            android:icon="@drawable/icon_popup"
-            android:key="profileProtected_javascriptPopUp"
-            android:summary="@string/setting_title_javascript_popUp" />
+                android:defaultValue="false"
+                android:icon="@drawable/icon_popup"
+                android:key="profileProtected_javascriptPopUp"
+                android:summary="@string/setting_title_javascript_popUp" />
 
     </PreferenceCategory>
 
@@ -76,16 +76,16 @@
 
 
         <SwitchPreferenceCompat
-            android:defaultValue="true"
-            android:icon="@drawable/icon_adblock"
-            android:key="profileProtected_adBlock"
-            android:summary="@string/setting_title_adblock" />
+                android:defaultValue="true"
+                android:icon="@drawable/icon_adblock"
+                android:key="profileProtected_adBlock"
+                android:summary="@string/setting_title_adblock" />
 
         <SwitchPreferenceCompat
-            android:defaultValue="true"
-            android:icon="@drawable/icon_fingerprint"
-            android:key="profileProtected_fingerPrintProtection"
-            android:summary="@string/setting_title_fingerPrint" />
+                android:defaultValue="true"
+                android:icon="@drawable/icon_fingerprint"
+                android:key="profileProtected_fingerPrintProtection"
+                android:summary="@string/setting_title_fingerPrint" />
 
 
     </PreferenceCategory>

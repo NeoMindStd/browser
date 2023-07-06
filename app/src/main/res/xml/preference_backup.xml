@@ -5,33 +5,33 @@
     <Preference android:summary="@string/data_summary" />
 
     <SwitchPreferenceCompat
-        android:defaultValue="true"
-        android:key="database"
-        android:summary="@string/title_appData" />
+            android:defaultValue="true"
+            android:key="database"
+            android:summary="@string/title_appData" />
 
     <SwitchPreferenceCompat
-        android:defaultValue="true"
-        android:key="settings"
-        android:summary="@string/setting_label" />
+            android:defaultValue="true"
+            android:key="settings"
+            android:summary="@string/setting_label" />
 
     <SwitchPreferenceCompat
-        android:defaultValue="true"
-        android:key="bookmark"
-        android:summary="@string/album_title_bookmarks" />
+            android:defaultValue="true"
+            android:key="bookmark"
+            android:summary="@string/album_title_bookmarks" />
 
     <SwitchPreferenceCompat
-        android:defaultValue="true"
-        android:key="java"
-        android:summary="@string/setting_title_profiles_trustedList" />
+            android:defaultValue="true"
+            android:key="java"
+            android:summary="@string/setting_title_profiles_trustedList" />
 
     <SwitchPreferenceCompat
-        android:defaultValue="true"
-        android:key="dom"
-        android:summary="@string/setting_title_profiles_standardList" />
+            android:defaultValue="true"
+            android:key="dom"
+            android:summary="@string/setting_title_profiles_standardList" />
 
     <SwitchPreferenceCompat
-        android:defaultValue="true"
-        android:key="cookie"
-        android:summary="@string/setting_title_profiles_protectedList" />
+            android:defaultValue="true"
+            android:key="cookie"
+            android:summary="@string/setting_title_profiles_protectedList" />
 
 </PreferenceScreen>
