@@ -21,18 +21,6 @@ package de.baumann.browser.unit;
 
 import static android.Manifest.permission.*;
 import static android.os.Build.VERSION.*;
-import static android.os.Environment.*;
-
-import java.io.BufferedReader;
-import java.io.BufferedWriter;
-import java.io.File;
-import java.io.FileReader;
-import java.io.FileWriter;
-import java.util.ArrayList;
-import java.util.Comparator;
-import java.util.List;
-import java.util.concurrent.ExecutorService;
-import java.util.concurrent.Executors;
 
 import android.app.Activity;
 import android.content.Context;
@@ -41,25 +29,16 @@ import android.content.pm.PackageManager;
 import android.net.Uri;
 import android.os.Build;
 import android.os.Environment;
-import android.os.Handler;
-import android.os.Looper;
 import android.provider.Settings;
 import androidx.appcompat.app.AlertDialog;
 import androidx.core.app.ActivityCompat;
 import androidx.core.content.ContextCompat;
 import com.google.android.material.dialog.MaterialAlertDialogBuilder;
 import de.baumann.browser.R;
-import de.baumann.browser.database.Record;
-import de.baumann.browser.database.RecordAction;
-import de.baumann.browser.view.NinjaToast;
 
 public class BackupUnit {
 
 	public static final int PERMISSION_REQUEST_CODE = 123;
-	private static final String BOOKMARK_TYPE = "<DT><A HREF=\"{url}\" ADD_DATE=\"{time}\">{title}</A>";
-	private static final String BOOKMARK_TITLE = "{title}";
-	private static final String BOOKMARK_URL = "{url}";
-	private static final String BOOKMARK_TIME = "{time}";
 
 	public static boolean checkPermissionStorage(Context context) {
 		if (SDK_INT >= Build.VERSION_CODES.R)
@@ -99,192 +78,5 @@ public class BackupUnit {
 		AlertDialog dialog = builder.create();
 		dialog.show();
 		HelperUnit.setupDialog(activity, dialog);
-	}
-
-	public static void makeBackupDir() {
-		File backupDir =
-			new File(Environment.getExternalStoragePublicDirectory(DIRECTORY_DOCUMENTS), "browser_backup//");
-		boolean wasSuccessful = backupDir.mkdirs();
-		if (!wasSuccessful)
-			System.out.println("was not successful.");
-	}
-
-	public static void backupData(Activity context, int i) {
-		ExecutorService executor = Executors.newSingleThreadExecutor();
-		Handler handler = new Handler(Looper.getMainLooper());
-		executor.execute(() -> {
-			//Background work here
-			switch (i) {
-				case 1:
-					exportList(context, 1);
-					break;
-				case 3:
-					exportList(context, 3);
-					break;
-				case 4:
-					exportBookmarks(context);
-					break;
-				default:
-					exportList(context, 2);
-					break;
-			}
-			handler.post(() -> {
-				//UI Thread work here
-				NinjaToast.show(context, context.getString(R.string.app_done));
-			});
-		});
-	}
-
-	public static void restoreData(Activity context, int i) {
-		ExecutorService executor = Executors.newSingleThreadExecutor();
-		Handler handler = new Handler(Looper.getMainLooper());
-		executor.execute(() -> {
-			//Background work here
-			switch (i) {
-				case 4:
-					importBookmarks(context);
-					break;
-			}
-			handler.post(() -> {
-				//UI Thread work here
-				NinjaToast.show(context, context.getString(R.string.app_done));
-			});
-		});
-	}
-
-	public static void exportList(Context context, int i) {
-		RecordAction action = new RecordAction(context);
-		List<String> list;
-		String filename;
-		action.open(false);
-		switch (i) {
-			case 1:
-				list = action.listDomains(RecordUnit.TABLE_TRUSTED);
-				filename = "list_trusted.txt";
-				break;
-			case 3:
-				list = action.listDomains(RecordUnit.TABLE_STANDARD);
-				filename = "list_standard.txt";
-				break;
-			default:
-				list = action.listDomains(RecordUnit.TABLE_PROTECTED);
-				filename = "list_protected.txt";
-				break;
-		}
-		action.close();
-		File file =
-			new File(Environment.getExternalStoragePublicDirectory(DIRECTORY_DOCUMENTS), "browser_backup//" + filename);
-		try {
-			BufferedWriter writer = new BufferedWriter(new FileWriter(file, false));
-			for (String domain : list) {
-				writer.write(domain);
-				writer.newLine();
-			}
-			writer.close();
-			String wasSuccessful = file.getAbsolutePath();
-			if (wasSuccessful.isEmpty())
-				System.out.println("was not successful.");
-		} catch (Exception ignored) {
-		}
-	}
-
-	public static void exportBookmarks(Context context) {
-		RecordAction action = new RecordAction(context);
-		action.open(false);
-		List<Record> list = action.listBookmark(context, false, 0);
-		action.close();
-		File file = new File(Environment.getExternalStoragePublicDirectory(DIRECTORY_DOCUMENTS),
-			"browser_backup//list_bookmarks.html");
-		try {
-			BufferedWriter writer = new BufferedWriter(new FileWriter(file, false));
-			for (Record record : list) {
-				String type = BOOKMARK_TYPE;
-				type = type.replace(BOOKMARK_TITLE, record.getTitle());
-				type = type.replace(BOOKMARK_URL, record.getURL());
-				type = type.replace(BOOKMARK_TIME, String.valueOf(
-					record.getIconColor() + (long)(record.getDesktopMode() ? 16 : 0) + (long)(record.getNightMode() ?
-						32 : 0)));
-				writer.write(type);
-				writer.newLine();
-			}
-			writer.close();
-			String wasSuccessful = file.getAbsolutePath();
-			if (wasSuccessful.isEmpty()) {
-				System.out.println("was not successful.");
-			}
-		} catch (Exception ignored) {
-		}
-	}
-
-	public static void importBookmarks(Context context) {
-		File file = new File(Environment.getExternalStoragePublicDirectory(DIRECTORY_DOCUMENTS),
-			"browser_backup//list_bookmarks.html");
-		List<Record> list = new ArrayList<>();
-		try {
-			BrowserUnit.clearBookmark(context);
-			RecordAction action = new RecordAction(context);
-			action.open(true);
-			BufferedReader reader = new BufferedReader(new FileReader(file));
-			String line;
-			while ((line = reader.readLine()) != null) {
-				line = line.trim();
-				if (!((line.startsWith("<dt><a ") && line.endsWith("</a>")) || (line.startsWith("<DT><A ")
-					&& line.endsWith("</A>")))) {
-					continue;
-				}
-				String title = getBookmarkTitle(line);
-				String url = getBookmarkURL(line);
-				long date = getBookmarkDate(line);
-				if (date > 123)
-					date = 11;
-				//if no color defined yet set it red (123 is max: 11 for color + 16 for desktop mode + 32 for List_trusted + 64 for List_standard Content
-				if (title.trim().isEmpty() || url.trim().isEmpty()) {
-					continue;
-				}
-				Record record = new Record();
-				record.setTitle(title);
-				record.setURL(url);
-				record.setIconColor(date & 15);
-				record.setDesktopMode((date & 16) == 16);
-				record.setNightMode(!((date & 32) == 32));
-
-				if (!action.checkUrl(url, RecordUnit.TABLE_BOOKMARK))
-					list.add(record);
-			}
-			reader.close();
-			list.sort(Comparator.comparing(Record::getTitle));
-			for (Record record : list) {
-				action.addBookmark(record);
-			}
-			action.close();
-		} catch (Exception ignored) {
-		}
-		list.size();
-	}
-
-	private static long getBookmarkDate(String line) {
-		for (String string : line.split(" +")) {
-			if (string.startsWith("ADD_DATE=\"")) {
-				int index = string.indexOf("\">");
-				return Long.parseLong(string.substring(10, index));
-			}
-		}
-		return 0;
-	}
-
-	private static String getBookmarkTitle(String line) {
-		// Remove last </a>
-		line = line.substring(0, line.length() - 4);
-		int index = line.lastIndexOf(">");
-		return line.substring(index + 1);
-	}
-
-	private static String getBookmarkURL(String line) {
-		// Remove href=\" and \"
-		for (String string : line.split(" +")) {
-			if (string.startsWith("href=\"") || string.startsWith("HREF=\""))
-				return string.substring(6, string.length() - 1);
-		}
-		return "";
 	}
 }

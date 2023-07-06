@@ -183,25 +183,6 @@ public class RecordAction {
 
 	//History
 
-	public void addHistory(Record record) {
-		if (record == null
-			|| record.getTitle() == null
-			|| record.getTitle().trim().isEmpty()
-			|| record.getURL() == null
-			|| record.getURL().trim().isEmpty()
-			|| record.getTime() < 0L) {
-			return;
-		}
-		record.setTime(record.getTime() & (~255));    //blank out lower 8bits of time
-
-		ContentValues values = new ContentValues();
-		values.put(RecordUnit.COLUMN_TITLE, record.getTitle().trim());
-		values.put(RecordUnit.COLUMN_URL, record.getURL().trim());
-		values.put(RecordUnit.COLUMN_TIME,
-			record.getTime() + (long)(record.getDesktopMode() ? 16 : 0) + (long)(record.getNightMode() ? 32 : 0));
-		database.insert(RecordUnit.TABLE_HISTORY, null, values);
-	}
-
 	public List<Record> listHistory() {
 		List<Record> list = new ArrayList<>();
 		Cursor cursor;
@@ -229,44 +210,6 @@ public class RecordAction {
 	}
 
 	// General
-
-	public void addDomain(String domain, String table) {
-		if (domain == null || domain.trim().isEmpty()) {
-			return;
-		}
-		ContentValues values = new ContentValues();
-		values.put(RecordUnit.COLUMN_DOMAIN, domain.trim());
-		database.insert(table, null, values);
-	}
-
-	public boolean checkDomain(String domain, String table) {
-		if (domain == null || domain.trim().isEmpty()) {
-			return false;
-		}
-		Cursor cursor = database.query(
-			table,
-			new String[] {RecordUnit.COLUMN_DOMAIN},
-			RecordUnit.COLUMN_DOMAIN + "=?",
-			new String[] {domain.trim()},
-			null,
-			null,
-			null
-									  );
-		if (cursor != null) {
-			boolean result = cursor.moveToFirst();
-			cursor.close();
-			return result;
-		}
-		return false;
-	}
-
-	public void deleteDomain(String domain, String table) {
-		if (domain == null || domain.trim().isEmpty()) {
-			return;
-		}
-		database.execSQL(
-			"DELETE FROM " + table + " WHERE " + RecordUnit.COLUMN_DOMAIN + " = " + "\"" + domain.trim() + "\"");
-	}
 
 	public List<String> listDomains(String table) {
 		List<String> list = new ArrayList<>();
@@ -311,14 +254,6 @@ public class RecordAction {
 			return result;
 		}
 		return false;
-	}
-
-	public void deleteURL(String domain, String table) {
-		if (domain == null || domain.trim().isEmpty()) {
-			return;
-		}
-		database.execSQL(
-			"DELETE FROM " + table + " WHERE " + RecordUnit.COLUMN_URL + " = " + "\"" + domain.trim() + "\"");
 	}
 
 	public void clearTable(String table) {

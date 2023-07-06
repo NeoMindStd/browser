@@ -149,7 +149,6 @@ public class BrowserActivity extends AppCompatActivity implements BrowserControl
 	private Context context;
 	private SharedPreferences sp;
 	private ObjectAnimator animation;
-	private long newIcon;
 	private long filterBy;
 	private boolean filter;
 	private boolean orientationChanged;
@@ -1548,14 +1547,6 @@ public class BrowserActivity extends AppCompatActivity implements BrowserControl
 			ninjaWebView.initPreferences(historyUrl);
 			ninjaWebView.goBack();
 		}
-	}
-
-	private void printPDF() {
-		String title = HelperUnit.fileName(ninjaWebView.getUrl());
-		PrintManager printManager = (PrintManager)getSystemService(Context.PRINT_SERVICE);
-		PrintDocumentAdapter printAdapter = ninjaWebView.createPrintDocumentAdapter(title);
-		Objects.requireNonNull(printManager).print(title, printAdapter, new PrintAttributes.Builder().build());
-		sp.edit().putBoolean("pdf_create", true).apply();
 	}
 
 	private void save_atHome(final String title, final String url) {
